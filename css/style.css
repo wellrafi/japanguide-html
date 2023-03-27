@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url('../assets/fonts/AlteHaasGroteskRegular.ttf');
+}
+
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url('../assets/fonts/AlteHaasGroteskBold.ttf');
+}
+
+*{ 
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+  
+.check{
+  border: 1px solid rgb(220,220,220);
+  height: 45px;
+  width: 45px;
+}
+
+.checkbox input:checked ~ .check{
+  background-color: #F34646;
+  border: none;
+}
