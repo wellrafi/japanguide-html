@@ -57,9 +57,9 @@
     <!-- header component -->
     <header class="">
         <div class="header-top">
-            <div class="mx-auto pt-3 pb-3 container border-b border-gray-100">
-                <div class="flex justify-between">
-                    <div class="flex gap-3">
+            <div class="mx-auto pt-3 pb-3 container">
+                <div class="flex sm:justify-between justify-center">
+                    <div class="sm:flex gap-3 hidden">
                         <img src="./assets/icons/cloud.svg" alt="">
                         <div class="text-base text-gray-800	">21°C, Cloudy</div>
                     </div>
@@ -73,10 +73,10 @@
                         <div class="cursor-pointer">
                             <div class="dropdown inline-block relative">
                                 <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
-                                <ul class="dropdown-menu absolute hidden shadow-lg rounded">
-                                  <li class=""><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-t " href="#">English</a></li>
+                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-10 overflow-hidden rounded-lg">
+                                  <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
                                   <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
-                                  <li class=""><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
+                                  <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -84,23 +84,41 @@
                 </div>
             </div>
         </div>
+        <div class="container header-line">
+            <div class="border-b border-gray-100"></div>
+        </div>
         <nav>
-            <div class="mx-auto container py-4">
-                <div class="flex justify-between items-center flex-1">
-                    <div class="nav-menu flex gap-10">
-                        <div class="nav-item text-lg"><a href="">Destinations</a></div>
-                        <div class="nav-item text-lg"><a href="">Shop</a></div>
-                        <div class="nav-item text-lg"><a href="">Good to know</a></div>
-                        <div class="nav-item text-lg"><a href="">News</a></div>
+            <div class="mx-auto container py-7">
+                <div class="flex justify-between items-center flex-1 relative">
+                    <div class="mobile-menu lg:hidden">
+                        <div class="hamburger">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="logo w-50">
+                    <div class="nav-menu lg:flex xl:gap-10 gap-6 hidden">
+                        <div class="nav-item"><a href="" class="text-lg">Destinations</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Shop</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Good to know</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">News</a></div>
+                    </div>
+                    <a href="/" class="logo gap-5 absolute right-1/2 translate-x-2/4">
                         <img src="./assets/logo.png" alt="">
+                    </a>
+                    <div class="mobile-search lg:hidden">
+                        <img src="./assets/icons/search_navbar.svg" alt="">
                     </div>
-                    <div class="search flex flex-1">
-                        <form action="">
-                            <input type="text" class="w-24 p-2 border rounded-xl">
+                    <div class="search lg:flex gap-4 hidden">
+                        <form action="" class="flex">
+                            <input type="text" class="w-35 h-px-34 border focus:border-gray-100 border-r-0 pl-4 text-sm rounded-l-xl" placeholder="Search destination...">
+                            <button type="button" class="h-px-34 pr-3 pl-2 border-l-0 border rounded-r-xl">
+                                <img src="./assets/icons/search_navbar.svg" alt="">
+                            </button>
                         </form>
-                        <a href="" class="button bg-primary text-base text-white py-2 px-4 rounded-xl">Services</a>
+                        <a href="" class="button bg-primary text-sm text-white px-4 flex items-center h-px-34 rounded-xl">
+                            <span>Services</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -108,11 +126,9 @@
     </header>
 
     <!-- content component -->
-    <main>
-        <div class="container">
-
-        </div>
-    </main>
+    <section id="banner" class="bg-cover bg-center bg-no-repeat h-60" style="background-image: url(./assets/banner.png)">
+        
+    </section>
 
     <!-- footer component -->
     <footer>
