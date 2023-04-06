@@ -67,3 +67,12 @@
 .mobile-layer.active{
   visibility: visible;
 }
+
+/* end sidebar toggle */
+
+
+/* mobile search toggle */
+
+.mobile-form-search.active{
+  display: block;
+}
