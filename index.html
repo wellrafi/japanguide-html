@@ -47,9 +47,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./scripts/tailwind-config.js"></script>
+    <link href="/dist/output.css" rel="stylesheet">
 
 </head>
 <body>
@@ -177,7 +175,7 @@
                                 <button type="button" class="h-12 pr-0 pl-3 border-r-0 border rounded-l-xl bg-white">
                                     <img src="./assets/icons/search_navbar.svg" alt="">
                                 </button>
-                                <input type="text" class="w-full h-12 border focus:border-gray-100 border-l-0 border-r-0 pl-4 text-sm" placeholder="Search destination...">
+                                <input type="text" class="outline-0 w-full h-12 border border-l-0 border-r-0 pl-4 text-sm" placeholder="Search destination...">
                                 <button type="button" class="h-12 pr-3 pl-2 border-l-0 border rounded-r-xl bg-white" onclick="toggleClass('.mobile-form-search')">
                                     <img src="./assets/icons/close-black.svg" alt="">
                                 </button>
@@ -192,7 +190,7 @@
                     <!-- desktop search form -->
                     <div class="search lg:flex gap-4 hidden">
                         <form action="" class="flex">
-                            <input type="text" class="w-35 h-px-34 border focus:border-gray-100 border-r-0 pl-4 text-sm rounded-l-xl" placeholder="Search destination...">
+                            <input type="text" class="outline-0 w-35 h-px-34 border border-r-0 pl-4 text-sm rounded-l-xl" placeholder="Search destination...">
                             <button type="button" class="h-px-34 pr-3 pl-2 border-l-0 border rounded-r-xl">
                                 <img src="./assets/icons/search_navbar.svg" alt="">
                             </button>
@@ -207,11 +205,63 @@
         </nav>
         <!-- end bottom navigation -->
         
+        <div class="absolute top-full left-0 w-full py-10 bg-white border-t">
+            <div class="container flex gap-6">
+                <div class="w-64 py-2 bg-red-100">
+                    <div class="flex gap-2 items-center py-2">
+                        <div class="bg-primary w-3 h-2 rounded"></div>
+                        <div class="text-base text-gray-800">Top Destinations</div>
+                    </div>
+                    <div class="flex gap-2 items-center py-2">
+                        <div class="bg-primary w-3 h-2 rounded"></div>
+                        <div class="text-base text-gray-800">Top Destinations</div>
+                    </div>
+                    <div class="flex gap-2 items-center py-2">
+                        <div class="bg-primary w-3 h-2 rounded"></div>
+                        <div class="text-base text-gray-800">Top Destinations</div>
+                    </div>
+                    <div class="flex gap-2 items-center py-2">
+                        <div class="bg-primary w-3 h-2 rounded"></div>
+                        <div class="text-base text-gray-800">Top Destinations</div>
+                    </div>
+                </div>
+                <div class="flex-1 py-2 bg-gray-100"></div>
+            </div>
+        </div>
+
     </header>
 
     <!-- content component -->
-    <section id="banner" class="bg-cover bg-center bg-no-repeat h-60" style="background-image: url(./assets/banner.png)">
-        
+    <section id="banner" class="bg-cover bg-center bg-no-repeat pt-20" style="background-image: url(./assets/banner.png)">
+        <div class="container">
+            <div class="flex gap-4">
+                <div class="banner-content">
+                    <div class="flex pb-4 items-center">
+                        <span class="w-8 bg-primary h-1 rounded block mr-2"></span> 
+                        <span class="text-white font-medium">Destinations</span>
+                    </div>
+                    <div class="pl-10 pb-4">
+                        <div class="text-4xl font-bold font-altebold text-white leading-tight">Cherry blossoms iconic symbols of spring in Japan</div>
+                    </div>
+                    <div class="pl-10 pb-4">
+                        <p class="text-base leading-8 text-white opacity-80">The most beautiful and iconic symbols of spring in Japan. The blooming of these delicate pink and white flowers is eagerly awaited every year by locals and tourists alike</p>
+                    </div>
+                    <div class="pl-10">
+                        <img src="./assets/icons/arrow.svg" alt="" class="cursor-pointer">
+                    </div>
+                </div>
+                <div class="banner-form">
+                    <form action="" class="w-px-530 h-full bg-white rounded-t-3xl px-9 pt-10">
+                        <div class="form-input">
+                            <label for=""></label>
+                            <div class="input-group flex">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer component -->

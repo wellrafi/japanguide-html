@@ -15,6 +15,9 @@ tailwind.config = {
         height: {
           'px-34' : "2.125rem"
         },
+        width: {
+          'px-530': "33.125rem"
+        },
         colors: {
           clifford: '#dadada',
           primary: '#F34646',
