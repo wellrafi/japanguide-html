@@ -1,6 +1,18 @@
 {
+  "name": "japanguide-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "html"
+    }
+  },
   "scripts": {
-    "start" : "npx tailwindcss -i ./css/style.css -o ./dist/output.css --watch"
+    "start" : "npx tailwindcss -i ./css/style.css -o ./dist/output.css --watch --minify"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.1"
