@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./public/**/*.{html,js}",
-    "./*.{html,js}"
+    "./*.{html,js}",
+    "./index.html"
   ],
   theme: {
     fontSize: {
