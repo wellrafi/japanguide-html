@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["public/**/*.{html,js}"],
+  content: ["public/*.{html,js}"],
   theme: {
     minHeight: {
       lg: '700px',
@@ -28,7 +28,9 @@ module.exports = {
       container: {
           padding: "15px",
           center: true,
-          '2xl': '1350px'
+          screens: {
+            '2xl': '1380px',
+          },
       }
     }
   },

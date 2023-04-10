@@ -32,14 +32,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
 
 </head>
 <body>
     
     <!-- header component -->
     <header class="relative">
+
+        <!-- mobile background layer -->
         <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass('.mobile-menu', '.mobile-layer')"></div>
+        <!-- end mobile background layer -->
+
+        <!-- mobile menu -->
         <div class="mobile-menu fixed z-20 -left-80 top-0 w-80 h-full bg-white z-20 overflow-y-scroll">
             <div class="px-6 m-auto pt-5 pb-4 h-full">
                 <div class="mobile-nav-menus flex flex-col justify-between">
@@ -100,40 +105,55 @@
                 </div>
             </div>
         </div>
+        <!-- end mobile menu -->
+
+        <!-- top navbar -->
         <div class="header-top sm:block hidden">
             <div class="mx-auto pt-3 pb-3 container">
                 <div class="flex sm:justify-between justify-center">
+                    <!-- left top navbar / weather -->
                     <div class="sm:flex gap-3 hidden">
                         <img src="./assets/icons/cloud.svg" alt="">
                         <div class="text-base text-gray-800	">21°C, Cloudy</div>
                     </div>
+                    <!-- end left top navbar / weather -->
+                    <!-- right top navbar -->
                     <div class="flex gap-3">
-                        <div class="flex gap-3">
+                        <!-- currency switch -->
+                        <div class="flex gap-3 cursor-pointer">
                             <div class="text-base text-gray-800">1,000 MNT</div>
                             <img src="./assets/icons/swap-read.svg" alt="">
                             <div class="text-base text-gray-800	">39.4 JPY</div>
                         </div>
+                        <!-- end currency switch -->
                         <div class="fw-bold">·</div>
+                        <!-- languange dropdown -->
                         <div class="cursor-pointer">
                             <div class="dropdown inline-block relative">
                                 <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
-                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-10 overflow-hidden rounded-lg">
+                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-20 overflow-hidden rounded-lg">
                                   <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
                                   <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
                                   <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
                                 </ul>
                             </div>
                         </div>
+                        <!-- end languange dropdown -->
                     </div>
+                    <!-- end right top navbar -->
                 </div>
             </div>
         </div>
+        <!-- end top navbar -->
+
+        <!-- line header -->
         <div class="container header-line">
             <div class="border-b border-gray-100"></div>
         </div>
+        <!-- end line header -->
 
         <!-- bottom navigation -->
-        <nav class="border-b">
+        <nav class="border-b border-gray-100">
             <div class="mx-auto container py-7">
                 <div class="flex justify-between items-center flex-1 relative">
                     <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass('.mobile-menu', '.mobile-layer')">
@@ -190,30 +210,106 @@
         </nav>
         <!-- end bottom navigation -->
         
-        <div class="absolute top-full left-0 w-full py-10 bg-white">
+        <!-- bottom navigation -->
+        <div class="absolute z-20 top-full left-0 w-full py-10 bg-white">
             <div class="container flex gap-6">
-                <div class="w-64 py-2 bg-red-100">
-                    <div class="flex gap-2 items-center py-2">
-                        <div class="bg-primary w-3 h-2 rounded"></div>
-                        <div class="text-base text-gray-800">Top Destinations</div>
+
+                <!-- left menus -->
+                <div class="w-48 py-2">
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">Top Destinations</div>
                     </div>
-                    <div class="flex gap-2 items-center py-2">
-                        <div class="bg-primary w-3 h-2 rounded"></div>
-                        <div class="text-base text-gray-800">Top Destinations</div>
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">Regions</div>
                     </div>
-                    <div class="flex gap-2 items-center py-2">
-                        <div class="bg-primary w-3 h-2 rounded"></div>
-                        <div class="text-base text-gray-800">Top Destinations</div>
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">Activities</div>
                     </div>
-                    <div class="flex gap-2 items-center py-2">
-                        <div class="bg-primary w-3 h-2 rounded"></div>
-                        <div class="text-base text-gray-800">Top Destinations</div>
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">All Destinations</div>
                     </div>
                 </div>
-                <div class="flex-1 py-2 bg-gray-100"></div>
+                <!-- end left menus -->
+
+                <!-- right menus -->
+                <div class="flex-1 py-2 pl-10 flex flex-row flex-wrap border-l-2 border-gray-100">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col max-w-sm h-32 gap-2 flex-wrap">
+                            <a href="" class="text-gray-600 p-1 w-40">Tokyo</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Kyoto</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Mt. Fuji</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Nara</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Yokohama</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Okinawa</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Nagoya</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Kamakura</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Kobe</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Yokohama</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Hiroshima</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Nagasaki</a>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <a href="" class="w-52 h-28 rounded-xl
+                                    bg-cover bg-no-repeat bg-center" 
+                            style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end right menus -->
+
             </div>
         </div>
-
     </header>
 
     <!-- content component -->
@@ -222,7 +318,7 @@
             <div class="flex gap-4">
                 <div class="banner-content">
                     <div class="flex pb-4 items-center">
-                        <span class="w-8 bg-primary h-1 rounded block mr-2"></span> 
+                        <span class="w-8 bg-primary h-1 rounded block mr-1"></span> 
                         <span class="text-white font-medium">Destinations</span>
                     </div>
                     <div class="pl-10 pb-4">
