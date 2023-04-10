@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Japan Guide - Happy traveling in japan</title>
+    <meta name="title" content="Japan Guide - Happy traveling in japan">
+    <meta name="description" content="Discover the wonders of Japan with our comprehensive Japan Guide. Whether you're planning your first trip or are a seasoned traveler, we've got you covered. From exploring bustling cities to discovering serene countryside landscapes, our guide will help you have a happy and fulfilling travel experience in Japan.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://japanguide.mn/">
+    <meta property="og:title" content="Japan Guide - Happy traveling in japan">
+    <meta property="og:description" content="Discover the wonders of Japan with our comprehensive Japan Guide. Whether you're planning your first trip or are a seasoned traveler, we've got you covered. From exploring bustling cities to discovering serene countryside landscapes, our guide will help you have a happy and fulfilling travel experience in Japan.">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://japanguide.mn/">
+    <meta property="twitter:title" content="Japan Guide - Happy traveling in japan">
+    <meta property="twitter:description" content="Discover the wonders of Japan with our comprehensive Japan Guide. Whether you're planning your first trip or are a seasoned traveler, we've got you covered. From exploring bustling cities to discovering serene countryside landscapes, our guide will help you have a happy and fulfilling travel experience in Japan.">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <link href="./dist/output.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- header component -->
+    <header class="relative">
+
+        <!-- mobile background layer -->
+        <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass('.mobile-menu', '.mobile-layer')"></div>
+        <!-- end mobile background layer -->
+
+        <!-- mobile menu -->
+        <div class="mobile-menu fixed z-20 -left-80 top-0 w-80 h-full bg-white z-20 overflow-y-scroll">
+            <div class="px-6 m-auto pt-5 pb-4 h-full">
+                <div class="mobile-nav-menus flex flex-col justify-between">
+                    <div class="mobile-top-nav-menus">
+                        <div class="flex justify-between items-center mb-5">
+                            <img src="./assets/logo.png" height="30" alt="">
+                            <div class="close cursor-pointer" onclick="toggleClass('.mobile-menu', '.mobile-layer')"><img src="./assets/icons/close-black.svg" alt=""></div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass(this)">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Shop</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Good to know</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass(this)">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between ">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Services</a>
+                        </div>
+                    
+                    </div>
+                    <div class="mobile-bottom-nav-menus">
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <div class="mobile-dropdown-trigger">
+                                <a href="" class="text-base text-gray-800 flex py-4 flex justify-between">
+                                    <span>Sign in</span> 
+                                    <img src="./assets/icons/user.svg" class="h-6" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mobile menu -->
+
+        <!-- top navbar -->
+        <div class="header-top sm:block hidden">
+            <div class="mx-auto pt-3 pb-3 container">
+                <div class="flex sm:justify-between justify-center">
+                    <!-- left top navbar / weather -->
+                    <div class="sm:flex gap-3 hidden">
+                        <img src="./assets/icons/cloud.svg" alt="">
+                        <div class="text-base text-gray-800	">21°C, Cloudy</div>
+                    </div>
+                    <!-- end left top navbar / weather -->
+                    <!-- right top navbar -->
+                    <div class="flex gap-3">
+                        <!-- currency switch -->
+                        <div class="flex gap-3 cursor-pointer">
+                            <div class="text-base text-gray-800">1,000 MNT</div>
+                            <img src="./assets/icons/swap-read.svg" alt="">
+                            <div class="text-base text-gray-800	">39.4 JPY</div>
+                        </div>
+                        <!-- end currency switch -->
+                        <div class="fw-bold">·</div>
+                        <!-- languange dropdown -->
+                        <div class="cursor-pointer">
+                            <div class="dropdown inline-block relative">
+                                <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
+                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-20 overflow-hidden rounded-lg">
+                                  <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
+                                  <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
+                                  <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end languange dropdown -->
+                    </div>
+                    <!-- end right top navbar -->
+                </div>
+            </div>
+        </div>
+        <!-- end top navbar -->
+
+        <!-- line header -->
+        <div class="container header-line">
+            <div class="border-b border-gray-100"></div>
+        </div>
+        <!-- end line header -->
+
+        <!-- bottom navigation -->
+        <nav class="border-b border-gray-100">
+            <div class="mx-auto container py-7">
+                <div class="flex justify-between items-center flex-1 relative">
+                    <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass('.mobile-menu', '.mobile-layer')">
+                        <div class="hamburger">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="nav-menu lg:flex xl:gap-10 gap-6 hidden">
+                        <div class="nav-item"><a href="" class="text-lg">Destinations</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Shop</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Good to know</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">News</a></div>
+                    </div>
+                    <a href="/" class="logo gap-5 absolute right-1/2 translate-x-2/4">
+                        <img src="./assets/logo.png" alt="">
+                    </a>
+
+                    <!-- mobile search -->
+                    <div class="mobile-form-search hidden fixed w-full left-0 z-20">
+                        <div class="container">
+                            <form action="" class="flex w-full">
+                                <button type="button" class="h-12 pr-0 pl-3 border-r-0 border rounded-l-xl bg-white">
+                                    <img src="./assets/icons/search_navbar.svg" alt="">
+                                </button>
+                                <input type="text" class="outline-0 w-full h-12 border border-l-0 border-r-0 pl-4 text-sm" placeholder="Search destination...">
+                                <button type="button" class="h-12 pr-3 pl-2 border-l-0 border rounded-r-xl bg-white" onclick="toggleClass('.mobile-form-search')">
+                                    <img src="./assets/icons/close-black.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mobile-search lg:hidden pl-2 cursor-pointer relative z-10" onclick="toggleClass('.mobile-form-search')">
+                        <img src="./assets/icons/search_navbar.svg" alt="">
+                    </div>
+                    <!-- end mobile serach -->
+
+                    <!-- desktop search form -->
+                    <div class="search lg:flex gap-4 hidden">
+                        <form action="" class="flex">
+                            <input type="text" class="outline-0 w-35 h-px-34 border border-r-0 pl-4 text-sm rounded-l-xl" placeholder="Search destination...">
+                            <button type="button" class="h-px-34 pr-3 pl-2 border-l-0 border rounded-r-xl">
+                                <img src="./assets/icons/search_navbar.svg" alt="">
+                            </button>
+                        </form>
+                        <a href="" class="button bg-primary text-sm text-white px-4 flex items-center h-px-34 rounded-xl">
+                            <span>Services</span>
+                        </a>
+                    </div>
+                    <!-- end search form -->
+                </div>
+            </div>
+        </nav>
+        <!-- end bottom navigation -->
+        
+        <!-- bottom navigation -->
+        <div class="absolute z-20 top-full left-0 w-full py-10 bg-white">
+            <div class="container flex gap-6">
+
+                <!-- left menus -->
+                <div class="w-48 py-2">
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">Top Destinations</div>
+                    </div>
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">Regions</div>
+                    </div>
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">Activities</div>
+                    </div>
+                    <div class="flex group/item items-center py-2 cursor-pointer">
+                        <div class="
+                            transition 
+                            bg-primary 
+                            opacity-0
+                            w-0 mr-0 h-1 rounded
+                            group-hover/item:w-3
+                            group-hover/item:opacity-100
+                            group-hover/item:mr-1
+                            ease duration-200 transition-all"></div>
+                        <div class="text-gray-800 text-base font-normal group-hover/item:font-bold transition-all duration-200">All Destinations</div>
+                    </div>
+                </div>
+                <!-- end left menus -->
+
+                <!-- right menus -->
+                <div class="flex-1 py-2 pl-10 flex flex-row flex-wrap border-l-2 border-gray-100">
+                    <div class="flex justify-between">
+                        <div class="flex flex-col max-w-sm h-32 gap-2 flex-wrap">
+                            <a href="" class="text-gray-600 p-1 w-40">Tokyo</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Kyoto</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Mt. Fuji</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Nara</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Yokohama</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Okinawa</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Nagoya</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Kamakura</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Kobe</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Yokohama</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Hiroshima</a>
+                            <a href="" class="text-gray-600 p-1 w-40">Nagasaki</a>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <a href="" class="w-52 h-28 rounded-xl
+                                    bg-cover bg-no-repeat bg-center" 
+                            style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                            <a href="" class="w-52 h-28 rounded-xl
+                                        bg-cover bg-no-repeat bg-center" 
+                                style="background-image: url('./assets/image_nav_1.png');"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end right menus -->
+
+            </div>
+        </div>
+    </header>
+
+    <!-- content component -->
+    <section id="banner" class="bg-cover bg-center bg-no-repeat pt-20" style="background-image: url(./assets/banner.png)">
+        <div class="container">
+            <div class="flex gap-4">
+                <div class="banner-content">
+                    <div class="flex pb-4 items-center">
+                        <span class="w-8 bg-primary h-1 rounded block mr-1"></span> 
+                        <span class="text-white font-medium">Destinations</span>
+                    </div>
+                    <div class="pl-10 pb-4">
+                        <div class="text-4xl font-bold font-altebold text-white leading-tight">Cherry blossoms iconic symbols of spring in Japan</div>
+                    </div>
+                    <div class="pl-10 pb-4">
+                        <p class="text-base leading-8 text-white opacity-80">The most beautiful and iconic symbols of spring in Japan. The blooming of these delicate pink and white flowers is eagerly awaited every year by locals and tourists alike</p>
+                    </div>
+                    <div class="pl-10">
+                        <img src="./assets/icons/arrow.svg" alt="" class="cursor-pointer">
+                    </div>
+                </div>
+                <div class="banner-form">
+                    <form action="" class="w-px-530 h-full bg-white rounded-t-3xl px-9 pt-10">
+                        <div class="form-input">
+                            <label for=""></label>
+                            <div class="input-group flex">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer component -->
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

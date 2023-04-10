@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url('../assets/fonts/AlteHaasGroteskRegular.ttf');
+}
+
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url('../assets/fonts/AlteHaasGroteskBold.ttf');
+}
+
+*{ 
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+  
+.check{
+  border: 1px solid rgb(220,220,220);
+  height: 45px;
+  width: 45px;
+}
+
+.checkbox input:checked ~ .check{
+  background-color: #F34646;
+  border: none;
+}
+
+
+/* mobile dropdown */
+
+.mobile-dropdown-trigger img.arrow-down-{
+  transition: all .2s ease;
+}
+
+.mobile-dropdown-menus{
+  opacity: 0;
+  transition: all .2s ease;
+  max-height: 0px;
+}
+
+.mobile-nav-item.active .mobile-dropdown-trigger img.arrow-down-{
+  transform: rotate(180deg);
+}
+
+.mobile-nav-item.active .mobile-dropdown-menus{
+  visibility: visible;
+  opacity: 1;
+  max-height: 1000px;
+  transition: max-height 0.2s ease-in;
+}
+
+/* end mobile dropdown */
+ 
+
+/* mobile sidebar toggle */
+
+.mobile-menu, .mobile-layer{
+  transition: all .3s ease;
+}
+
+.mobile-menu.active{
+  left: 0;
+}
+
+.mobile-layer.active{
+  visibility: visible;
+}
+
+/* end sidebar toggle */
+
+
+/* mobile search toggle */
+
+.mobile-form-search.active{
+  display: block;
+}
+
+/* end mobile search toggle */
+
+
+/* 404 font custom */
+
+.font-404{
+  font-size: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .font-404{
+    font-size: 23.75rem;
+  }
+}
