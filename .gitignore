@@ -1,3 +1,4 @@
 /node_modules
 /dist
 /assets
+/package-lock.json
