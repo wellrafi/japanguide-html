@@ -1,9 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './public/**/*.{html,js}',
-    './*.{html,js}',
-    './index.html'
+    './public/**/*.{html,js}'
   ],
   theme: {
     minHeight: {
