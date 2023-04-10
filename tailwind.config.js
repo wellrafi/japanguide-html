@@ -5,6 +5,9 @@ module.exports = {
     "./*.{html,js}"
   ],
   theme: {
+    fontSize: {
+      "404": "23.75rem"
+    },
     minHeight: {
       lg: '700px',
       xl: '860px',
