@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./public/**/*.{html,js}",
-    "./*.{html,js}",
-    "./index.html"
+    './public/**/*.{html,js}',
+    './*.{html,js}',
+    './index.html'
   ],
   theme: {
-    fontSize: {
-      "404": "23.75rem"
-    },
     minHeight: {
       lg: '700px',
       xl: '860px',
@@ -19,13 +16,13 @@ module.exports = {
     },
     extend: {
       margin: {
-        'header': "margin-top: 139px"
+        'header': 'margin-top: 139px'
       },
       height: {
-        'px-34' : "2.125rem"
+        'px-34' : '2.125rem'
       },
       width: {
-        'px-530': "33.125rem"
+        'px-530': '33.125rem'
       },
       colors: {
         clifford: '#dadada',
@@ -33,7 +30,7 @@ module.exports = {
         darkprimary: '#C23333',
       },
       container: {
-          padding: "15px",
+          padding: '15px',
           center: true,
           screens: {
             '2xl': '1380px',

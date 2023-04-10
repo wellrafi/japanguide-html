@@ -80,3 +80,17 @@
 .mobile-form-search.active{
   display: block;
 }
+
+/* end mobile search toggle */
+
+
+/* 404 font custom */
+
+.font-404{
+  font-size: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .font-404{
+    font-size: 23.75rem;
+  }
+}
