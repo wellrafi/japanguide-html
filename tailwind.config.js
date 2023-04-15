@@ -5,6 +5,9 @@ module.exports = {
     './*.{html,js}'
   ],
   theme: {
+    screens: {
+      'ph': '340px',
+    },
     minHeight: {
       lg: '700px',
       xl: '860px',
@@ -29,11 +32,11 @@ module.exports = {
         darkprimary: '#C23333',
       },
       container: {
-          padding: '15px',
-          center: true,
-          screens: {
-            '2xl': '1380px',
-          },
+        padding: '15px',
+        center: true,
+      },
+      maxWidth: {
+        '1350': '1350px !important',
       }
     }
   },
