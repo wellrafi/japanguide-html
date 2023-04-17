@@ -35,9 +35,6 @@ module.exports = {
         padding: '15px',
         center: true,
       },
-      maxWidth: {
-        '1350': '1350px !important',
-      }
     }
   },
   plugins: [],
