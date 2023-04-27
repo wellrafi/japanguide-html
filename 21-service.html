@@ -45,11 +45,11 @@
 </head>
 <body>
 
-        <!-- header component -->
+    <!-- header component -->
     <header class="relative">
 
         <!-- mobile background layer -->
-        <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass('.mobile-menu', '.mobile-layer')"></div>
+        <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"></div>
         <!-- end mobile background layer -->
 
         <!-- mobile menu -->
@@ -59,9 +59,9 @@
                     <div class="mobile-top-nav-menus">
                         <div class="flex justify-between items-center mb-5">
                             <img src="./assets/logo.png" height="30" alt="">
-                            <div class="close cursor-pointer" onclick="toggleClass('.mobile-menu', '.mobile-layer')"><img src="./assets/icons/close-black.svg" alt=""></div>
+                            <div class="close cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"><img src="./assets/icons/close-black.svg" alt=""></div>
                         </div>
-                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass(this)">
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
                             <div class="mobile-dropdown-trigger cursor-pointer">
                                 <div class="text-base text-gray-800 flex py-4 block flex justify-between">
                                     <span>Destinations</span> 
@@ -81,7 +81,7 @@
                         <div class="mobile-nav-item border-b border-gray-200">
                             <a href="" class="text-base text-gray-800 py-4 block">Good to know</a>
                         </div>
-                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass(this)">
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
                             <div class="mobile-dropdown-trigger cursor-pointer">
                                 <div class="text-base text-gray-800 flex py-4 block flex justify-between ">
                                     <span>Destinations</span> 
@@ -164,7 +164,7 @@
         <nav class="border-b border-gray-100">
             <div class="mx-auto container py-7">
                 <div class="flex justify-between items-center flex-1 relative">
-                    <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass('.mobile-menu', '.mobile-layer')">
+                    <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])">
                         <div class="hamburger">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -189,13 +189,13 @@
                                     <img src="./assets/icons/search_navbar.svg" alt="">
                                 </button>
                                 <input type="text" class="outline-0 w-full h-12 border border-l-0 border-r-0 pl-4 text-sm" placeholder="Search destination...">
-                                <button type="button" class="h-12 pr-3 pl-2 border-l-0 border rounded-r-xl bg-white" onclick="toggleClass('.mobile-form-search')">
+                                <button type="button" class="h-12 pr-3 pl-2 border-l-0 border rounded-r-xl bg-white" onclick="toggleClass(['.mobile-form-search'])">
                                     <img src="./assets/icons/close-black.svg" alt="">
                                 </button>
                             </form>
                         </div>
                     </div>
-                    <div class="mobile-search lg:hidden pl-2 cursor-pointer relative z-10" onclick="toggleClass('.mobile-form-search')">
+                    <div class="mobile-search lg:hidden pl-2 cursor-pointer relative z-10" onclick="toggleClass(['.mobile-form-search'])">
                         <img src="./assets/icons/search_navbar.svg" alt="">
                     </div>
                     <!-- end mobile serach -->
@@ -219,6 +219,7 @@
         <!-- end bottom navigation -->
         
     </header>
+    <!-- end header component -->
 
     <!-- content -->
     <div class="container flex flex-col pt-16">
@@ -549,7 +550,7 @@
     <!-- end contnet -->
 
     <!-- footer -->
-    <footer class="bg-neutral-100 pt-28 mt-28">
+    <footer class="bg-neutral-50 pt-28 mt-28">
         <div class="container flex flex-col">
             <div class="flex lg:gap-4 justify-between lg:flex-row flex-col gap-10">
                 <div class="logo-footer xl:max-w-md lg:max-w-xs">

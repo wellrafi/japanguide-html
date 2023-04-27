@@ -39,15 +39,554 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./dist/output.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./scripts/tailwind-config.js"></script>
 
 </head>
 <body>
     
-    <div class="w-full h-full flex items-center justify-center p-10">
-        <div class="text-2xl md:text-4xl font-altebold font-bold text-primary">Will be ready soon, ASAP</div>
+    <!-- header component -->
+    <header class="relative">
+
+        <!-- mobile background layer -->
+        <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"></div>
+        <!-- end mobile background layer -->
+
+        <!-- mobile menu -->
+        <div class="mobile-menu fixed z-20 -left-80 top-0 w-80 h-full bg-white overflow-y-scroll">
+            <div class="px-6 m-auto pt-5 pb-4 h-full">
+                <div class="mobile-nav-menus flex flex-col justify-between">
+                    <div class="mobile-top-nav-menus">
+                        <div class="flex justify-between items-center mb-5">
+                            <img src="./assets/logo.png" height="30" alt="">
+                            <div class="close cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"><img src="./assets/icons/close-black.svg" alt=""></div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Shop</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Good to know</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between ">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Services</a>
+                        </div>
+                    
+                    </div>
+                    <div class="mobile-bottom-nav-menus">
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <div class="mobile-dropdown-trigger">
+                                <a href="" class="text-base text-gray-800 flex py-4 flex justify-between">
+                                    <span>Sign in</span> 
+                                    <img src="./assets/icons/user.svg" class="h-6" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mobile menu -->
+
+        <!-- top navbar -->
+        <div class="header-top sm:block hidden">
+            <div class="mx-auto pt-3 pb-3 container">
+                <div class="flex sm:justify-between justify-center">
+                    <!-- left top navbar / weather -->
+                    <div class="sm:flex gap-3 hidden">
+                        <img src="./assets/icons/cloud.svg" alt="">
+                        <div class="text-base text-gray-800	">21°C, Cloudy</div>
+                    </div>
+                    <!-- end left top navbar / weather -->
+                    <!-- right top navbar -->
+                    <div class="flex gap-3">
+                        <!-- currency switch -->
+                        <div class="flex gap-3 cursor-pointer">
+                            <div class="text-base text-gray-800">1,000 MNT</div>
+                            <img src="./assets/icons/swap-read.svg" alt="">
+                            <div class="text-base text-gray-800	">39.4 JPY</div>
+                        </div>
+                        <!-- end currency switch -->
+                        <div class="fw-bold">·</div>
+                        <!-- languange dropdown -->
+                        <div class="cursor-pointer">
+                            <div class="dropdown inline-block relative">
+                                <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
+                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-20 overflow-hidden rounded-lg">
+                                    <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
+                                    <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
+                                    <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end languange dropdown -->
+                    </div>
+                    <!-- end right top navbar -->
+                </div>
+            </div>
+        </div>
+        <!-- end top navbar -->
+
+        <!-- line header -->
+        <div class="container header-line">
+            <div class="border-b border-gray-100"></div>
+        </div>
+        <!-- end line header -->
+
+        <!-- bottom navigation -->
+        <nav class="border-b border-gray-100">
+            <div class="mx-auto container py-7">
+                <div class="flex justify-between items-center flex-1 relative">
+                    <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])">
+                        <div class="hamburger">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="nav-menu lg:flex xl:gap-10 gap-6 hidden">
+                        <div class="nav-item"><a href="" class="text-lg">Destinations</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Shop</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Good to know</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">News</a></div>
+                    </div>
+                    <a href="/" class="logo gap-5 absolute right-1/2 translate-x-2/4">
+                        <img src="./assets/logo.png" alt="">
+                    </a>
+
+                    <!-- mobile search -->
+                    <div class="mobile-form-search hidden fixed w-full left-0 z-20">
+                        <div class="container">
+                            <form action="" class="flex w-full">
+                                <button type="button" class="h-12 pr-0 pl-3 border-r-0 border rounded-l-xl bg-white">
+                                    <img src="./assets/icons/search_navbar.svg" alt="">
+                                </button>
+                                <input type="text" class="outline-0 w-full h-12 border border-l-0 border-r-0 pl-4 text-sm" placeholder="Search destination...">
+                                <button type="button" class="h-12 pr-3 pl-2 border-l-0 border rounded-r-xl bg-white" onclick="toggleClass(['.mobile-form-search'])">
+                                    <img src="./assets/icons/close-black.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mobile-search lg:hidden pl-2 cursor-pointer relative z-10" onclick="toggleClass(['.mobile-form-search'])">
+                        <img src="./assets/icons/search_navbar.svg" alt="">
+                    </div>
+                    <!-- end mobile serach -->
+
+                    <!-- desktop search form -->
+                    <div class="search lg:flex gap-4 hidden">
+                        <form action="" class="flex">
+                            <input type="text" class="outline-0 w-35 h-px-34 border border-r-0 pl-4 text-sm rounded-l-xl" placeholder="Search destination...">
+                            <button type="button" class="h-px-34 pr-3 pl-2 border-l-0 border rounded-r-xl">
+                                <img src="./assets/icons/search_navbar.svg" alt="">
+                            </button>
+                        </form>
+                        <a href="" class="button bg-primary text-sm text-white px-4 flex items-center h-px-34 rounded-xl">
+                            <span>Services</span>
+                        </a>
+                    </div>
+                    <!-- end search form -->
+                </div>
+            </div>
+        </nav>
+        <!-- end bottom navigation -->
+        
+    </header>
+    <!-- end header component -->
+
+    <!-- sitemap -->
+    <div class="max-w-6xl mx-auto lg:block hidden">
+        <div class="container mt-14">
+            <div class="link flex gap-2 text-gray-400 font-normal">
+                <a href="" class="underline">Home</a> 
+                <div>›</div> 
+                <a href="" class="underline">News</a> 
+                <div>›</div>
+                <div>Diam elit scelerisque fringilla egestas Elementum sed blandit vitae in</div>
+            </div>
+        </div>
     </div>
+    <!-- end sitemap -->
+
+
+    <div class="max-w-6xl mx-auto my-4 lg:mt-4 mt-8">
+        <div class="container">
+            <div class="flex gap-3 lg:flex-row flex-col">
+                <div class="title text-neutral-800 font-altebold font-bold lg:text-4xl sm:text-3xl text-2xl flex-1 sm:leading-normal leading-normal lg:leading-normal">Diam elit scelerisque fringilla egestas Elementum sed blandit vitae in.</div>
+                <div class="flex-col flex lg:w-auto w-full gap-5">
+                    <div class="profile flex lg:justify-between justify-start lg:w-72 md:w-full gap-2">
+                        <div class="lg:mr-0 mr-2"><img src="./assets/profile.png" class="w-12" alt=""></div>
+                        <div class="flex flex-col">
+                            <div class="flex lg:flex-col sm:flex-row flex-col lg:gap-0 sm:gap-10 gap-0 lg:justify-normal sm:justify-center justify-normal h-full lg:items-start sm:items-center items-start">
+                                <div class="flex flex-col">
+                                    <div class="text-neutral-400 text-sm">posted by</div>
+                                    <div class="text-neutral-800 sm:text-lg text-base font-altebold font-bold">Mana Normalin</div>
+                                </div>
+                                <div class="sm:flex flex-col hidden">
+                                    <div class="text-neutral-400 text-sm">Senior Writer - Traveler</div>
+                                    <div class="text-neutral-400 text-sm">Want to travel around the world</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto w-full">
+        <div class="container flex items-center gap-3 justify-between">
+            <div class="flex gap-2 text-gray-400">
+                <div class="sm:text-base text-sm">Feb 20</div>
+                <div class="sm:text-base text-sm">·</div>
+                <div class="sm:text-base text-sm">3 min read</div>
+            </div>
+            <div class="flex gap-6 text-gray-400 justify-end">
+                <div class="hidden sm:block">Share to</div>
+                <div class="flex sosmed sm:gap-5 gap-4">
+                    <a href="facebook.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-brands-facebook"></i></a>
+                    <a href="twitter.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-brands-twitter"></i></a>
+                    <a href="linkedin.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-brands-linkedin"></i></a>
+                    <a href="mylinks.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-sr-link"></i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-10">
+        <img src="./assets/detail-news.png" class="rounded-3xl w-full h-auto" alt="">
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+        <div class="container flex lg:flex-row flex-col gap-10">
+            <div class="text-content flex flex-col gap-6 flex-1">
+                <p class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
+                    Planning a trip to Japan can be a daunting experience for travelers unsure about where to go and how to get to places, and that is where having access to a travel concierge would be advantageous. Tourist information centers typically offer a wealth of travel information and are good places to visit for travel advice.
+                </p>
+                <p class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
+                    For visitors already in Tokyo, there are five Tokyo Tourist Information Centers located in areas popular with tourists and are also easy to access by public transport. Visitors can pick up brochures about Tokyo and its surroundings or consult a travel guide expert in person. Complementing the physical centers is the Online Tourist Guide service, which visitors can access outside of Tokyo or anywhere in the world for travel advice. Both the Tokyo Tourist Information Center and the Online Tourist Guide are useful services aimed at providing travelers with reccomendations and travel information based on their interests and needs.
+                </p>
+                <div class="text-center">
+                    <img src="./assets/content-image.png" class="rounded-2xl w-full h-auto" alt="">
+                    <p><i class="text-sm text-neutral-400 text-center">Main entrance to the Tokyo Tourist Information Center at the Shinjuku Expressway Bus Terminal (Busta Shinjuku)</i>                    </p>
+                </div>
+                <div class="lg:text-3xl text-xl mt-6 font-altebold">Online Tourist Guide</div>
+                <div class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
+                    The Online Tourist Guide is a free online service provided by the Tokyo Tourist Information Center with the goal of providing tourist information to travelers to Tokyo. As an online service, travelers can access it anywhere in the world before arriving or while they are on the road in Japan. This means that travelers can plan their trip in advance with the help of travel guide experts.
+                </div>
+                <div class="text-center">
+                    <img src="./assets/bg_discount.png" class="rounded-2xl h-full w-auto" alt="">
+                </div>
+                <p class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
+                    The online service is pretty straightforward to use. All you would need is a smartphone or a computer with a working speaker and microphone, then access the online tourist guide webpage and select your preferred language - English, Chinese, Korean and Japanese are available - finally, connect to a travel concierge.
+                </p>
+            </div>
+            <div class="sidebar flex flex-col gap-12 sm:border-0 border-y-4 border-neutral-100 sm:mt-0 mt-10 sm:pt-0 py-10">
+                <form class="lg:max-w-sm bg-white rounded-2xl lg:px-6 sm:px-10 p-0 py-10 flex flex-col gap-4 sm:border sm:border-neutral-150">
+                    <div class="text-primary text-2xl font-altebold font-bold mb-2">Book Your Trip</div>
+                    <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
+                        <label for="destination">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                                <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
+                                <input name="destination" id="destination" placeholder="Tokyo" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                        <div class="open_destination_list overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <label for="date">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                                <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
+                                <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label for="adult">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                                <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
+                                <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-input relative">
+                        <label for="kid" class="relative">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                                <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
+                                <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-button pt-2">
+                        <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 w-full">Book Now</button>
+                    </div>
+                </form>
+                
+                <div class="latest-news lg:flex flex-col gap-4 lg:max-w-sm hidden">
+                    <div class="md:text-2xl text-lg font-altebold">Latest News</div>
+                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 md:w-px-340 lg:w-px-435 w-full hover:text-primary">
+                        <img src="./assets/latest-new-1.png" class="rounded-xl h-full" alt="">
+                        <div class="font-altebold text-lg p-4 pl-0">Aliquam vel nulla nunc facilisi velit quis aliquam sem urna. Feugiat.</div>
+                    </a>
+                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 hover:text-primary">
+                        <img src="./assets/latest-new-2.png" class="rounded-xl h-full" alt="">
+                        <div class="font-altebold text-lg p-4 pl-0">Magnis sed enim integer tempus eu. Orci maecenas mus a orci.</div>
+                    </a>
+                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 hover:text-primary">
+                        <img src="./assets/latest-new-3.png" class="rounded-xl h-full" alt="">
+                        <div class="font-altebold text-lg p-4 pl-0">Egestas ligula nullam interdum sed sit ultricies scelerisque. Maecenas.</div>
+                    </a>
+                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 hover:text-primary">
+                        <img src="./assets/latest-new-4.png" class="rounded-xl h-full" alt="">
+                        <div class="font-altebold text-lg p-4 pl-0">Imperdiet ut pharetra mattis hac. Ultricies vitae pellentesque.</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-20">
+        <div class="flex md:justify-between justify-center gap-10">
+            <a class="prev lg:w-px-530 w-96 md:block hidden" href="">
+                <div class="flex items-center gap-4">
+                    <img src="./assets/icons/big-left-arrow.svg" class="lg:w-auto w-12" alt="">
+                    <div class="text-neutral-600 lg:text-xl text-base">Prev News</div>
+                </div>
+                <div class="lg:pl-20 pl-0 font-bold font-altebold lg:text-xl text-lg lg:ml-3 ml-0 text-neutral-800 hover:text-primary">Diam eu est condimentum proin fusce. Leo lacus euismod ac morbi nisi morbi aenean.</div>
+            </a>
+            <a class="next lg:w-px-530 w-96" href="">
+                <div class="flex items-center gap-4 md:justify-end justify-start">
+                    <div class="text-neutral-600 lg:text-xl text-base">Next News</div>
+                    <img src="./assets/icons/big-right-arrow.svg" class="lg:w-auto w-12" alt="">
+                </div>
+                <div class="lg:pl-20 pl-0 font-bold font-altebold lg:text-xl text-lg lg:ml-3 ml-0 text-neutral-800 hover:text-primary">Diam eu est condimentum proin fusce. Leo lacus euismod ac morbi nisi morbi aenean.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="line container py-20">
+        <div class="w-full h-1 bg-neutral-100"></div>
+    </div>
+
+    <div class="container">
+        <div class="flex lg:flex-row flex-col md:gap-10 gap-20">
+            <div class="news-list flex flex-col gap-6 flex-1">
+                <div class="text-neutral-800 lg:text-3xl md:text-2xl text-xl font-altebold font-bold md:pb-10 pb-2">Related news</div>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 md:w-44 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-1.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Malesuada vulputate sed maecenas sed diam varius tincidunt. Nibh non quisque.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Placerat nunc consectetur sociis sapien arcu facilisi. In quam nulla sed vestibulum turpis morbi mollis odio vestibulum.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 md:w-44 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-1.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Malesuada vulputate sed maecenas sed diam varius tincidunt. Nibh non quisque.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Placerat nunc consectetur sociis sapien arcu facilisi. In quam nulla sed vestibulum turpis morbi mollis odio vestibulum.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 md:w-44 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-1.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Malesuada vulputate sed maecenas sed diam varius tincidunt. Nibh non quisque.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Placerat nunc consectetur sociis sapien arcu facilisi. In quam nulla sed vestibulum turpis morbi mollis odio vestibulum.</div>
+                    </div>
+                </a>
+
+                <div class="text-center sm:mt-10 mt-2">
+                    <a href="" class="px-5 py-2 text-white rounded-xl bg-primary hover:bg-darkprimary duration-200">Check all news</a>
+                </div>
+            </div>
+            <div class="sidebar lg:flex-col flex-row flex-wrap flex lg:gap-6 gap-4 xl:max-w-sm xl:w-full lg:w-80 lg:max-w-none">
+                <div class="text-neutral-800 lg:text-3xl md:text-2xl text-xl font-altebold font-bold sm:pb-10 pb-2 w-full">Related destinations</div>
+                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full h-52 rounded-2xl flex items-end justify-center overflow-hidden" style="background-image: url('./assets/related-desti-1.png');">
+                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hokkaido</div>
+                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
+                </a>
+                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full h-52 rounded-2xl flex items-end justify-center overflow-hidden" style="background-image: url('./assets/related-desti-1.png');">
+                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hokkaido</div>
+                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
+                </a>
+                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full h-52 rounded-2xl flex items-end justify-center overflow-hidden" style="background-image: url('./assets/related-desti-1.png');">
+                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hokkaido</div>
+                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
+                </a>
+                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full h-52 rounded-2xl flex items-end justify-center overflow-hidden" style="background-image: url('./assets/related-desti-1.png');">
+                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hokkaido</div>
+                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
+                </a>
+                <div class="md:mt-4 mt-6 w-full md:text-left text-center">
+                    <a href="" class="px-5 py-2 text-white rounded-xl bg-primary hover:bg-darkprimary duration-200">Check all destinations</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-neutral-50 pt-28 mt-28">
+        <div class="container flex flex-col">
+            <div class="flex lg:gap-4 justify-between lg:flex-row flex-col gap-10">
+                <div class="logo-footer xl:max-w-md lg:max-w-xs">
+                    <a href=""><img src="./assets/footer_logo.png" class="lg:w-none md:w-32 w-20" alt=""></a>
+                    <div class="text-neutral-500 sm:leading-loose mt-5 sm:text-base text-sm">In tempus vitae laoreet fames tincidunt. Tristique cras aliquet augue eu ut dui. Elementum etiam sit aliquam dui orci. </div>
+                    <div class="flex sosmed-footer gap-6 mt-8">
+                        <a href=""><img src="./assets/icons/footer_facebook.svg" alt=""></a>
+                        <a href=""><img src="./assets/icons/footer_instagram.svg" alt=""></a>
+                        <a href=""><img src="./assets/icons/footer_youtube.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="destinations">
+                    <div class="text-2xl font-bold font-altebold text-neutral-900">Destinations</div>
+                    <div class="flex flex-col mt-4 gap-1">
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Tokyo</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kyoto</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Osaka</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Nara</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Mount Fuji</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Hiroshima</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kamakura</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kobe</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Nagoya</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">See all</a>
+                    </div>
+                </div>
+                <div class="regions">
+                    <div class="text-2xl font-bold font-altebold text-neutral-900">Regions</div>
+                    <div class="flex flex-col mt-4 gap-1">
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Hokkaido</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Tohoku</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kanto</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Chubu</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kansai</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Chugoku</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Shikoku</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kyusu</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Okinawa</a>
+                    </div>
+                </div>
+                <div class="regions lg:mr-20 mr-0">
+                    <div class="text-2xl font-bold font-altebold text-neutral-900">Good to know</div>
+                    <div class="flex flex-col mt-4 gap-1">
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Before you go</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Itineraries</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Tours</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Learn</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Transportation</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Accommodation</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Living in Japan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container lg:pt-20 pt-16">
+            <div class="flex border-t-4 border-neutral-100 py-10 justify-between lg:flex-row flex-col-reverse items-center lg:gap-20 md:gap-10 sm:gap-8 gap-6">
+                <div class="copyright text-neutral-600 text-center md:text-base text-xs">Copyright © 1996-2023 japanguide.mn All Rights Reserved.</div>
+                <div class="links gap-10 hidden sm:flex">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms of service</a>
+                    <a href="">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="./scripts/script.js"></script>
 
 </body>
 </html>

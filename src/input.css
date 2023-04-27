@@ -21,7 +21,7 @@
 }
   
 .check{
-  border: 1px solid rgb(220,220,220);
+  /* border: 1px solid rgb(220,220,220); */
   height: 45px;
   width: 45px;
 }
@@ -29,6 +29,10 @@
 .checkbox input:checked ~ .check{
   background-color: #F34646;
   border: none;
+}
+
+.checkbox input:checked ~ .click-to-white{
+  color: #fff !important;
 }
 
 
@@ -44,11 +48,11 @@
   max-height: 0px;
 }
 
-.mobile-nav-item.active .mobile-dropdown-trigger img.arrow-down-{
+.mobile-nav-item.active_element .mobile-dropdown-trigger img.arrow-down-{
   transform: rotate(180deg);
 }
 
-.mobile-nav-item.active .mobile-dropdown-menus{
+.mobile-nav-item.active_element .mobile-dropdown-menus{
   visibility: visible;
   opacity: 1;
   max-height: 1000px;
@@ -64,11 +68,11 @@
   transition: all .3s ease;
 }
 
-.mobile-menu.active{
+.mobile-menu.active_element{
   left: 0;
 }
 
-.mobile-layer.active{
+.mobile-layer.active_element{
   visibility: visible;
 }
 
@@ -77,7 +81,7 @@
 
 /* mobile search toggle */
 
-.mobile-form-search.active{
+.mobile-form-search.active_element{
   display: block;
 }
 
@@ -94,3 +98,50 @@
     font-size: 23.75rem;
   }
 }
+
+/* end 404 font custom */
+
+
+/* container */
+
+@media screen and (min-width: 1536px) {
+  .container{
+    max-width: 1380px !important;
+  }
+}
+
+/* end container */
+
+* {
+  scrollbar-width: 5px;
+  scrollbar-color: #777;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 14px;
+  border: 3px solid #777;
+}
+
+/* end scrollbar */
+
+
+/* dropdown trips */
+
+.open_destination_list{
+  display: none;
+}
+
+.open_destination_list.active_element{
+  display: block !important;
+}
+/* end dropdown trips  */

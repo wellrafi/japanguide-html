@@ -45,9 +45,183 @@
 </head>
 <body>
     
-    <div class="w-full h-full flex items-center justify-center p-10">
-        <div class="text-2xl md:text-4xl font-altebold font-bold text-primary">Will be ready soon, ASAP</div>
-    </div>
+    <!-- header component -->
+    <header class="relative">
+
+        <!-- mobile background layer -->
+        <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"></div>
+        <!-- end mobile background layer -->
+
+        <!-- mobile menu -->
+        <div class="mobile-menu fixed z-20 -left-80 top-0 w-80 h-full bg-white overflow-y-scroll">
+            <div class="px-6 m-auto pt-5 pb-4 h-full">
+                <div class="mobile-nav-menus flex flex-col justify-between">
+                    <div class="mobile-top-nav-menus">
+                        <div class="flex justify-between items-center mb-5">
+                            <img src="./assets/logo.png" height="30" alt="">
+                            <div class="close cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"><img src="./assets/icons/close-black.svg" alt=""></div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Shop</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Good to know</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between ">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Services</a>
+                        </div>
+                    
+                    </div>
+                    <div class="mobile-bottom-nav-menus">
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <div class="mobile-dropdown-trigger">
+                                <a href="" class="text-base text-gray-800 flex py-4 flex justify-between">
+                                    <span>Sign in</span> 
+                                    <img src="./assets/icons/user.svg" class="h-6" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mobile menu -->
+
+        <!-- top navbar -->
+        <div class="header-top sm:block hidden">
+            <div class="mx-auto pt-3 pb-3 container">
+                <div class="flex sm:justify-between justify-center">
+                    <!-- left top navbar / weather -->
+                    <div class="sm:flex gap-3 hidden">
+                        <img src="./assets/icons/cloud.svg" alt="">
+                        <div class="text-base text-gray-800	">21°C, Cloudy</div>
+                    </div>
+                    <!-- end left top navbar / weather -->
+                    <!-- right top navbar -->
+                    <div class="flex gap-3">
+                        <!-- currency switch -->
+                        <div class="flex gap-3 cursor-pointer">
+                            <div class="text-base text-gray-800">1,000 MNT</div>
+                            <img src="./assets/icons/swap-read.svg" alt="">
+                            <div class="text-base text-gray-800	">39.4 JPY</div>
+                        </div>
+                        <!-- end currency switch -->
+                        <div class="fw-bold">·</div>
+                        <!-- languange dropdown -->
+                        <div class="cursor-pointer">
+                            <div class="dropdown inline-block relative">
+                                <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
+                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-20 overflow-hidden rounded-lg">
+                                    <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
+                                    <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
+                                    <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end languange dropdown -->
+                    </div>
+                    <!-- end right top navbar -->
+                </div>
+            </div>
+        </div>
+        <!-- end top navbar -->
+
+        <!-- line header -->
+        <div class="container header-line mx-auto">
+            <div class="border-b border-gray-100"></div>
+        </div>
+        <!-- end line header -->
+
+        <!-- bottom navigation -->
+        <nav class="border-b border-gray-100">
+            <div class="mx-auto container py-7">
+                <div class="flex justify-between items-center flex-1 relative">
+                    <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])">
+                        <div class="hamburger">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="nav-menu lg:flex xl:gap-10 gap-6 hidden">
+                        <div class="nav-item"><a href="" class="text-lg">Destinations</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Shop</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Good to know</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">News</a></div>
+                    </div>
+                    <a href="/" class="logo gap-5 absolute right-1/2 translate-x-2/4">
+                        <img src="./assets/logo.png" alt="">
+                    </a>
+
+                    <!-- mobile search -->
+                    <div class="mobile-form-search hidden fixed w-full left-0 z-20">
+                        <div class="container">
+                            <form action="" class="flex w-full">
+                                <button type="button" class="h-12 pr-0 pl-3 border-r-0 border rounded-l-xl bg-white">
+                                    <img src="./assets/icons/search_navbar.svg" alt="">
+                                </button>
+                                <input type="text" class="outline-0 w-full h-12 border border-l-0 border-r-0 pl-4 text-sm" placeholder="Search destination...">
+                                <button type="button" class="h-12 pr-3 pl-2 border-l-0 border rounded-r-xl bg-white" onclick="toggleClass(['.mobile-form-search'])">
+                                    <img src="./assets/icons/close-black.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mobile-search lg:hidden pl-2 cursor-pointer relative z-10" onclick="toggleClass(['.mobile-form-search'])">
+                        <img src="./assets/icons/search_navbar.svg" alt="">
+                    </div>
+                    <!-- end mobile serach -->
+
+                    <!-- desktop search form -->
+                    <div class="search lg:flex gap-4 hidden">
+                        <form action="" class="flex">
+                            <input type="text" class="outline-0 w-35 h-px-34 border border-r-0 pl-4 text-sm rounded-l-xl" placeholder="Search destination...">
+                            <button type="button" class="h-px-34 pr-3 pl-2 border-l-0 border rounded-r-xl">
+                                <img src="./assets/icons/search_navbar.svg" alt="">
+                            </button>
+                        </form>
+                        <a href="" class="button bg-primary text-sm text-white px-4 flex items-center h-px-34 rounded-xl">
+                            <span>Services</span>
+                        </a>
+                    </div>
+                    <!-- end search form -->
+                </div>
+            </div>
+        </nav>
+        <!-- end bottom navigation -->
+        
+    </header>
+    <!-- end header component -->
+    
+
 
 </body>
 </html>

@@ -1,16 +1,27 @@
-function toggleClass(target1, target2, target3, target4) {
-    toggle(target1)
-    toggle(target2)
-    toggle(target3)
-    toggle(target4)
+function toggleClass(targets) {
+    targets.forEach(target => {
+        toggle(target)
+    });
 }
 
 function toggle(target) {
     try {
         let doit = document.querySelector(target)
-            doit.classList.toggle('active') 
+            doit.classList.toggle('active_element') 
     } catch (error) {
-        target.classList.toggle('active')  
+        target.classList.toggle('active_element')  
     }
-
 }
+
+// document.addEventListener('click', function (e) {
+//     const specifiedElement = document.getElementsByClassName('active_element')
+    
+//     document.addEventListener('click', function (eve) {
+//         if (specifiedElement.length > 0) {
+//             const isClickInside = specifiedElement[0].contains(eve.target)
+//             if (!isClickInside) {
+//                 specifiedElement[0].classList.toggle('active_element')
+//             }
+//         }
+//     })
+// })

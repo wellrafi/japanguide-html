@@ -4,6 +4,7 @@ module.exports = {
     './**/*.{html,js}',
     './*.{html,js}'
   ],
+  mode: "jit",
   theme: {
     screens: {
       'ph': '340px',
@@ -24,7 +25,9 @@ module.exports = {
         'px-34' : '2.125rem'
       },
       width: {
-        'px-530': '33.125rem'
+        'px-530': '33.125rem',
+        'px-340': '21.25rem',
+        'px-435': '27.188rem'
       },
       colors: {
         clifford: '#dadada',
