@@ -225,90 +225,96 @@
 
     <!-- destination form search -->
     <div class="container mt-12">
-        <form action="" class="flex gap-4">
-            <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
-                <label for="destination">
-                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
-                    <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
-                        <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                        <input name="destination" id="destination" placeholder="Tokyo" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
-                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+        <form action="" class="flex gap-4 xl:flex-row flex-col">
+            <div class="flex gap-4 lg:flex-row flex-col">
+                <div class="flex gap-4 sm:flex-row flex-col">
+                    <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
+                        <label for="destination">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                                <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
+                                <input name="destination" id="destination" placeholder="Tokyo" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                        <div class="open_destination_list overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
+                                    <img src="./assets/icons/star.svg" alt="">
+                                    <div class="value text-base font-bold">Tokyo</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </label>
-                <div class="open_destination_list overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
-                    <div class="flex flex-col">
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
+                    <div class="form-input lg:flex-none flex-1">
+                        <label for="date">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                                <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
+                                <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex gap-4 sm:flex-row flex-col">
+                    <div class="form-input lg:flex-none flex-1">
+                        <label for="adult">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 lg:w-44 w-full px-5 cursor-pointer">
+                                <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
+                                <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-input relative lg:flex-none flex-1">
+                        <label for="kid" class="relative">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 lg:w-44 w-full px-5 cursor-pointer">
+                                <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
+                                <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
                     </div>
                 </div>
             </div>
-            <div class="form-input">
-                <label for="date">
-                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
-                    <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
-                        <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                        <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
-                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                    </div>
-                </label>
-            </div>
-            <div class="form-input">
-                <label for="adult">
-                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
-                    <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 w-44 px-5 cursor-pointer">
-                        <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
-                        <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
-                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                    </div>
-                </label>
-            </div>
-            <div class="form-input relative">
-                <label for="kid" class="relative">
-                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
-                    <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 w-44 px-5 cursor-pointer">
-                        <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
-                        <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
-                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                    </div>
-                </label>
-            </div>
-            <div class="form-button flex items-end">
-                <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 w-56">Book Now</button>
-            </div>
+            <div class="form-button flex items-end md:mt-0 mt-4">
+                <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 sm:w-56 w-full">Book Now</button>
+            </div> 
         </form>
     </div>
     <!-- end destination form search -->
@@ -323,7 +329,7 @@
     <div class="container">
         <div class="flex">
             <aside>
-                <div class="w-72 border border-neutral-100 rounded-2xl py-6 flex flex-col gap-4">
+                <div class="xl:w-72 lg:w-60 border hidden border-neutral-100 rounded-2xl py-6 lg:flex flex-col gap-4">
                     <div class="sidebar-destination px-5">
                         <div class="text-lg text-neutral-800 font-bold border-b border-neutral-100 pb-2">Destinations</div>
                         <div class="flex flex-col gap-1 mt-3">
@@ -499,14 +505,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
-                    <img src="./assets/ads-sidebar.png" class="w-full h-auto" alt="">
+                <div class="mt-12 lg:block hidden" >
+                    <img src="./assets/iklan-sidebar.png" class="w-full h-auto" alt="">
                 </div>
             </aside>
-            <div class="main pl-5 pt-5 flex-1">
+            <div class="main lg:pl-5 pl-0 pt-5 flex-1">
                 <div class="placeholder-main flex justify-between">
                     <div class="text-neutral-600 flex items-center gap-1">Found <span class="font-bold text-neutral-800">12 trips</span> for <span class="font-bold text-neutral-800">shoes for travel</span></div>
-                    <div class="flex gap-4 items-center">
+                    <div class="sm:flex hidden gap-4 items-center ">
                         <div class="text-neutral-800">Sort By</div>
                         <div class="dropdown cursor-pointer">
                             <input type="hidden" name="sortby" id="sortby">
@@ -516,10 +522,10 @@
                 </div>
 
                 <!-- list trips -->
-                <div class="flex mt-4 justify-between flex-wrap">
+                <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-3 mt-4">
                     
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -545,7 +551,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -571,7 +577,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -597,7 +603,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -623,7 +629,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -649,7 +655,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-4">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -675,7 +681,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-4">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -701,7 +707,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-4">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -727,7 +733,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-4">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -753,7 +759,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-4">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -779,7 +785,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-4">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">
@@ -805,7 +811,7 @@
                     </a>
                     <!-- end card trip -->
                     <!-- card trip -->
-                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden w-px-340 mb-4">
+                    <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-4">
                         <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
                         <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
                         <div class="flex px-5 py-2 gap-2 items-center">

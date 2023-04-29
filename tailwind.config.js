@@ -29,6 +29,9 @@ module.exports = {
         'px-340': '21.25rem',
         'px-435': '27.188rem'
       },
+      maxWidth: {
+        '435': '27.188rem'
+      },
       colors: {
         clifford: '#dadada',
         primary: '#F34646',

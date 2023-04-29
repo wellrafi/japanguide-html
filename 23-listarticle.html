@@ -39,8 +39,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./dist/output.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./scripts/tailwind-config.js"></script>
 
@@ -223,109 +222,123 @@
     </header>
     <!-- end header component -->
 
-    <!-- sitemap -->
-    <div class="max-w-6xl mx-auto lg:block hidden">
-        <div class="container mt-14">
-            <div class="link flex gap-2 text-gray-400 font-normal">
-                <a href="" class="underline">Home</a> 
-                <div>›</div> 
-                <a href="" class="underline">News</a> 
-                <div>›</div>
-                <div>Diam elit scelerisque fringilla egestas Elementum sed blandit vitae in</div>
-            </div>
-        </div>
-    </div>
-    <!-- end sitemap -->
+    <!-- content section -->
+    <div class="container mt-14">
+        <div class="flex lg:flex-row flex-col md:gap-10 gap-20">
 
-    <!-- header title -->
-    <div class="max-w-6xl mx-auto my-4 lg:mt-4 mt-8">
-        <div class="container">
-            <div class="flex gap-3 lg:flex-row flex-col">
-                <div class="title text-neutral-800 font-altebold font-bold lg:text-4xl sm:text-3xl text-2xl flex-1 sm:leading-normal leading-normal lg:leading-normal">Diam elit scelerisque fringilla egestas Elementum sed blandit vitae in.</div>
-                <div class="flex-col flex lg:w-auto w-full gap-5">
-                    <div class="profile flex lg:justify-between justify-start lg:w-72 md:w-full gap-2">
-                        <div class="lg:mr-0 mr-2"><img src="./assets/profile.png" class="w-12" alt=""></div>
-                        <div class="flex flex-col">
-                            <div class="flex lg:flex-col sm:flex-row flex-col lg:gap-0 sm:gap-10 gap-0 lg:justify-normal sm:justify-center justify-normal h-full lg:items-start sm:items-center items-start">
-                                <div class="flex flex-col">
-                                    <div class="text-neutral-400 text-sm">posted by</div>
-                                    <div class="text-neutral-800 sm:text-lg text-base font-altebold font-bold">Mana Normalin</div>
-                                </div>
-                                <div class="sm:flex flex-col hidden">
-                                    <div class="text-neutral-400 text-sm">Senior Writer - Traveler</div>
-                                    <div class="text-neutral-400 text-sm">Want to travel around the world</div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- list of Japan's news -->
+            <div class="news-list flex flex-col gap-6 flex-1">
+                <div class="flex justify-between items-center">
+                    <div class="text-neutral-800 lg:text-3xl md:text-2xl text-xl font-altebold font-bold md:pb-4 pb-2">Japan's news</div>
+                    <div class="flex gap-4">
+                        <div class="cursor-pointer"><i class="fi fi-br-list text-primary"></i></i></div>
+                        <div class="cursor-pointer"><i class="fi fi-br-grid"></i></div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- end header title -->
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-1.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Malesuada vulputate sed maecenas sed diam varius tincidunt. Nibh non quisque.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Placerat nunc consectetur sociis sapien arcu facilisi. In quam nulla sed vestibulum turpis morbi mollis odio vestibulum.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-2.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Enim hac quis scelerisque pellentesque semper placerat amet. Facilisis ridiculus non.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Fermentum dolor sed dui maecenas purus mauris semper sit. Odio sagittis eget tellus feugiat vestibulum. Sed elementum risus dolor.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-3.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Velit gravida sit tempus vestibulum. Quis proin integer at donec cursus dictum amet.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Integer elit proin eget in nunc morbi donec amet ac. Cursus aliquet risus enim odio porttitor at. Nec et ut suspendisse sed vulputate.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-4.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Augue risus eget sit ipsum. Ultrices cras accumsan ornare sed lorem. Odio ultricies.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Facilisis sit in orci nunc scelerisque et ut mus. Sagittis convallis congue viverra eget convallis. Mollis proin non mattis ante. In laoreet justo dui.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-4.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Augue risus eget sit ipsum. Ultrices cras accumsan ornare sed lorem. Odio ultricies.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Facilisis sit in orci nunc scelerisque et ut mus. Sagittis convallis congue viverra eget convallis. Mollis proin non mattis ante. In laoreet justo dui.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-4.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Augue risus eget sit ipsum. Ultrices cras accumsan ornare sed lorem. Odio ultricies.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Facilisis sit in orci nunc scelerisque et ut mus. Sagittis convallis congue viverra eget convallis. Mollis proin non mattis ante. In laoreet justo dui.</div>
+                    </div>
+                </a>
+                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
+                    <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
+                        <img src="./assets/related-news-4.png" class="w-full h-full object-cover rounded-xl" alt="">
+                    </div>
+                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-1 rounded-full bg-primary"></div>
+                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
+                        </div> 
+                        <div class="md:text-xl text-base font-bold font-altebold">Augue risus eget sit ipsum. Ultrices cras accumsan ornare sed lorem. Odio ultricies.</div>
+                        <div class="text-base text-neutral-400 md:block hidden">Facilisis sit in orci nunc scelerisque et ut mus. Sagittis convallis congue viverra eget convallis. Mollis proin non mattis ante. In laoreet justo dui.</div>
+                    </div>
+                </a>
 
-    <!-- little details -->
-    <div class="max-w-6xl mx-auto w-full">
-        <div class="container flex items-center gap-3 justify-between">
-            <div class="flex gap-2 text-gray-400">
-                <div class="sm:text-base text-sm">Feb 20</div>
-                <div class="sm:text-base text-sm">·</div>
-                <div class="sm:text-base text-sm">3 min read</div>
-            </div>
-            <div class="flex gap-6 text-gray-400 justify-end">
-                <div class="hidden sm:block">Share to</div>
-                <div class="flex sosmed sm:gap-5 gap-4">
-                    <a href="facebook.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-brands-facebook"></i></a>
-                    <a href="twitter.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-brands-twitter"></i></a>
-                    <a href="linkedin.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-brands-linkedin"></i></a>
-                    <a href="mylinks.com" class="text-neutral-500 hover:text-primary text-xl"><i class="fi fi-sr-link"></i></i></a>
+                <div class="text-center sm:mt-10 mt-2">
+                    <a href="" class="px-5 py-2 text-white rounded-xl bg-primary hover:bg-darkprimary duration-200">Load more news</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- end little details -->
+            <!-- end list of related news -->
 
-    <!-- image header -->
-    <div class="container my-10">
-        <img src="./assets/detail-news.png" class="rounded-3xl w-full h-auto" alt="">
-    </div>
-    <!-- end image header -->
+            <!-- sidebar -->
+            <div class="sidebar lg:flex-col flex-row flex-wrap flex gap-12 lg:max-w-sm w-full lg:max-w-none mt-16 xl:mt-0">
 
-    <!-- content -->
-    <div class="max-w-6xl mx-auto">
-        <div class="container flex lg:flex-row flex-col gap-10">
-
-            <!-- text content -->
-            <div class="text-content flex flex-col gap-6 flex-1">
-                <p class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
-                    Planning a trip to Japan can be a daunting experience for travelers unsure about where to go and how to get to places, and that is where having access to a travel concierge would be advantageous. Tourist information centers typically offer a wealth of travel information and are good places to visit for travel advice.
-                </p>
-                <p class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
-                    For visitors already in Tokyo, there are five Tokyo Tourist Information Centers located in areas popular with tourists and are also easy to access by public transport. Visitors can pick up brochures about Tokyo and its surroundings or consult a travel guide expert in person. Complementing the physical centers is the Online Tourist Guide service, which visitors can access outside of Tokyo or anywhere in the world for travel advice. Both the Tokyo Tourist Information Center and the Online Tourist Guide are useful services aimed at providing travelers with reccomendations and travel information based on their interests and needs.
-                </p>
-                <div class="text-center">
-                    <img src="./assets/content-image.png" class="rounded-2xl w-full h-auto" alt="">
-                    <p><i class="text-sm text-neutral-400 text-center">Main entrance to the Tokyo Tourist Information Center at the Shinjuku Expressway Bus Terminal (Busta Shinjuku)</i>                    </p>
-                </div>
-                <div class="lg:text-3xl text-xl mt-6 font-altebold">Online Tourist Guide</div>
-                <div class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
-                    The Online Tourist Guide is a free online service provided by the Tokyo Tourist Information Center with the goal of providing tourist information to travelers to Tokyo. As an online service, travelers can access it anywhere in the world before arriving or while they are on the road in Japan. This means that travelers can plan their trip in advance with the help of travel guide experts.
-                </div>
-                <div class="text-center">
-                    <img src="./assets/bg_discount.png" class="rounded-2xl h-full w-auto" alt="">
-                </div>
-                <p class="lg:text-lg text-base text-neutral-600 lg:leading-loose leading-loose text-justify">
-                    The online service is pretty straightforward to use. All you would need is a smartphone or a computer with a working speaker and microphone, then access the online tourist guide webpage and select your preferred language - English, Chinese, Korean and Japanese are available - finally, connect to a travel concierge.
-                </p>
-            </div>
-            <!-- end text content -->
-
-            <!-- sidebar content -->
-            <div class="sidebar flex flex-col gap-12 sm:border-0 border-y-4 border-neutral-100 sm:mt-0 mt-10 sm:pt-0 py-10">
-                
                 <!-- booking form -->
-                <form class="lg:max-w-sm bg-white rounded-2xl lg:px-6 sm:px-10 p-0 py-10 flex flex-col gap-4 sm:border sm:border-neutral-150">
-                    <div class="text-primary text-2xl font-altebold font-bold mb-2">Book Your Trip</div>
+                <form class="lg:max-w-sm w-full bg-white rounded-2xl lg:px-6 sm:px-6 p-0 py-6 flex flex-col gap-4 sm:border sm:border-neutral-150">
+                    <div class="text-primary text-2xl font-altebold font-bold mb-2 text-center">Book Your Trip</div>
                     <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
                         <label for="destination">
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
@@ -412,163 +425,45 @@
                 </form>
                 <!-- end booking form -->
 
-                <!-- latest news sidebar -->
-                <div class="latest-news lg:flex flex-col gap-4 lg:max-w-sm hidden">
-                    <div class="md:text-2xl text-lg font-altebold">Latest News</div>
-                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 md:w-px-340 lg:w-px-435 w-full hover:text-primary">
-                        <img src="./assets/latest-new-1.png" class="rounded-xl h-full" alt="">
-                        <div class="font-altebold text-lg p-4 pl-0">Aliquam vel nulla nunc facilisi velit quis aliquam sem urna. Feugiat.</div>
+                <!-- top destinations -->
+                <div class="flex gap-7 flex-wrap w-full">
+
+                    <!-- top destination title -->
+                    <div class="text-neutral-800 md:text-2xl text-xl font-altebold font-bold w-full">Top Destinations</div>
+                    <!-- end top destination title -->
+
+                    <!-- items of top destination -->
+                    <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-1.png');">
+                        <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hokkaido</div>
+                        <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
                     </a>
-                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 hover:text-primary">
-                        <img src="./assets/latest-new-2.png" class="rounded-xl h-full" alt="">
-                        <div class="font-altebold text-lg p-4 pl-0">Magnis sed enim integer tempus eu. Orci maecenas mus a orci.</div>
+                    <!-- end first top destination -->
+                    <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-2.png');">
+                        <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hiroshima</div>
+                        <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
                     </a>
-                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 hover:text-primary">
-                        <img src="./assets/latest-new-3.png" class="rounded-xl h-full" alt="">
-                        <div class="font-altebold text-lg p-4 pl-0">Egestas ligula nullam interdum sed sit ultricies scelerisque. Maecenas.</div>
+                    <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-3.png');">
+                        <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Okinawa</div>
+                        <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
                     </a>
-                    <a href="" class="card-news flex rounded-xl border border-neutral-100 items-center gap-4 hover:text-primary">
-                        <img src="./assets/latest-new-4.png" class="rounded-xl h-full" alt="">
-                        <div class="font-altebold text-lg p-4 pl-0">Imperdiet ut pharetra mattis hac. Ultricies vitae pellentesque.</div>
+                    <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-4.png');">
+                        <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Tokyo</div>
+                        <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
                     </a>
+                    <div class="md:mt-4 mt-6 w-full md:text-left text-center">
+                        <a href="" class="px-5 py-2 text-white rounded-xl bg-primary hover:bg-darkprimary duration-200">Check all destinations</a>
+                    </div>
+                    <!-- end items of top destination  -->
+
                 </div>
-                <!-- end latest news -->
+                <!-- end top destinations -->
 
             </div>
-            <!-- end sidebar content -->
+            <!-- end sidebar -->
 
         </div>
     </div>
-
-    <!-- prev next news -->
-    <div class="container mt-20">
-        <div class="flex md:justify-between justify-center gap-10">
-            <a class="prev lg:w-px-530 w-96 md:block hidden" href="">
-                <div class="flex items-center gap-4">
-                    <img src="./assets/icons/big-left-arrow.svg" class="lg:w-auto w-12" alt="">
-                    <div class="text-neutral-600 lg:text-xl text-base">Prev News</div>
-                </div>
-                <div class="lg:pl-20 pl-0 font-bold font-altebold lg:text-xl text-lg lg:ml-3 ml-0 text-neutral-800 hover:text-primary">Diam eu est condimentum proin fusce. Leo lacus euismod ac morbi nisi morbi aenean.</div>
-            </a>
-            <a class="next lg:w-px-530 w-96" href="">
-                <div class="flex items-center gap-4 md:justify-end justify-start">
-                    <div class="text-neutral-600 lg:text-xl text-base">Next News</div>
-                    <img src="./assets/icons/big-right-arrow.svg" class="lg:w-auto w-12" alt="">
-                </div>
-                <div class="lg:pl-20 pl-0 font-bold font-altebold lg:text-xl text-lg lg:ml-3 ml-0 text-neutral-800 hover:text-primary">Diam eu est condimentum proin fusce. Leo lacus euismod ac morbi nisi morbi aenean.</div>
-            </a>
-        </div>
-    </div>
-    <!-- end prev next news -->
-
-    <!-- line -->
-    <div class="line container py-20">
-        <div class="w-full h-1 bg-neutral-100"></div>
-    </div>
-    <!-- end line -->
-
-    <!-- bottom section -->
-    <div class="container">
-        <div class="flex lg:flex-row flex-col md:gap-10 gap-20">
-
-            <!-- list of related news -->
-            <div class="news-list flex flex-col gap-6 flex-1">
-                <div class="text-neutral-800 lg:text-3xl md:text-2xl text-xl font-altebold font-bold md:pb-10 pb-2">Related news</div>
-                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
-                    <div class="xl:w-80 md:w-44 sm:w-40 w-full h-auto overflow-hidden" >
-                        <img src="./assets/related-news-1.png" class="w-full h-full object-cover rounded-xl" alt="">
-                    </div>
-                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-1 rounded-full bg-primary"></div>
-                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
-                        </div> 
-                        <div class="md:text-xl text-base font-bold font-altebold">Malesuada vulputate sed maecenas sed diam varius tincidunt. Nibh non quisque.</div>
-                        <div class="text-base text-neutral-400 md:block hidden">Placerat nunc consectetur sociis sapien arcu facilisi. In quam nulla sed vestibulum turpis morbi mollis odio vestibulum.</div>
-                    </div>
-                </a>
-                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
-                    <div class="xl:w-80 md:w-44 sm:w-40 w-full h-auto overflow-hidden" >
-                        <img src="./assets/related-news-2.png" class="w-full h-full object-cover rounded-xl" alt="">
-                    </div>
-                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-1 rounded-full bg-primary"></div>
-                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
-                        </div> 
-                        <div class="md:text-xl text-base font-bold font-altebold">Enim hac quis scelerisque pellentesque semper placerat amet. Facilisis ridiculus non.</div>
-                        <div class="text-base text-neutral-400 md:block hidden">Fermentum dolor sed dui maecenas purus mauris semper sit. Odio sagittis eget tellus feugiat vestibulum. Sed elementum risus dolor.</div>
-                    </div>
-                </a>
-                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
-                    <div class="xl:w-80 md:w-44 sm:w-40 w-full h-auto overflow-hidden" >
-                        <img src="./assets/related-news-3.png" class="w-full h-full object-cover rounded-xl" alt="">
-                    </div>
-                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-1 rounded-full bg-primary"></div>
-                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
-                        </div> 
-                        <div class="md:text-xl text-base font-bold font-altebold">Velit gravida sit tempus vestibulum. Quis proin integer at donec cursus dictum amet.</div>
-                        <div class="text-base text-neutral-400 md:block hidden">Integer elit proin eget in nunc morbi donec amet ac. Cursus aliquet risus enim odio porttitor at. Nec et ut suspendisse sed vulputate.</div>
-                    </div>
-                </a>
-                <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
-                    <div class="xl:w-80 md:w-44 sm:w-40 w-full h-auto overflow-hidden" >
-                        <img src="./assets/related-news-4.png" class="w-full h-full object-cover rounded-xl" alt="">
-                    </div>
-                    <div class="flex flex-col md:gap-3 gap-1 sm:py-4 py-2 flex-1">
-                        <div class="flex items-center gap-2">
-                            <div class="w-6 h-1 rounded-full bg-primary"></div>
-                            <div class="text-neutral-400 md:text-base text-sm">Destinations</div>
-                        </div> 
-                        <div class="md:text-xl text-base font-bold font-altebold">Augue risus eget sit ipsum. Ultrices cras accumsan ornare sed lorem. Odio ultricies.</div>
-                        <div class="text-base text-neutral-400 md:block hidden">Facilisis sit in orci nunc scelerisque et ut mus. Sagittis convallis congue viverra eget convallis. Mollis proin non mattis ante. In laoreet justo dui.</div>
-                    </div>
-                </a>
-
-                <div class="text-center sm:mt-10 mt-2">
-                    <a href="" class="px-5 py-2 text-white rounded-xl bg-primary hover:bg-darkprimary duration-200">Check all news</a>
-                </div>
-            </div>
-            <!-- end list of related news -->
-
-            <!-- list related destinations -->
-            <div class="sidebar lg:flex-col flex-row flex-wrap flex lg:gap-6 gap-4 xl:max-w-sm xl:w-full lg:w-80 lg:max-w-none">
-
-                <!-- title related destinations -->
-                <div class="text-neutral-800 lg:text-3xl md:text-2xl text-xl font-altebold font-bold sm:pb-10 pb-2 w-full">Related destinations</div>
-                <!-- end title related destinations -->
-
-                <!-- items of related destinations -->
-                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-1.png');">
-                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hokkaido</div>
-                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
-                </a>
-                <!-- end first item of related destinations -->
-                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-2.png');">
-                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Hiroshima</div>
-                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
-                </a>
-                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-3.png');">
-                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Okinawa</div>
-                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
-                </a>
-                <a href="" class="relative lg:w-full md:w-80 sm:w-72 w-full md:h-52 h-40 rounded-2xl flex items-end justify-center overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/related-desti-4.png');">
-                    <div class="text-white lg:text-2xl text-lg font-altebold z-10 mb-3">Tokyo</div>
-                    <div class="h-14 absolute w-full bottom-0 left-0 bg-gradient-to-t from-black to-transparent z-0 opacity-80"></div>
-                </a>
-                <div class="md:mt-4 mt-6 w-full md:text-left text-center">
-                    <a href="" class="px-5 py-2 text-white rounded-xl bg-primary hover:bg-darkprimary duration-200">Check all destinations</a>
-                </div>
-                <!-- end items of related destinations  -->
-
-            </div>
-            <!-- end list related destinations -->
-
-        </div>
-    </div>
-    <!-- end bottom section -->
+    <!-- end content section -->
 
     <!-- footer -->
     <footer class="bg-neutral-50 pt-28 mt-28">
@@ -640,6 +535,7 @@
     <!-- end footer -->
 
     <script src="./scripts/script.js"></script>
+
 
 </body>
 </html>
