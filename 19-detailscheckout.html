@@ -42,12 +42,286 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./scripts/tailwind-config.js"></script>
 
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
 </head>
-<body>
+<body class="sm:bg-neutral-100 bg-white">
     
-    <div class="w-full h-full flex items-center justify-center p-10">
-        <div class="text-2xl md:text-4xl font-altebold font-bold text-primary">Will be ready soon, ASAP</div>
+    <!-- top header -->
+    <header class="container">
+
+        <!-- top navbar -->
+        <div class="header-top">
+            <div class="mx-auto py-7 container">
+                <div class="flex sm:justify-between justify-center items-center">
+
+                    <!-- left top navbar / logo -->
+                    <a href="/"><img src="./assets/logo.png" alt=""></a>
+                    <!-- end left top navbar / logo -->
+
+                    <!-- right top navbar -->
+                    <div class="sm:flex hidden gap-3 items-center">
+
+                        <!-- currency switch -->
+                        <div class="flex gap-3 cursor-pointer items-center">
+                            <div class="text-base text-gray-800">1,000 MNT</div>
+                            <img src="./assets/icons/swap-read.svg" alt="">
+                            <div class="text-base text-gray-800	">39.4 JPY</div>
+                        </div>
+                        <!-- end currency switch -->
+
+                        <div class="fw-bold">·</div>
+
+                        <!-- languange dropdown -->
+                        <div class="cursor-pointer">
+                            <div class="dropdown inline-block relative">
+                                <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
+                                <ul class="dropdown-menu absolute shadow-lg hidden right-0 z-20 overflow-hidden rounded-lg">
+                                    <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
+                                    <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
+                                    <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end languange dropdown -->
+
+                    </div>
+                    <!-- end right top navbar -->
+                </div>
+            </div>
+        </div>
+        <!-- end top navbar -->
+
+    </header>
+    <!-- end top header -->
+
+    <!-- back to contact details -->
+    <div class="container">
+        <a class="flex items-center gap-3">
+            <img src="./assets/icons/arrow-left-gray.svg" alt="">
+            <div class="text-neutral-500">Back to contact details</div>
+        </a>
     </div>
+    <!-- end back to contact details -->
+    
+    <!-- content payment -->
+    <div class="flex lg:flex-row flex-col gap-6 container mt-7">
+        
+        <!-- form -->
+        <form action="" class="rounded-3xl bg-white sm:border border-none border-neutral-100 sm:px-9 px-0 py-10 flex-1 pb-12">
+            <div class="title text-neutral-800 text-2xl font-altebold font-bold">Payment details</div>
+            <div class="mt-6 flex sm:flex-row flex-col gap-5" >
+                <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-600 flex gap-2 items-center cursor-pointer">
+                    <img src="./assets/icons/visacard.svg" class="h-4 w-auto" alt="">
+                    <div class="text-base text-neutral-600">Credit/Debit Card</div>
+                </div>
+                <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-100 flex gap-2 items-center cursor-pointer">
+                    <img src="./assets/icons/paypal.svg" class="h-4 w-auto" alt="">
+                    <div class="text-base text-neutral-600">Paypal</div>
+                </div>
+            </div>
+            <div class="detail-payment-input mt-8">
+                <div class="form-input flex flex-col gap-4">
+                    <label for="credit-number">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Credit/Debit Card Number*</span>
+                        <input name="text" id="credit-number" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                    </label>
+                    <label for="credit-name">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Cardholder Name*</span>
+                        <input name="text" id="credit-name" placeholder="Type your cardholder name" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                    </label>
+                    <div class="flex w-full gap-4">
+                        <label for="exp" class="flex-1">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Expiration Date*</span>
+                            <input name="text" id="exp" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                        </label>
+                        <label for="cvc" class="flex-1">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">CVC*</span>
+                            <input name="text" id="cvc" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="billing-address mt-8">
+                <div class="title text-neutral-800 text-2xl font-altebold font-bold">Billing Address</div>
+                <div class="form-input flex flex-col gap-4 mt-6">
+                    <div class="flex w-full gap-4">
+                        <label for="country" class="flex-1">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Country</span>
+                            <input name="text" id="country" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                        </label>
+                        <label for="zip" class="flex-1">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Postal/Zip Code</span>
+                            <input name="text" id="zip" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                        </label>
+                    </div>
+                    <label for="address">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Address</span>
+                        <input name="text" id="address" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                    </label>
+
+                </div>
+            </div>
+        </form>
+
+        <!-- sidebar order list -->
+        <aside class="lg:max-w-md max-w-none w-full py-8 rounded-2xl bg-white sm:border border-none border-neutral-100">
+
+            <!-- title sidebar -->
+            <div class="title font-bold font-altebold text-xl text-neutral-800 sm:px-6 px-4">Summary</div>
+            <!-- end title sidebar -->
+
+            <!-- order list -->
+            <div class="list-order flex flex-col gap-4 mt-4 sm:px-6 px-0">
+
+                <!-- item order -->
+                <div class="flex gap-3 order-item">
+                    <img src="./assets/list-order-1.png" class="rounded-xl sm:w-20 sm:h-20 h-14 w-14 object-cover" alt="">
+                    <div class="text-order">
+                        <div class="text-sm text-neutral-800 font-alte">Tincidunt ut convallis tellus faucibus. Ultrices vel proin vel cum imperdiet tincidunt.</div>
+                        <div class="flex flex-row text-neutral-400 flex-wrap text-xs mt-1">
+                            <div class="mr-2">Tuesday, 21 February 2023</div>
+                            <div class="mr-2">-</div>
+                            <div class="mr-2">09:00 AM</div>
+                            <div class="mr-2">-</div>
+                            <div class="mr-2">2 Adults & 2 Kids</div>
+                        </div>
+                        <div class="flex sm:flex-row flex-col sm:items-center items-start sm:justify-between justify-start">
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class="font-bold text-neutral-800 text-base">₮ 170,370</div>
+                                <img src="./assets/icons/swap-gray.svg" alt="">
+                                <div class="font-bold text-neutral-800 text-base">¥ 6,807</div>
+                            </div>
+                            <div class="flex items-center gap-2 cursor-pointer">
+                                <i class="fi fi-sr-trash text-neutral-400 mt-1"></i>
+                                <div class="text-neutral-400 text-sm font-normal">Remove</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-neutral-100"></div>
+                <div class="flex gap-3 order-item">
+                    <img src="./assets/list-order-1.png" class="rounded-xl sm:w-20 sm:h-20 h-14 w-14 object-cover" alt="">
+                    <div class="text-order">
+                        <div class="text-sm text-neutral-800 font-alte">Tincidunt ut convallis tellus faucibus. Ultrices vel proin vel cum imperdiet tincidunt.</div>
+                        <div class="flex flex-row text-neutral-400 flex-wrap text-xs mt-1">
+                            <div class="mr-2">Tuesday, 21 February 2023</div>
+                            <div class="mr-2">-</div>
+                            <div class="mr-2">09:00 AM</div>
+                            <div class="mr-2">-</div>
+                            <div class="mr-2">2 Adults & 2 Kids</div>
+                        </div>
+                        <div class="flex sm:flex-row flex-col sm:items-center items-start sm:justify-between justify-start">
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class="font-bold text-neutral-800 text-base">₮ 170,370</div>
+                                <img src="./assets/icons/swap-gray.svg" alt="">
+                                <div class="font-bold text-neutral-800 text-base">¥ 6,807</div>
+                            </div>
+                            <div class="flex items-center gap-2 cursor-pointer">
+                                <i class="fi fi-sr-trash text-neutral-400 mt-1"></i>
+                                <div class="text-neutral-400 text-sm font-normal">Remove</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end order item -->
+
+            </div>
+            <!-- end order list -->
+
+            <!-- line -->
+            <div class="border-t-2 my-4 border-neutral-100"></div>
+            <!-- end line -->
+
+            <!-- claim code -->
+            <div class="sm:px-6 px-0 pt-2">
+                <div class="input-group flex items-center">
+                    <input type="text" placeholder="type your code here" class="w-full h-12 rounded-l-xl border-neutral-200 border bg-neutral-50 border-r-0 flex-1 outline-none pl-4">
+                    <button class="h-12 px-4 text-primary font-bold border-neutral-200 bg-neutral-50 border border-l-0 rounded-r-xl text-base">Claim</button>
+                </div>
+            </div>
+            <!-- claim code  -->
+
+            <!-- price details -->
+            <div class="flex flex-col sm:px-6 px-0 pt-4 gap-4">
+                <div class="flex flex-row justify-between items-center w-full">
+                    <div class="sm:text-base text-sm text-neutral-500">Booking fee</div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <div class="font-bold text-neutral-500 sm:text-lg text-base">₮ 0</div>
+                        <img src="./assets/icons/swap-gray.svg" alt="">
+                        <div class="font-bold text-neutral-500 sm:text-lg text-base">¥ 0</div>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-between items-center w-full">
+                    <div class="sm:text-base text-sm text-neutral-500">2 trips</div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <div class="font-bold text-neutral-500 sm:text-lg text-base">₮ 340,740</div>
+                        <img src="./assets/icons/swap-gray.svg" alt="">
+                        <div class="font-bold text-neutral-500 sm:text-lg text-base">¥ 13,614</div>
+                    </div>
+                </div>
+            </div>
+            <!-- end pridce details -->
+
+            <!-- line -->
+            <div class="border-t-2 my-4 border-neutral-100"></div>
+            <!-- end line -->
+
+            <!-- total price -->
+            <div class="flex flex-col sm:px-6 px-0 gap-4">
+                <div class="flex flex-row justify-between items-center w-full">
+                    <div class="text-lg text-neutral-800 font-altebold font-bold">Total</div>
+                    <div class="flex items-center gap-2 mt-1">
+                        <div class="font-bold font-altebold text-neutral-800 text-xl">₮ 340,740</div>
+                        <img src="./assets/icons/swap-gray.svg" alt="">
+                        <div class="font-bold font-altebold text-neutral-800 text-xl">¥ 13,614</div>
+                    </div>
+                </div>
+            </div>
+            <!-- end total price -->
+
+            <!-- button next -->
+            <div class="button sm:px-6 px-0 pt-5">
+                <div class="text-neutral-400">no additional taxes and fee </div>
+                <a href="" class="mt-2 hover:bg-darkprimary duration-200 bg-primary w-full flex items-center justify-center rounded-xl h-16 text-white">Next</a>
+            </div>
+            <div class="sm:px-6 px-0 mt-2">
+                <a href="" class="flex gap-2">
+                    <i class="fi fi-sr-edit text-base text-neutral-400"></i>
+                    <div class="text-neutral-400 text-base">Add note</div>
+                </a>
+            </div>
+            <!-- end button next -->
+
+        </aside>
+        <!-- end sidebar order list -->
+
+        <!-- end form -->
+
+    </div>
+
+    <!-- footer -->
+    <footer class="container sm:mt-40 mt-52">
+        <div class="border-t-2 border-neutral-200"></div>
+        <div class="flex justify-between items-center py-10 lg:flex-row flex-col-reverse gap-6">
+
+            <!-- copyright -->
+            <div class="copyright sm:text-base text-sm text-neutral-400">Copyright © 1996-2023 japanguide.mn All Rights Reserved.</div>
+            <!-- end copyright -->
+
+            <!-- footer links -->
+            <div class="flex sm:gap-10 gap-0 sm:justify-normal justify-between w-full">
+                <a href="/policy" class="sm:text-base text-sm text-neutral-600">Privacy Policy</a>
+                <a href="/terms" class="sm:text-base text-sm text-neutral-600">Terms of service</a>
+                <a href="/faq" class="sm:text-base text-sm text-neutral-600">FAQ</a>
+            </div>
+            <!-- end footer links -->
+            
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="./scripts/script.js"></script>
 
 </body>
 </html>
