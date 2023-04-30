@@ -108,67 +108,51 @@
     <div class="flex lg:flex-row flex-col gap-6 container mt-7">
         
         <!-- form -->
-        <form action="" class="rounded-3xl bg-white sm:border border-none border-neutral-100 sm:px-9 px-0 py-10 flex-1 pb-12">
-            <div class="title text-neutral-800 text-2xl font-altebold font-bold">Payment details</div>
-            <div class="mt-6 flex sm:flex-row flex-col gap-5" >
-                <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-600 flex gap-2 items-center cursor-pointer">
-                    <img src="./assets/icons/visacard.svg" class="h-4 w-auto" alt="">
-                    <div class="text-base text-neutral-600">Credit/Debit Card</div>
-                </div>
-                <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-100 flex gap-2 items-center cursor-pointer">
-                    <img src="./assets/icons/paypal.svg" class="h-4 w-auto" alt="">
-                    <div class="text-base text-neutral-600">Paypal</div>
-                </div>
-            </div>
-            <div class="detail-payment-input mt-8">
-                <div class="form-input flex flex-col gap-4">
-                    <label for="credit-number">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Credit/Debit Card Number*</span>
-                        <input name="text" id="credit-number" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                    </label>
-                    <label for="credit-name">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Cardholder Name*</span>
-                        <input name="text" id="credit-name" placeholder="Type your cardholder name" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                    </label>
-                    <div class="flex w-full gap-4">
-                        <label for="exp" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Expiration Date*</span>
-                            <input name="text" id="exp" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+        <div class="flex-1 form">
+            <form action="" class="rounded-3xl bg-white sm:border border-none border-neutral-100 sm:px-9 px-0 py-10 pb-20">
+                <div class="contact-details">
+                    <div class="title text-neutral-800 text-2xl font-altebold font-bold">Contact details</div>
+                    <div class="form-input flex flex-col gap-4 mt-6">
+                        <div class="flex sm:flex-row flex-col w-full gap-4">
+                            <label for="fist_name" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">First Name*</span>
+                                <input name="text" id="fist_name" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                            <label for="last_name" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">Last Name*</span>
+                                <input name="text" id="last_name" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                        </div>
+                        <div class="flex sm:flex-row flex-col w-full gap-4">
+                            <label for="email" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">Email*</span>
+                                <input name="email" id="email" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                            <label for="phone_number" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">Phone number*</span>
+                                <input name="text" id="phone_number" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                        </div>
+                        <label for="address_pickup">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Address pick up*</span>
+                            <input name="text" id="address_pickup" placeholder="type address to we pick up you" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
                         </label>
-                        <label for="cvc" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">CVC*</span>
-                            <input name="text" id="cvc" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                        <label for="tour_lang" class="xl:w-1/2 w-full">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Tour/Activity Languange</span>
+                            <input name="text" id="tour_lang" placeholder="type your main languange" class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
                         </label>
+    
                     </div>
                 </div>
-            </div>
-            <div class="billing-address mt-8">
-                <div class="title text-neutral-800 text-2xl font-altebold font-bold">Billing Address</div>
-                <div class="form-input flex flex-col gap-4 mt-6">
-                    <div class="flex w-full gap-4">
-                        <label for="country" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Country</span>
-                            <input name="text" id="country" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                        </label>
-                        <label for="zip" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Postal/Zip Code</span>
-                            <input name="text" id="zip" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                        </label>
-                    </div>
-                    <label for="address">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Address</span>
-                        <input name="text" id="address" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                    </label>
-
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
+        <!-- end form -->
 
         <!-- sidebar order list -->
-        <aside class="lg:max-w-md max-w-none w-full py-8 rounded-2xl bg-white sm:border border-none border-neutral-100">
+        <aside class="xl:max-w-md lg:max-w-sm max-w-none w-full py-8 rounded-2xl bg-white sm:border border-none border-neutral-100">
 
             <!-- title sidebar -->
-            <div class="title font-bold font-altebold text-xl text-neutral-800 sm:px-6 px-4">Summary</div>
+            <div class="title font-bold font-altebold text-xl text-neutral-800 sm:px-6 px-0">Summary</div>
             <!-- end title sidebar -->
 
             <!-- order list -->
@@ -296,8 +280,6 @@
         </aside>
         <!-- end sidebar order list -->
 
-        <!-- end form -->
-
     </div>
 
     <!-- footer -->
@@ -310,7 +292,7 @@
             <!-- end copyright -->
 
             <!-- footer links -->
-            <div class="flex sm:gap-10 gap-0 sm:justify-normal justify-between w-full">
+            <div class="flex sm:gap-10 gap-0 sm:justify-normal justify-between sm:w-auto w-full">
                 <a href="/policy" class="sm:text-base text-sm text-neutral-600">Privacy Policy</a>
                 <a href="/terms" class="sm:text-base text-sm text-neutral-600">Terms of service</a>
                 <a href="/faq" class="sm:text-base text-sm text-neutral-600">FAQ</a>

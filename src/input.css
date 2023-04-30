@@ -147,3 +147,17 @@
   display: block !important;
 }
 /* end dropdown trips  */
+
+
+/* cart order item */
+.cart-order-item.active_element{
+  border-width: 2px;
+  border-color: #e5e5e5;
+}
+@media screen and (max-width: 641px) {
+  .cart-order-item.active_element{
+    border-width: 0px;
+    border-bottom-width: 2px;
+  }
+}
+/* end cart order item */

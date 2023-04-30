@@ -108,64 +108,76 @@
     <div class="flex lg:flex-row flex-col gap-6 container mt-7">
         
         <!-- form -->
-        <form action="" class="rounded-3xl bg-white sm:border border-none border-neutral-100 sm:px-9 px-0 py-10 flex-1 pb-12">
-            <div class="title text-neutral-800 text-2xl font-altebold font-bold">Payment details</div>
-            <div class="mt-6 flex sm:flex-row flex-col gap-5" >
-                <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-600 flex gap-2 items-center cursor-pointer">
-                    <img src="./assets/icons/visacard.svg" class="h-4 w-auto" alt="">
-                    <div class="text-base text-neutral-600">Credit/Debit Card</div>
+        <div class="form flex-1">
+            <form action="" class="rounded-3xl bg-white sm:border border-none border-neutral-100 sm:px-9 px-0 py-10 pb-14">
+                <div class="title text-neutral-800 text-2xl font-altebold font-bold">Payment details</div>
+                <div class="mt-6 flex sm:flex-row flex-col gap-5" >
+                    <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-600 flex gap-2 items-center cursor-pointer">
+                        <img src="./assets/icons/visacard.svg" class="h-4 w-auto" alt="">
+                        <div class="text-base text-neutral-600">Credit/Debit Card</div>
+                    </div>
+                    <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-100 flex gap-2 items-center cursor-pointer">
+                        <img src="./assets/icons/paypal.svg" class="h-4 w-auto" alt="">
+                        <div class="text-base text-neutral-600">Paypal</div>
+                    </div>
                 </div>
-                <div class="payment-method-item h-14 px-5 rounded-xl border-2 border-neutral-100 flex gap-2 items-center cursor-pointer">
-                    <img src="./assets/icons/paypal.svg" class="h-4 w-auto" alt="">
-                    <div class="text-base text-neutral-600">Paypal</div>
-                </div>
-            </div>
-            <div class="detail-payment-input mt-8">
-                <div class="form-input flex flex-col gap-4">
-                    <label for="credit-number">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Credit/Debit Card Number*</span>
-                        <input name="text" id="credit-number" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                    </label>
-                    <label for="credit-name">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Cardholder Name*</span>
-                        <input name="text" id="credit-name" placeholder="Type your cardholder name" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                    </label>
-                    <div class="flex w-full gap-4">
-                        <label for="exp" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Expiration Date*</span>
-                            <input name="text" id="exp" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                <div class="detail-payment-input mt-8">
+                    <div class="form-input flex flex-col gap-4">
+                        <label for="credit-number">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Credit/Debit Card Number*</span>
+                            <input name="text" id="credit-number" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
                         </label>
-                        <label for="cvc" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">CVC*</span>
-                            <input name="text" id="cvc" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                        <label for="credit-name">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Cardholder Name*</span>
+                            <input name="text" id="credit-name" placeholder="Type your cardholder name" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                        </label>
+                        <div class="flex w-full gap-4">
+                            <label for="exp" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">Expiration Date*</span>
+                                <input name="text" id="exp" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                            <label for="cvc" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">CVC*</span>
+                                <input name="text" id="cvc" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="billing-address mt-8">
+                    <div class="title text-neutral-800 text-2xl font-altebold font-bold">Billing Address</div>
+                    <div class="form-input flex flex-col gap-4 mt-6">
+                        <div class="flex w-full gap-4">
+                            <label for="country" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">Country</span>
+                                <input name="text" id="country" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                            <label for="zip" class="flex-1">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">Postal/Zip Code</span>
+                                <input name="text" id="zip" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
+                            </label>
+                        </div>
+                        <label for="address">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Address</span>
+                            <input name="text" id="address" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
                         </label>
                     </div>
                 </div>
-            </div>
-            <div class="billing-address mt-8">
-                <div class="title text-neutral-800 text-2xl font-altebold font-bold">Billing Address</div>
-                <div class="form-input flex flex-col gap-4 mt-6">
-                    <div class="flex w-full gap-4">
-                        <label for="country" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Country</span>
-                            <input name="text" id="country" placeholder="MM/YY" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                        </label>
-                        <label for="zip" class="flex-1">
-                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Postal/Zip Code</span>
-                            <input name="text" id="zip" placeholder="***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                        </label>
-                    </div>
-                    <label for="address">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Address</span>
-                        <input name="text" id="address" placeholder="**** ****** ***" required class="border-neutral-200 border px-5 w-full rounded-xl h-14 bg-neutral-50 outline-none" />
-                    </label>
+            </form>
+        </div>
+        <!-- end form -->
 
-                </div>
-            </div>
-        </form>
-        <aside class="lg:max-w-md max-w-none w-full py-8 rounded-2xl bg-white sm:border border-none border-neutral-100">
-            <div class="title font-bold font-altebold text-xl text-neutral-800 sm:px-6 px-4">Summary</div>
+
+        <!-- sidebar order list -->
+        <aside class="xl:max-w-md lg:max-w-md max-w-none w-full py-8 rounded-2xl bg-white sm:border border-none border-neutral-100">
+
+            <!-- title sidebar -->
+            <div class="title font-bold font-altebold text-xl text-neutral-800 sm:px-6 px-0">Summary</div>
+            <!-- end title sidebar -->
+
+            <!-- order list -->
             <div class="list-order flex flex-col gap-4 mt-4 sm:px-6 px-0">
+
+                <!-- item order -->
                 <div class="flex gap-3 order-item">
                     <img src="./assets/list-order-1.png" class="rounded-xl sm:w-20 sm:h-20 h-14 w-14 object-cover" alt="">
                     <div class="text-order">
@@ -215,14 +227,25 @@
                         </div>
                     </div>
                 </div>
+                <!-- end order item -->
+
             </div>
+            <!-- end order list -->
+
+            <!-- line -->
             <div class="border-t-2 my-4 border-neutral-100"></div>
+            <!-- end line -->
+
+            <!-- claim code -->
             <div class="sm:px-6 px-0 pt-2">
                 <div class="input-group flex items-center">
                     <input type="text" placeholder="type your code here" class="w-full h-12 rounded-l-xl border-neutral-200 border bg-neutral-50 border-r-0 flex-1 outline-none pl-4">
                     <button class="h-12 px-4 text-primary font-bold border-neutral-200 bg-neutral-50 border border-l-0 rounded-r-xl text-base">Claim</button>
                 </div>
             </div>
+            <!-- claim code  -->
+
+            <!-- price details -->
             <div class="flex flex-col sm:px-6 px-0 pt-4 gap-4">
                 <div class="flex flex-row justify-between items-center w-full">
                     <div class="sm:text-base text-sm text-neutral-500">Booking fee</div>
@@ -241,7 +264,13 @@
                     </div>
                 </div>
             </div>
+            <!-- end price details -->
+
+            <!-- line -->
             <div class="border-t-2 my-4 border-neutral-100"></div>
+            <!-- end line -->
+
+            <!-- total price -->
             <div class="flex flex-col sm:px-6 px-0 gap-4">
                 <div class="flex flex-row justify-between items-center w-full">
                     <div class="text-lg text-neutral-800 font-altebold font-bold">Total</div>
@@ -252,9 +281,12 @@
                     </div>
                 </div>
             </div>
+            <!-- end total price -->
+
+            <!-- button next -->
             <div class="button sm:px-6 px-0 pt-5">
                 <div class="text-neutral-400">no additional taxes and fee </div>
-                <a href="" class="mt-2 hover:bg-darkprimary duration-200 bg-primary w-full flex items-center justify-center rounded-xl h-16 text-white">Next</a>
+                <a href="" class="mt-2 hover:bg-darkprimary duration-200 bg-primary w-full flex items-center justify-center rounded-xl h-16 text-white">Pay now</a>
             </div>
             <div class="sm:px-6 px-0 mt-2">
                 <a href="" class="flex gap-2">
@@ -262,22 +294,33 @@
                     <div class="text-neutral-400 text-base">Add note</div>
                 </a>
             </div>
+            <!-- end button next -->
+
         </aside>
-        <!-- end form -->
+        <!-- end sidebar order list -->
 
     </div>
 
+    <!-- footer -->
     <footer class="container sm:mt-40 mt-52">
         <div class="border-t-2 border-neutral-200"></div>
         <div class="flex justify-between items-center py-10 lg:flex-row flex-col-reverse gap-6">
+
+            <!-- copyright -->
             <div class="copyright sm:text-base text-sm text-neutral-400">Copyright © 1996-2023 japanguide.mn All Rights Reserved.</div>
-            <div class="flex sm:gap-10 gap-0 sm:justify-normal justify-between w-full">
+            <!-- end copyright -->
+
+            <!-- footer links -->
+            <div class="flex sm:gap-10 gap-0 sm:justify-normal justify-between sm:w-auto w-full">
                 <a href="/policy" class="sm:text-base text-sm text-neutral-600">Privacy Policy</a>
                 <a href="/terms" class="sm:text-base text-sm text-neutral-600">Terms of service</a>
                 <a href="/faq" class="sm:text-base text-sm text-neutral-600">FAQ</a>
             </div>
+            <!-- end footer links -->
+            
         </div>
     </footer>
+    <!-- end footer -->
 
     <script src="./scripts/script.js"></script>
 
