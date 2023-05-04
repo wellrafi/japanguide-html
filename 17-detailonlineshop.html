@@ -40,14 +40,655 @@
 
     <link rel="stylesheet" href="./dist/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./scripts/tailwind-config.js"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
 </head>
 <body>
     
-    <div class="w-full h-full flex items-center justify-center p-10">
-        <div class="text-2xl md:text-4xl font-altebold font-bold text-primary">Will be ready soon, ASAP</div>
+    <!-- header component -->
+    <header class="relative">
+
+        <!-- mobile background layer -->
+        <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"></div>
+        <!-- end mobile background layer -->
+
+        <!-- mobile menu -->
+        <div class="mobile-menu fixed -left-80 top-0 w-80 h-full bg-white z-20 overflow-y-scroll">
+            <div class="px-6 m-auto pt-5 pb-4 h-full">
+                <div class="mobile-nav-menus flex flex-col justify-between">
+                    <div class="mobile-top-nav-menus">
+                        <div class="flex justify-between items-center mb-5">
+                            <img src="./assets/logo.png" height="30" alt="">
+                            <div class="close cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"><img src="./assets/icons/close-black.svg" alt=""></div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Shop</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Good to know</a>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
+                            <div class="mobile-dropdown-trigger cursor-pointer">
+                                <div class="text-base text-gray-800 flex py-4 block flex justify-between ">
+                                    <span>Destinations</span> 
+                                    <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
+                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                            </div>
+                        </div>
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <a href="" class="text-base text-gray-800 py-4 block">Services</a>
+                        </div>
+                    
+                    </div>
+                    <div class="mobile-bottom-nav-menus">
+                        <div class="mobile-nav-item border-b border-gray-200">
+                            <div class="mobile-dropdown-trigger">
+                                <a href="" class="text-base text-gray-800 flex py-4 flex justify-between">
+                                    <span>Sign in</span> 
+                                    <img src="./assets/icons/user.svg" class="h-6" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end mobile menu -->
+
+        <!-- top navbar -->
+        <div class="header-top sm:block hidden">
+            <div class="mx-auto pt-3 pb-3 container">
+                <div class="flex sm:justify-between justify-center">
+                    <!-- left top navbar / weather -->
+                    <div class="sm:flex gap-3 hidden">
+                        <img src="./assets/icons/cloud.svg" alt="">
+                        <div class="text-base text-gray-800	">21°C, Cloudy</div>
+                    </div>
+                    <!-- end left top navbar / weather -->
+                    <!-- right top navbar -->
+                    <div class="flex gap-3">
+                        <!-- currency switch -->
+                        <div class="flex gap-3 cursor-pointer swap">
+                            <div class="text-base text-gray-800">1,000 MNT</div>
+                            <img src="./assets/icons/swap-read.svg" alt="">
+                            <div class="text-base text-gray-800	">39.4 JPY</div>
+                        </div>
+                        <!-- end currency switch -->
+                        <div class="fw-bold">·</div>
+                        <!-- languange dropdown -->
+                        <div class="cursor-pointer">
+                            <div class="dropdown inline-block relative">
+                                <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
+                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-20 overflow-hidden rounded-lg">
+                                    <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
+                                    <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
+                                    <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end languange dropdown -->
+                    </div>
+                    <!-- end right top navbar -->
+                </div>
+            </div>
+        </div>
+        <!-- end top navbar -->
+
+        <!-- line header -->
+        <div class="container header-line">
+            <div class="border-b border-gray-100"></div>
+        </div>
+        <!-- end line header -->
+
+        <!-- bottom navigation -->
+        <nav class="border-b border-gray-100">
+            <div class="mx-auto container py-7">
+                <div class="flex justify-between items-center flex-1 relative">
+                    <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])">
+                        <div class="hamburger">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="nav-menu lg:flex xl:gap-10 gap-6 hidden">
+                        <div class="nav-item"><a href="" class="text-lg">Destinations</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Shop</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">Good to know</a></div>
+                        <div class="nav-item"><a href="" class="text-lg">News</a></div>
+                    </div>
+                    <a href="/" class="logo gap-5 absolute right-1/2 translate-x-2/4">
+                        <img src="./assets/logo.png" alt="">
+                    </a>
+
+                    <!-- mobile search -->
+                    <div class="mobile-form-search hidden fixed w-full left-0 z-20">
+                        <div class="container">
+                            <form action="" class="flex w-full">
+                                <button type="button" class="h-12 pr-0 pl-3 border-r-0 border rounded-l-xl bg-white">
+                                    <img src="./assets/icons/search_navbar.svg" alt="">
+                                </button>
+                                <input type="text" class="outline-0 w-full h-12 border border-l-0 border-r-0 pl-4 text-sm" placeholder="Search destination...">
+                                <button type="button" class="h-12 pr-3 pl-2 border-l-0 border rounded-r-xl bg-white" onclick="toggleClass(['.mobile-form-search'])">
+                                    <img src="./assets/icons/close-black.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mobile-search lg:hidden pl-2 cursor-pointer relative z-10" onclick="toggleClass(['.mobile-form-search'])">
+                        <img src="./assets/icons/search_navbar.svg" alt="">
+                    </div>
+                    <!-- end mobile serach -->
+
+                    <!-- desktop search form -->
+                    <div class="search lg:flex gap-4 hidden">
+                        <form action="" class="flex">
+                            <input type="text" class="outline-0 w-35 h-px-34 border border-r-0 pl-4 text-sm rounded-l-xl" placeholder="Search destination...">
+                            <button type="button" class="h-px-34 pr-3 pl-2 border-l-0 border rounded-r-xl">
+                                <img src="./assets/icons/search_navbar.svg" alt="">
+                            </button>
+                        </form>
+                        <a href="" class="button bg-primary text-sm text-white px-4 flex items-center h-px-34 rounded-xl">
+                            <span>Services</span>
+                        </a>
+                    </div>
+                    <!-- end search form -->
+                </div>
+            </div>
+        </nav>
+        <!-- end bottom navigation -->
+        
+    </header>
+    <!-- end header component -->
+
+    <!-- search section shop -->
+    <div class="container py-6 flex justify-between items-center sm:gap-10 gap-5">
+        <div class="title-search text-lg font-bold lg:block hidden">Made travel easy</div>
+        <form action="" class="flex items-center flex-1">
+            <input type="text" placeholder="Search your travel product" class="outline-none w-full px-4 h-11 rounded-l-xl border border-r-0 border-neutral-200">
+            <button class="outline-none border border-l-0 border-neutral-200 rounded-r-xl pl-3 pr-4 h-11">
+                <i class="fi fi-br-search text-primary"></i>
+            </button>
+        </form>
+        <div class="right flex items-center sm:gap-8 gap-4">
+            <div class="wishlist">
+                <a href=""><i class="fi fi-sr-heart text-2xl text-neutral-600"></i></a>
+            </div>
+            <div class="cart">
+                <a href=""><i class="fi fi-sr-shopping-cart text-2xl text-neutral-600"></i></i></a>
+            </div>
+            <div class="resgisterlogin md:block hidden">
+                <a href="" class="bg-primary rounded-xl py-3 px-5 text-white text-sm">Login / Register</a>
+            </div>
+        </div>
     </div>
+    <!-- end search section shop -->
+
+    <!-- sitemap -->
+    <div class="lg:block hidden">
+        <div class="container mt-4">
+            <div class="link flex gap-2 text-gray-400 font-normal">
+                <a href="" class="underline">Home</a> 
+                <div>›</div> 
+                <a href="" class="underline">Shops</a> 
+                <div>›</div>
+                <a href="" class="underline">Shoes</a> 
+                <div>›</div>
+                <div>Shoes Sandals Multipurpose Travel Bag Tas Sepatu - NAVY</div>
+            </div>
+        </div>
+    </div>
+    <!-- end sitemap -->
+
+    <div class="container lg:mt-8 mt-0">
+        <div class="flex flex-1 gap-8 items-stretch">
+            <div class="flex flex-col gap-20 flex-1">
+                <div class="flex lg:flex-row flex-col lg:gap-8 gap-5 items-strecth">
+                    <div class="image-spot flex lg:flex-col flex-row flex-1 lg:gap-0 gap-4">
+                        <div class="image-zone rounded-2xl bg-no-repeat bg-cover bg-center h-px-560 sm:max-h-max max-h-96 lg:flex-none flex-1" style="background-image: url('./assets/detail-online-shop.png');"></div>
+                        <div class="sm:flex lg:flex-row flex-col gap-4 lg:mt-5 mt-0 image-list hidden">
+                            <div class="image-item cursor-pointer w-24 h-24 rounded-xl bg-cover bg-no-repeat bg-center" style="background-image: url('./assets/detail-online-shop.png');"></div>
+                            <div class="image-item cursor-pointer w-24 h-24 rounded-xl bg-cover bg-no-repeat bg-center" style="background-image: url('./assets/detail-online-shop-2.png');"></div>
+                            <div class="image-item cursor-pointer w-24 h-24 rounded-xl bg-cover bg-no-repeat bg-center" style="background-image: url('./assets/detail-online-shop-3.png');"></div>
+                        </div>
+                    </div>
+                    <div class="detail flex-1">
+                        <div class="md:text-3xl text-2xl font-altebold font-bold">Shoes Sandals Multipurpose Travel Bag Tas Sepatu - NAVY</div>
+                        <div class="flex gap-2 items-center mt-5">
+                            <div class="text-base text-neutral-600">Hiking</div>
+                            <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                            <div class="rating flex items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <span class="text-orange-600 pl-1">(1,512)</span>
+                            </div>
+                            <div class="bg-primary w-5 rounded-2xl h-1 sm:block hidden"></div>
+                            <div class="text-base text-neutral-600 sm:block hidden">Sold 511 pieces</div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-5 swap cursor-pointer">
+                            <div class="font-bold text-primary sm:text-3xl text-2xl">₮ 170,370</div>
+                            <img src="./assets/icons/swap-gray.svg" alt="">
+                            <div class="font-bold text-primary sm:text-3xl text-2xl">¥ 6,807</div>
+                        </div>
+                        <div class="card bg-white xl:px-5 px-0 xl:py-6 py-0 pt-4 mt-6 border-t-2 border-neutral-200 flex-col xl:hidden flex gap-4">
+                            <div class="sm:text-xl text-base font-bold font-altebold text-neutral-800">Set amount</div>
+                            <div class="flex items-center gap-3">
+                                <div class="flex rounded-xl bg-neutral-100 border border-neutral-100 items-center">
+                                    <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-minus text-neutral-800 mt-1"></i></button>
+                                    <input type="text" class="h-10 outline-none rounded-xl w-14 text-center" value="1">
+                                    <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-plus text-neutral-800 mt-1"></i></button>
+                                </div>
+                                <div class="text-neutral-600 text-base font-medium">20 Left</div>
+                            </div>
+                            <div class="text-sm text-neutral-600">*Min. purchase of 1 pcs</div>
+                            <div class="flex xl:flex-col sm:flex-row flex-col gap-2">
+                                <button class="h-11 rounded-xl sm:px-10 bg-primary hover:bg-darkprimary duration-200 text-white font-bold">Add to cart</button>
+                                <button class="h-11 rounded-xl sm:px-10 border border-primary text-primary font-normal">Wishlist</button>
+                            </div>
+                        </div>
+                        <div class="tabs mt-8">
+                            <div class="flex sm:flex-row flex-col-reverse justify-between sm:items-center items-start">
+                                <div class="flex tabs-nav">
+                                    <a href="#" class="tab active border-b-2 text-base font-bold font-altebold pb-4 px-5" data-toggle-target=".tab-content-1">Detail</a>
+                                    <a href="#" class="tab text-base border-b-2 font-bold font-altebold pb-4 px-5" data-toggle-target=".tab-content-2">Important to know</a>
+                                </div>
+                                <div class="flex items-center gap-2 sm:border-b-2 border-0 border-neutral-200 flex-1 justify-end sm:pt-1 pt-0 sm:pb-3 pb-4">
+                                    <img src="./assets/icons/gray-delivery-truck.svg" alt="">
+                                    <div class="font-semibold text-sm text-neutral-600">Free Delivery</div>
+                                </div>
+                            </div>
+                            <div class="tabs-content mt-7">
+                                <div class="tab-content tab-content-1" style="display: block;" id="tab1">
+                                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-2">
+                                        <div class="flex items-center">
+                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Condition</div>
+                                            <div class="text-neutral-800 font-medium sm:text-base text-sm">: New</div>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Weight</div>
+                                            <div class="text-neutral-800 font-medium sm:text-base text-sm">: 200 gram</div>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Category</div>
+                                            <div class="text-neutral-800 font-medium sm:text-base text-sm">: Shoes</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5"></div>
+                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">Integer duis nulla pharetra dui vel vel. Semper faucibus amet posuere tellus ornare. Ullamcorper pharetra sit lacus ipsum aliquet fringilla tincidunt condimentum libero. </p>
+                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">Nisl nisl egestas placerat nec eu. Felis at elit elit eu sit sed proin amet urna. Massa tincidunt at risus orci cursus donec. Accumsan integer sagittis et non ut egestas. Malesuada phasellus elit etiam magna velit aliquam pellentesque tincidunt. Eget dignissim pellentesque donec nullam cras sit turpis. Vulputate eget at maecenas vitae sodales enim vel. </p>
+                                </div>
+                                <div class="tab-content tab-content-2" id="tab2">
+                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">sit amet consectetur adipisicing elit. Repellendus consequatur itaque reprehenderit. Hic reprehenderit odio ex nam velit pariatur distinctio delectus, eius quia, aspernatur itaque dolor veniam libero dolores at.</p>
+                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">Eum ex unde officia totam consequuntur! Quasi minima cupiditate velit. Nisi, deleniti. Alias dolorum voluptates provident suscipit omnis optio animi voluptatum deleniti?</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- buyer reviews  -->
+                <div class="flex lg:flex-row flex-col gap-20 items-stretch">
+                    <div class="flex lg:flex-col sm:flex-row flex-col lg:max-w-xs w-full items-stretch xl:gap-0 gap-6">
+                        <div class="">
+                            <div class="title text-2xl font-bold font-altebold text-neutral-800 mb-5">Stars</div>
+                            <div class="flex items-center gap-7">
+                                <img src="./assets/icons/star-big.svg" alt="">
+                                <div class="flex items-end">
+                                    <div class="md:text-8xl text-6xl font-medium text-neutral-800">4.9</div>
+                                    <div class="text-neutral-400 font-medium sm:text-4xl text-xl">/5.0</div>
+                                </div>
+                            </div>
+                            <div class="sm:text-left text-center sm:ml-16 text-neutral-400 mt-5">97% of buyers are satisfied</div>
+                        </div>
+                        <div class="flex flex-col flex-1 gap-3 mt-4">
+                            <div class="flex gap-2 items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <div class="text-base font-medium text-neutral-800">5</div>
+                                <div class="w-full h-3 rounded-full bg-neutral-100">
+                                    <div class="filler w-full h-full rounded-full bg-orange-400"></div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <div class="text-base font-medium text-neutral-800">4</div>
+                                <div class="w-full h-3 rounded-full bg-neutral-100">
+                                    <div class="filler w-4/5 h-full rounded-full bg-orange-400"></div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <div class="text-base font-medium text-neutral-800">3</div>
+                                <div class="w-full h-3 rounded-full bg-neutral-100">
+                                    <div class="filler w-0 h-full rounded-full bg-orange-400"></div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <div class="text-base font-medium text-neutral-800">2</div>
+                                <div class="w-full h-3 rounded-full bg-neutral-100">
+                                    <div class="filler w-0 h-full rounded-full bg-orange-400"></div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <div class="text-base font-medium text-neutral-800">1</div>
+                                <div class="w-full h-3 rounded-full bg-neutral-100">
+                                    <div class="filler w-0 h-full rounded-full bg-orange-400"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buyer-review flex-1 flex flex-col gap-9 xl:max-w-2xl max-w-none">
+                        <div class="title text-2xl font-bold font-altebold text-neutral-800">Buyer reviews</div>
+                        <div class="review-list flex flex-col gap-5">
+                            <div class="review-item flex items-start gap-3">
+                                <img src="./assets/profile.png" class="w-14 h-14 rounded-full" alt="">
+                                <div class="flex flex-col gap-2 mt-2">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="text-lg font-medium text-neutral-700">Chandler B.</div>
+                                        <div class="flex">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="sm:text-base text-sm text-neutral-500 leading-relaxed font-normal">Integer duis nulla pharetra dui vel vel. Semper faucibus amet posuere tellus ornare. Ullamcorper pharetra sit lacus ipsum aliquet fringilla tincidunt condimentum libero</p>
+                                </div>
+                            </div>
+                            <div class="review-item flex items-start gap-3">
+                                <img src="./assets/profile.png" class="w-14 h-14 rounded-full" alt="">
+                                <div class="flex flex-col gap-2 mt-2">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="text-lg font-medium text-neutral-700">Chandler B.</div>
+                                        <div class="flex">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star_empty.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="sm:text-base text-sm text-neutral-500 leading-relaxed font-normal">Ac vestibulum gravida lacus cursus vel enim ipsum adipiscing mauris. Risus eu tellus nascetur dolor tempus tortor ac. Arcu diam malesuada sit quam. Varius aliquet sollicitudin amet facilisi integer. Tempor at sapien et nisi.</p>
+                                </div>
+                            </div>
+                            <div class="review-item flex items-start gap-3">
+                                <img src="./assets/profile.png" class="w-14 h-14 rounded-full" alt="">
+                                <div class="flex flex-col gap-2 mt-2">
+                                    <div class="flex gap-2 items-center">
+                                        <div class="text-lg font-medium text-neutral-700">Chandler B.</div>
+                                        <div class="flex">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star.svg" alt="">
+                                            <img src="./assets/icons/star_empty.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="sm:text-base text-sm text-neutral-500 leading-relaxed font-normal">Malesuada sem eget vitae interdum. Consequat commodo neque convallis vitae vitae faucibus. Nulla turpis pharetra at elit. Libero lectus ultrices ultricies a ullamcorper.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end buyer reviews -->
+            </div>
+            <div class="sidebar w-64 xl:block hidden">
+                <div class="card bg-white border border-neutral-200 rounded-xl px-5 py-6 flex-col flex gap-4">
+                    <div class="text-xl font-bold font-altebold text-neutral-800">Set amount</div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex rounded-xl bg-neutral-100 border border-neutral-100 items-center">
+                            <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-minus text-neutral-800 mt-1"></i></button>
+                            <input type="text" class="h-10 outline-none rounded-xl w-14 text-center" value="1">
+                            <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-plus text-neutral-800 mt-1"></i></button>
+                        </div>
+                        <div class="text-neutral-600 text-base font-medium">20 Left</div>
+                    </div>
+                    <div class="text-sm text-neutral-600">*Min. purchase of 1 pcs</div>
+                    <div class="border-t-2 border-neutral-200 "></div>
+                    <div class="flex-col flex">
+                        <div class="text-sm text-neutral-600">subtotal</div>
+                        <div class="flex items-center gap-2 mt-1 cursor-pointer swap">
+                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
+                            <img src="./assets/icons/swap-gray.svg" alt="">
+                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <button class="h-11 rounded-xl bg-primary hover:bg-darkprimary duration-200 text-white font-bold">Add to cart</button>
+                        <button class="h-11 rounded-xl border border-primary text-primary font-normal">Wishlist</button>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <a href="">
+                        <img src="./assets/iklan-detail-product.png" class="rounded-xl" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- related -->
+    <div class="last-related-product container my-40">
+        
+        <div class="font-bold font-altebold text-2xl text-neutral-800 mb-8">Related products</div>
+
+        <!-- list related product -->
+        <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 mt-4">
+            
+            <!-- card related product -->
+            <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
+                <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/product-1.png');">
+                    <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
+                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                    </div>
+                </div>
+                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
+                <div class="flex items-stretch px-5">
+                    <div class="flex flex-col flex-1">
+                        <div class="flex items-center gap-2 py-2">
+                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
+                            <img src="./assets/icons/swap-gray.svg" alt="">
+                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
+                        </div>
+                        <div class="flex pb-5 gap-2 items-center">
+                            <div class="rating flex items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <span class="text-orange-600 pl-1">(1,512)</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                                <div class="text-base text-neutral-600">Hiking</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:flex hidden gap-2 bottom-4 right-5 mt-1">
+                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                    </div>
+                </div>
+            </a>
+            <!-- end first card related product -->
+
+            <!-- card related product -->
+            <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
+                <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/product-1.png');">
+                    <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
+                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                    </div>
+                </div>
+                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
+                <div class="flex items-stretch px-5">
+                    <div class="flex flex-col flex-1">
+                        <div class="flex items-center gap-2 py-2">
+                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
+                            <img src="./assets/icons/swap-gray.svg" alt="">
+                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
+                        </div>
+                        <div class="flex pb-5 gap-2 items-center">
+                            <div class="rating flex items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <span class="text-orange-600 pl-1">(1,512)</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                                <div class="text-base text-neutral-600">Hiking</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:flex hidden gap-2 bottom-4 right-5 mt-1">
+                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- card related product -->
+            <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
+                <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/product-1.png');">
+                    <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
+                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                    </div>
+                </div>
+                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
+                <div class="flex items-stretch px-5">
+                    <div class="flex flex-col flex-1">
+                        <div class="flex items-center gap-2 py-2">
+                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
+                            <img src="./assets/icons/swap-gray.svg" alt="">
+                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
+                        </div>
+                        <div class="flex pb-5 gap-2 items-center">
+                            <div class="rating flex items-center">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <img src="./assets/icons/star.svg" alt="">
+                                <span class="text-orange-600 pl-1">(1,512)</span>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                                <div class="text-base text-neutral-600">Hiking</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:flex hidden gap-2 bottom-4 right-5 mt-1">
+                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                    </div>
+                </div>
+            </a>
+            <!-- end card related product -->
+
+        </div>
+        <!-- end list related product -->
+    </div>
+    <!-- end related -->
+
+    <!-- footer -->
+    <footer class="bg-neutral-50 pt-28 mt-28">
+        <div class="container flex flex-col">
+            <div class="flex lg:gap-4 justify-between lg:flex-row flex-col gap-10">
+                <div class="logo-footer xl:max-w-md lg:max-w-xs">
+                    <a href=""><img src="./assets/footer_logo.png" class="lg:w-none md:w-32 w-20" alt=""></a>
+                    <div class="text-neutral-500 sm:leading-loose mt-5 sm:text-base text-sm">In tempus vitae laoreet fames tincidunt. Tristique cras aliquet augue eu ut dui. Elementum etiam sit aliquam dui orci. </div>
+                    <div class="flex sosmed-footer gap-6 mt-8">
+                        <a href=""><img src="./assets/icons/footer_facebook.svg" alt=""></a>
+                        <a href=""><img src="./assets/icons/footer_instagram.svg" alt=""></a>
+                        <a href=""><img src="./assets/icons/footer_youtube.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="destinations">
+                    <div class="text-2xl font-bold font-altebold text-neutral-900">Destinations</div>
+                    <div class="flex flex-col mt-4 gap-1">
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Tokyo</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kyoto</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Osaka</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Nara</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Mount Fuji</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Hiroshima</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kamakura</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kobe</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Nagoya</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">See all</a>
+                    </div>
+                </div>
+                <div class="regions">
+                    <div class="text-2xl font-bold font-altebold text-neutral-900">Regions</div>
+                    <div class="flex flex-col mt-4 gap-1">
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Hokkaido</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Tohoku</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kanto</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Chubu</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kansai</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Chugoku</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Shikoku</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Kyusu</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Okinawa</a>
+                    </div>
+                </div>
+                <div class="regions lg:mr-20 mr-0">
+                    <div class="text-2xl font-bold font-altebold text-neutral-900">Good to know</div>
+                    <div class="flex flex-col mt-4 gap-1">
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Before you go</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Itineraries</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Tours</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Learn</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Transportation</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Accommodation</a>
+                        <a href="" class="text-neutral-500 sm:text-base text-sm hover:underline hover:text-neutral-900 duration-100">Living in Japan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container lg:pt-20 pt-16">
+            <div class="flex border-t-4 border-neutral-100 py-10 justify-between lg:flex-row flex-col-reverse items-center lg:gap-20 md:gap-10 sm:gap-8 gap-6">
+                <div class="copyright text-neutral-600 text-center md:text-base text-xs">Copyright © 1996-2023 japanguide.mn All Rights Reserved.</div>
+                <div class="links gap-10 hidden sm:flex">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms of service</a>
+                    <a href="">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="./scripts/script.js"></script>
 
 </body>
 </html>

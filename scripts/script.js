@@ -13,6 +13,60 @@ function toggle(target) {
     }
 }
 
+// tab
+// $('.tab').on('click', function(evt) {
+//     evt.preventDefault();
+//     $(this).toggleClass('block');
+//     var sel = this.getAttribute('data-toggle-target');
+//     $('.tab-content').removeClass('block').filter(sel).addClass('block');
+// });
+
+$(function() {
+    $('.tab').click(function() {
+  
+      // Check for active
+      $('.tab').removeClass('active');
+      $(this).addClass('active');
+  
+      // Display active tab
+      let currentTab = this.getAttribute('data-toggle-target');
+
+      $('.tab-content').hide();
+      $(currentTab).show();
+  
+      return false;
+    });
+
+    $('.image-item').on('click', function () {
+        let url = $(this).attr('style');
+        $('.image-zone').attr('style', url)
+    })
+
+    // swap currency
+    $('.swap').on('click', function () {
+
+        let swapElements = $('.swap')
+
+        for (let i = 0; i < swapElements.length; i++) {
+
+            let first = $(swapElements[i]).find('div:first-child')
+            let last = $(swapElements[i]).find('div:last-child')
+
+            let firstText = first.text();
+            let lastText = last.text();
+            
+            first.text("")
+            last.text("")
+            
+            last = last.text(firstText)
+            first = first.text(lastText)
+            
+        }
+    })
+});
+
+
+
 // document.addEventListener('click', function (e) {
 //     const specifiedElement = document.getElementsByClassName('active_element')
     

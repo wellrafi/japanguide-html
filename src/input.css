@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
-
 @font-face {
   font-family: "AlteHaasGroteskRegular";
   src: url('../assets/fonts/AlteHaasGroteskRegular.ttf');
@@ -161,3 +159,18 @@
   }
 }
 /* end cart order item */
+
+
+/* tab-content */
+.tab-content{
+  display: none;
+}
+
+.tab.active{
+  border-color: #F34646;
+  color: #262626;
+}
+
+.tab{
+  color: #a3a3a3;
+}
