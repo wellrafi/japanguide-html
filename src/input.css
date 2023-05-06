@@ -174,3 +174,28 @@
 .tab{
   color: #a3a3a3;
 }
+
+
+/* expand component */
+
+.wrap-itin.active > .target,
+.wrap.active > .target{
+  max-height: 100%;
+}
+
+.wrap-itin-deep.active > .target{
+  max-height: 100% !important;
+}
+
+.wrap-itin > .target,
+.wrap > .target{
+  max-height: 0%;
+}
+
+.wrap-itin-deep > .target{
+  max-height: 0% !important;
+}
+
+.wrap.active .trigger img{
+  transform: rotate(180deg);
+}

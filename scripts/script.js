@@ -63,6 +63,35 @@ $(function() {
             
         }
     })
+
+    // expand component
+    $(document).on('click', '.wrap', function (e) {
+        e.preventDefault()
+        $(this).toggleClass('active')
+    })
+
+    // expand itinerary
+    $(document).on('click', '.wrap-itin .trigger', function (e) {
+        e.preventDefault()
+        let parent = $($(this).parent())
+        let less = $(this).attr('data-text-after')
+        let more = $(this).attr('data-text')
+        
+        console.log(parent.find('wrap-itin'))
+
+        parent.hasClass('active') ? parent.find('.trigger').text(more) : parent.find('.trigger').text(less)
+        
+        if (parent.find('.wrap-itin-deep')) {
+            let insideRead = $('.wrap-itin-deep .trigger').attr('data-text-after')
+            let insideLess = $('.wrap-itin-deep .trigger').attr('data-text')
+            parent.find('.wrap-itin-deep').hasClass('active') ? parent.find('.wrap-itin-deep .trigger').text(insideRead) : parent.find('.wrap-itin-deep .trigger').text(insideLess)
+        }
+        
+        $($(this).parent()).toggleClass('active')
+    })
+
+    
+
 });
 
 
