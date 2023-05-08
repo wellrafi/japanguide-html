@@ -44,7 +44,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
 </head>
-<body>
+<body class="overflow-hidden">
     
     <!-- header component -->
     <header class="relative">
@@ -265,7 +265,7 @@
         <div class="flex flex-1 gap-8 items-stretch">
             <div class="flex flex-col gap-20 flex-1">
                 <div class="flex lg:flex-row flex-col lg:gap-8 gap-5 items-strecth">
-                    <div class="image-spot flex lg:flex-col flex-row flex-1 lg:gap-0 gap-4">
+                    <div class="image-spot flex lg:flex-col flex-row flex-1 lg:gap-0 gap-4 lg:max-w-lg max-w-full">
                         <div class="image-zone rounded-2xl bg-no-repeat bg-cover bg-center h-px-560 sm:max-h-max max-h-96 lg:flex-none flex-1" style="background-image: url('./assets/detail-online-shop.png');"></div>
                         <div class="sm:flex lg:flex-row flex-col gap-4 lg:mt-5 mt-0 image-list hidden">
                             <div class="image-item cursor-pointer w-24 h-24 rounded-xl bg-cover bg-no-repeat bg-center" style="background-image: url('./assets/detail-online-shop.png');"></div>
@@ -273,11 +273,11 @@
                             <div class="image-item cursor-pointer w-24 h-24 rounded-xl bg-cover bg-no-repeat bg-center" style="background-image: url('./assets/detail-online-shop-3.png');"></div>
                         </div>
                     </div>
+
+                    <!-- detail -->
                     <div class="detail flex-1">
-                        <div class="md:text-3xl text-2xl font-altebold font-bold">Shoes Sandals Multipurpose Travel Bag Tas Sepatu - NAVY</div>
+                        <div class="md:text-3xl text-2xl font-altebold font-bold">Tokyo - Kanto, Full-Day Private Tour with Government-Licensed Guide</div>
                         <div class="flex gap-2 items-center mt-5">
-                            <div class="text-base text-neutral-600">Hiking</div>
-                            <div class="bg-primary w-5 rounded-2xl h-1"></div>
                             <div class="rating flex items-center">
                                 <img src="./assets/icons/star.svg" alt="">
                                 <img src="./assets/icons/star.svg" alt="">
@@ -286,72 +286,282 @@
                                 <img src="./assets/icons/star.svg" alt="">
                                 <span class="text-orange-600 pl-1">(1,512)</span>
                             </div>
-                            <div class="bg-primary w-5 rounded-2xl h-1 sm:block hidden"></div>
-                            <div class="text-base text-neutral-600 sm:block hidden">Sold 511 pieces</div>
+                            <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                            <div class="text-base text-neutral-600">Recommended</div>
                         </div>
-                        <div class="flex items-center gap-2 mt-5 swap cursor-pointer">
-                            <div class="font-bold text-primary sm:text-3xl text-2xl">₮ 170,370</div>
-                            <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-primary sm:text-3xl text-2xl">¥ 6,807</div>
-                        </div>
-                        <div class="card bg-white xl:px-5 px-0 xl:py-6 py-0 pt-4 mt-6 border-t-2 border-neutral-200 flex-col xl:hidden flex gap-4">
-                            <div class="sm:text-xl text-base font-bold font-altebold text-neutral-800">Set amount</div>
-                            <div class="flex items-center gap-3">
-                                <div class="flex rounded-xl bg-neutral-100 border border-neutral-100 items-center">
-                                    <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-minus text-neutral-800 mt-1"></i></button>
-                                    <input type="text" class="h-10 outline-none rounded-xl w-14 text-center" value="1">
-                                    <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-plus text-neutral-800 mt-1"></i></button>
-                                </div>
-                                <div class="text-neutral-600 text-base font-medium">20 Left</div>
+                        <div class="flex xl:flex-row flex-col gap-5 justify-between items-start">
+                            <div class="flex items-center gap-2 mt-5 swap cursor-pointer">
+                                <div class="font-bold text-primary sm:text-3xl text-2xl">₮ 170,370</div>
+                                <img src="./assets/icons/swap-gray.svg" alt="">
+                                <div class="font-bold text-primary sm:text-3xl text-2xl">¥ 6,807</div>
                             </div>
-                            <div class="text-sm text-neutral-600">*Min. purchase of 1 pcs</div>
-                            <div class="flex xl:flex-col sm:flex-row flex-col gap-2">
-                                <button class="h-11 rounded-xl sm:px-10 bg-primary hover:bg-darkprimary duration-200 text-white font-bold">Add to cart</button>
-                                <button class="h-11 rounded-xl sm:px-10 border border-primary text-primary font-normal">Wishlist</button>
-                            </div>
+                            <button class="bg-primary h-14 px-9 rounded-xl text-base font-bold text-white open-edit open-modal" data-target-modal=".modal-edit">Check availability</button>
                         </div>
+
                         <div class="tabs mt-8">
-                            <div class="flex sm:flex-row flex-col-reverse justify-between sm:items-center items-start">
+                            <div class="flex sm:flex-row flex-col-reverse justify-between sm:items-end items-start">
                                 <div class="flex tabs-nav">
                                     <a href="#" class="tab active border-b-2 text-base font-bold font-altebold pb-4 px-5" data-toggle-target=".tab-content-1">Detail</a>
-                                    <a href="#" class="tab text-base border-b-2 font-bold font-altebold pb-4 px-5" data-toggle-target=".tab-content-2">Important to know</a>
+                                    <a href="#" class="tab text-base border-b-2 font-bold font-altebold pb-4 px-5" data-toggle-target=".tab-content-2">FAQ</a>
+                                    <a href="#" class="tab text-base border-b-2 font-bold font-altebold pb-4 px-5" data-toggle-target=".tab-content-3">Help</a>
                                 </div>
-                                <div class="flex items-center gap-2 sm:border-b-2 border-0 border-neutral-200 flex-1 justify-end sm:pt-1 pt-0 sm:pb-3 pb-4">
-                                    <img src="./assets/icons/gray-delivery-truck.svg" alt="">
-                                    <div class="font-semibold text-sm text-neutral-600">Free Delivery</div>
-                                </div>
+                                <div class="line border-b-2 border-neutral-200 flex-1"></div>
                             </div>
                             <div class="tabs-content mt-7">
                                 <div class="tab-content tab-content-1" style="display: block;" id="tab1">
-                                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-2">
-                                        <div class="flex items-center">
-                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Condition</div>
-                                            <div class="text-neutral-800 font-medium sm:text-base text-sm">: New</div>
+                                    <div class="grid sm:grid-cols-5 grid-cols-1 gap-2">
+                                        <div class="flex items-start col-span-2">
+                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Ages</div>
+                                            <div class="mr-1">:</div>
+                                            <div class="text-neutral-800 font-medium sm:text-base text-sm flex-1">10 - 60</div>
                                         </div>
-                                        <div class="flex items-center">
-                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Weight</div>
-                                            <div class="text-neutral-800 font-medium sm:text-base text-sm">: 200 gram</div>
+                                        <div class="flex items-start col-span-2">
+                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Duration</div>
+                                            <div class="mr-1">:</div>
+                                            <div class="text-neutral-800 font-medium sm:text-base text-sm flex-1">12 Hours</div>
                                         </div>
-                                        <div class="flex items-center">
-                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Category</div>
-                                            <div class="text-neutral-800 font-medium sm:text-base text-sm">: Shoes</div>
+                                        <div class="flex items-start col-span-2">
+                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Start Time</div>
+                                            <div class="mr-1">:</div>
+                                            <div class="text-neutral-800 font-medium sm:text-base text-sm flex-1">06:00 AM</div>
+                                        </div>
+                                        <div class="flex items-start col-span-3">
+                                            <div class="text-neutral-400 font-medium sm:text-base text-sm w-24">Languange</div>
+                                            <div class="mr-1">:</div>
+                                            <div class="text-neutral-800 font-medium sm:text-base text-sm flex-1">Japanese, Mongolian, English</div>
                                         </div>
                                     </div>
                                     <div class="mt-5"></div>
-                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">Integer duis nulla pharetra dui vel vel. Semper faucibus amet posuere tellus ornare. Ullamcorper pharetra sit lacus ipsum aliquet fringilla tincidunt condimentum libero. </p>
-                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">Nisl nisl egestas placerat nec eu. Felis at elit elit eu sit sed proin amet urna. Massa tincidunt at risus orci cursus donec. Accumsan integer sagittis et non ut egestas. Malesuada phasellus elit etiam magna velit aliquam pellentesque tincidunt. Eget dignissim pellentesque donec nullam cras sit turpis. Vulputate eget at maecenas vitae sodales enim vel. </p>
+                                    <p class="text-neutral-600 font-normal sm:text-base text-sm sm:leading-loose leading-loose mb-4">Ridiculus eget eget arcu nulla. Donec commodo aliquet sed posuere eu nisl. Nunc tempus arcu neque lorem velit sed vestibulum. Ac diam vulputate amet ipsum semper pretium egestas. Montes aliquet placerat nisi aliquam viverra risus in nunc eget. Turpis eget at odio fames lorem vitae. Egestas elit nam risus ornare. Iaculis porttitor duis at ac sit. </p>
+                                    <div class="expand-list flex flex-col pt-5 gap-3">
+                                        <div class="wrap cursor-pointer pt-1">
+                                            <div class="trigger flex justify-between items-center">
+                                                <div class="text-base font-bold text-neutral-800">What’s included</div>
+                                                <img src="./assets/icons/arrow-down.svg" alt="">
+                                            </div>
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="py-4">
+                                                    <ul class="text-neutral-600 leading-loose">
+                                                    <li>・ Ridiculus eget eget arcu nulla. </li>
+                                                    <li>・ Donec commodo aliquet sed posuere eu nisl. </li>
+                                                    <li>・ Nunc tempus arcu neque lorem velit sed vestibulum. </li>
+                                                    <li>・ Ac diam vulputate amet ipsum semper pretium egestas. </li>
+                                                </ul>
+                                                </div>
+                                            </div>
+                                            <div class="pb-4 border-b border-neutral-200"></div>
+                                        </div>
+                                        <div class="wrap cursor-pointer pt-1">
+                                            <div class="trigger flex justify-between items-center">
+                                                <div class="text-base font-bold text-neutral-800">What’s not included</div>
+                                                <img src="./assets/icons/arrow-down.svg" alt="">
+                                            </div>
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="py-4">
+                                                    <p class="text-neutral-600 leading-loose">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat necessitatibus beatae iusto aspernatur debitis, facere id facilis veniam animi laboriosam consequuntur rerum sapiente rem at sunt cupiditate, mollitia omnis qui!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-4 border-b border-neutral-200"></div>
+                                        </div>
+                                        <div class="wrap cursor-pointer pt-1">
+                                            <div class="trigger flex justify-between items-center">
+                                                <div class="text-base font-bold text-neutral-800">Departure and return</div>
+                                                <img src="./assets/icons/arrow-down.svg" alt="">
+                                            </div>
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="py-4">
+                                                    <p class="text-neutral-600 leading-loose">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat necessitatibus beatae iusto aspernatur debitis, facere id facilis veniam animi laboriosam consequuntur rerum sapiente rem at sunt cupiditate, mollitia omnis qui!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-4 border-b border-neutral-200"></div>
+                                        </div>
+                                        <div class="wrap cursor-pointer pt-1">
+                                            <div class="trigger flex justify-between items-center">
+                                                <div class="text-base font-bold text-neutral-800">Accessibility</div>
+                                                <img src="./assets/icons/arrow-down.svg" alt="">
+                                            </div>
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="py-4">
+                                                    <p class="text-neutral-600 leading-loose">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat necessitatibus beatae iusto aspernatur debitis, facere id facilis veniam animi laboriosam consequuntur rerum sapiente rem at sunt cupiditate, mollitia omnis qui!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-4 border-b border-neutral-200"></div>
+                                        </div>
+                                        <div class="wrap cursor-pointer pt-1">
+                                            <div class="trigger flex justify-between items-center">
+                                                <div class="text-base font-bold text-neutral-800">Additional information</div>
+                                                <img src="./assets/icons/arrow-down.svg" alt="">
+                                            </div>
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="py-4">
+                                                    <p class="text-neutral-600 leading-loose">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat necessitatibus beatae iusto aspernatur debitis, facere id facilis veniam animi laboriosam consequuntur rerum sapiente rem at sunt cupiditate, mollitia omnis qui!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-4 border-b border-neutral-200"></div>
+                                        </div>
+                                        <div class="wrap cursor-pointer pt-1">
+                                            <div class="trigger flex justify-between items-center">
+                                                <div class="text-base font-bold text-neutral-800">Cancellation policy</div>
+                                                <img src="./assets/icons/arrow-down.svg" alt="">
+                                            </div>
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="py-4">
+                                                    <p class="text-neutral-600 leading-loose">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat necessitatibus beatae iusto aspernatur debitis, facere id facilis veniam animi laboriosam consequuntur rerum sapiente rem at sunt cupiditate, mollitia omnis qui!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pb-4 border-b border-neutral-200"></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="tab-content tab-content-2" id="tab2">
-                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">sit amet consectetur adipisicing elit. Repellendus consequatur itaque reprehenderit. Hic reprehenderit odio ex nam velit pariatur distinctio delectus, eius quia, aspernatur itaque dolor veniam libero dolores at.</p>
-                                    <p class="text-neutral-600 font-normal sm:text-base text-sm leading-loose mb-4">Eum ex unde officia totam consequuntur! Quasi minima cupiditate velit. Nisi, deleniti. Alias dolorum voluptates provident suscipit omnis optio animi voluptatum deleniti?</p>
-                                    
+                                    <p class="text-neutral-600 font-normal sm:text-base text-sm sm:leading-loose leading-loose mb-4">sit amet consectetur adipisicing elit. Repellendus consequatur itaque reprehenderit. Hic reprehenderit odio ex nam velit pariatur distinctio delectus, eius quia, aspernatur itaque dolor veniam libero dolores at.</p>
+                                    <p class="text-neutral-600 font-normal sm:text-base text-sm sm:leading-loose leading-loose mb-4">Eum ex unde officia totam consequuntur! Quasi minima cupiditate velit. Nisi, deleniti. Alias dolorum voluptates provident suscipit omnis optio animi voluptatum deleniti?</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- end detail -->
+
                 </div>
 
-                <!-- buyer reviews  -->
+                <!-- Itinerary -->
+                <div class="itinerary flex lg:flex-row flex-col-reverse gap-8">
+
+                    <!-- map -->
+                    <div class="w-full flex-1 rounded-xl overflow-hidden">
+                        <iframe width="100%" height="650" class="lg:max-h-none max-h-96" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=tokyo%20japan+(Japan%20Guide)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    </div>
+                    <!-- end map -->
+
+                    <div class="flex flex-col py-6 max-w-xl">
+                        <div class="text-2xl font-altebold font-bold text-neutral-800">Itinerary</div>
+                        <div class="list-itinerary flex flex-col mt-6">
+
+                            <!-- item itinerary -->
+                            <div class="flex gap-3 items-stretch -mt-1">
+                                <div class="relative">
+                                    <div class="line absolute top-0 w-1 h-full bg-neutral-200 left-1/2 -translate-x-1/2"></div>
+                                    <div class="w-9 h-9 rounded-full flex items-center justify-center bg-neutral-800 text-white relative">
+                                        <img src="./assets/icons/pin_white.svg" alt="" class="relative z-20">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col wrap-itin mt-1 pb-5">
+                                    <div class="title text-lg font-bold font-altebold text-neutral-800">You'll get picked up</div>
+                                    <div class="target max-h-0 overflow-hidden">
+                                        <div class="mt-2 text-base text-neutral-500">Ac diam vulputate amet ipsum semper pretium egestas.</div>
+                                    </div>
+                                    <div class="trigger underline text-neutral-800 mt-1 cursor-pointer" data-text-after="See less" data-text="See more details">See more details</div>
+                                </div>
+                            </div>
+                            <!-- item itinerary till end bottom -->
+
+                            <div class="flex gap-3 items-stretch -mt-1">
+                                <div class="relative">
+                                    <div class="line absolute top-0 w-1 h-full bg-neutral-200 left-1/2 -translate-x-1/2"></div>
+                                    <div class="w-9 h-9 rounded-full flex items-center justify-center bg-neutral-800 text-white relative">
+                                        <div class="font-bold">1</div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col wrap-itin mt-1 pb-5 active">
+                                    <div class="title flex sm:flex-row flex-col sm:items-center items-start text-lg font-bold font-altebold text-neutral-800">
+                                        Fushimi Inari-taisha Shrine <span class="text-neutral-400 sm:text-base text-sm font-normal sm:ml-1 ml-0"><span class="sm:block hidden"> · </span> 60 minutes</span>
+                                    </div>
+                                    <div class="target max-h-0 overflow-hidden">
+                                        <div class="flex gap-2 mt-2">
+                                            <img src="./assets/itinerary-1.png" class="rounded-xl sm:w-fit w-full sm:max-h-fit max-h-36 object-cover" alt="">
+                                            <img src="./assets/itinerary-2.png" class="rounded-xl sm:block hidden" alt="">
+                                            <img src="./assets/itinerary-3.png" class="rounded-xl sm:block hidden" alt="">
+                                        </div>
+                                        <div class="mt-2 text-sm leading-relaxed text-neutral-500 text-justify">Ridiculus eget eget arcu nulla. Donec commodo aliquet sed posuere eu nisl. Nunc tempus arcu neque lorem velit sed vestibulum. Ac diam vulputate amet ipsum semper pretium egestas. Montes aliquet placerat nisi aliquam viverra risus in nunc eget. </div>
+                                        <div class="wrap-itin">
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="t-2 text-sm leading-relaxed text-neutral-500 text-justify">Ridiculus eget eget arcu nulla. Donec commodo aliquet sed posuere eu nisl. Nunc tempus arcu neque lorem velit sed vestibulum. Ac diam vulputate amet ipsum semper pretium egestas. Montes aliquet placerat nisi aliquam viverra risus in nunc eget. </div>
+                                            </div>
+                                            <div class="trigger text-sm text-right underline text-neutral-400 cursor-pointer" data-text-after="Less read" data-text="Read more">Read more</div>
+                                        </div>
+                                        <div class="pb-2"></div>
+                                    </div>
+                                    <div class="trigger underline text-neutral-800 mt-1 cursor-pointer" data-text-after="See less" data-text="See more details">See less</div>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 items-stretch -mt-1">
+                                <div class="relative">
+                                    <div class="line absolute top-0 w-1 h-full bg-neutral-200 left-1/2 -translate-x-1/2"></div>
+                                    <div class="w-9 h-9 rounded-full flex items-center justify-center bg-neutral-800 text-white relative">
+                                        <div class="font-bold">2</div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col wrap-itin mt-1 pb-5">
+                                    <div class="title flex sm:flex-row flex-col sm:items-center items-start text-lg font-bold font-altebold text-neutral-800">
+                                        Kiyomizu-dera Temple <span class="text-neutral-400 sm:text-base text-sm font-normal sm:ml-1 ml-0"><span class="sm:block hidden"> · </span> 60 minutes</span>
+                                    </div>
+                                    <div class="target max-h-0 overflow-hidden">
+                                        <div class="mt-2 text-sm leading-relaxed text-neutral-500 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas assumenda asperiores velit. Sint explicabo, veritatis quam maiores voluptate placeat ea id fuga ipsum beatae numquam aut saepe illum, doloremque debitis.</div>
+                                    </div>
+                                    <div class="trigger underline text-neutral-800 mt-1 cursor-pointer" data-text-after="See less" data-text="See more details">See more details</div>
+                                </div>
+                            </div>
+                   
+                            <div class="flex gap-3 items-stretch -mt-1">
+                                <div class="relative">
+                                    <div class="line absolute top-0 w-1 h-full bg-neutral-200 left-1/2 -translate-x-1/2"></div>
+                                    <div class="w-9 h-9 rounded-full flex items-center justify-center bg-neutral-800 text-white relative">
+                                        <div class="font-bold">3</div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col wrap-itin mt-1 pb-5">
+                                    <div class="title flex sm:flex-row flex-col sm:items-center items-start text-lg font-bold font-altebold text-neutral-800">
+                                        Nijo Castle <span class="text-neutral-400 sm:text-base text-sm font-normal sm:ml-1 ml-0"><span class="sm:block hidden"> · </span> 60 minutes</span>
+                                    </div>
+                                    <div class="target max-h-0 overflow-hidden">
+                                        <div class="mt-2 text-sm leading-relaxed text-neutral-500 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas assumenda asperiores velit. Sint explicabo, veritatis quam maiores voluptate placeat ea id fuga ipsum beatae numquam aut saepe illum, doloremque debitis.</div>
+                                    </div>
+                                    <div class="trigger underline text-neutral-800 mt-1 cursor-pointer" data-text-after="See less" data-text="See more details">See more details</div>
+                                </div>
+                            </div>
+
+                            <div class="wrap-itin">
+                                <div class="target max-h-0 overflow-hidden">
+                                    <div class="flex gap-3 items-stretch">
+                                        <div class="relative">
+                                            <div class="line absolute top-0 w-1 h-full bg-neutral-200 left-1/2 -translate-x-1/2"></div>
+                                            <div class="w-9 h-9 rounded-full flex items-center justify-center bg-neutral-800 text-white relative">
+                                                <div class="font-bold">4</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col wrap-itin mt-1 pb-5">
+                                            <div class="title flex sm:flex-row flex-col sm:items-center items-start text-lg font-bold font-altebold text-neutral-800">
+                                                Next Next one <span class="text-neutral-400 sm:text-base text-sm font-normal sm:ml-1 ml-0"><span class="sm:block hidden"> · </span> 60 minutes</span>
+                                            </div>
+                                            <div class="target max-h-0 overflow-hidden">
+                                                <div class="mt-2 text-sm leading-relaxed text-neutral-500 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas assumenda asperiores velit. Sint explicabo, veritatis quam maiores voluptate placeat ea id fuga ipsum beatae numquam aut saepe illum, doloremque debitis.</div>
+                                            </div>
+                                            <div class="trigger underline text-neutral-800 mt-1 cursor-pointer" data-text-after="See less" data-text="See more details">See more details</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="trigger font-bold underline ml-1 mt-1 cursor-pointer" data-text-after="See less spots" data-text="See more spots">See more spots</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end Itinerary -->
+
+
+                <!-- traveler reviews  -->
                 <div class="flex lg:flex-row flex-col gap-20 items-stretch">
                     <div class="flex lg:flex-col sm:flex-row flex-col lg:max-w-xs w-full items-stretch xl:gap-0 gap-6">
                         <div class="">
@@ -363,7 +573,7 @@
                                     <div class="text-neutral-400 font-medium sm:text-4xl text-xl">/5.0</div>
                                 </div>
                             </div>
-                            <div class="sm:text-left text-center sm:ml-16 text-neutral-400 mt-5">97% of buyers are satisfied</div>
+                            <div class="sm:text-left text-center sm:ml-16 text-neutral-400 mt-5">97% of travelers are satisfied</div>
                         </div>
                         <div class="flex flex-col flex-1 gap-3 mt-4">
                             <div class="flex gap-2 items-center">
@@ -403,10 +613,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buyer-review flex-1 flex flex-col gap-9 xl:max-w-2xl max-w-none">
-                        <div class="title text-2xl font-bold font-altebold text-neutral-800">Buyer reviews</div>
+                    <div class="travelers-review flex-1 flex flex-col gap-9 xl:max-w-2xl max-w-none">
+                        <div class="title text-2xl font-bold font-altebold text-neutral-800">Travelers reviews</div>
                         <div class="review-list flex flex-col gap-5">
-                            <div class="review-item flex items-start gap-3">
+                            <div class="review-item flex items-start gap-3 border-b pb-5 border-neutral-1e00">
                                 <img src="./assets/profile.png" class="w-14 h-14 rounded-full" alt="">
                                 <div class="flex flex-col gap-2 mt-2">
                                     <div class="flex gap-2 items-center">
@@ -422,7 +632,7 @@
                                     <p class="sm:text-base text-sm text-neutral-500 leading-relaxed font-normal">Integer duis nulla pharetra dui vel vel. Semper faucibus amet posuere tellus ornare. Ullamcorper pharetra sit lacus ipsum aliquet fringilla tincidunt condimentum libero</p>
                                 </div>
                             </div>
-                            <div class="review-item flex items-start gap-3">
+                            <div class="review-item flex items-start gap-3 border-b pb-5 border-neutral-1e00">
                                 <img src="./assets/profile.png" class="w-14 h-14 rounded-full" alt="">
                                 <div class="flex flex-col gap-2 mt-2">
                                     <div class="flex gap-2 items-center">
@@ -438,7 +648,7 @@
                                     <p class="sm:text-base text-sm text-neutral-500 leading-relaxed font-normal">Ac vestibulum gravida lacus cursus vel enim ipsum adipiscing mauris. Risus eu tellus nascetur dolor tempus tortor ac. Arcu diam malesuada sit quam. Varius aliquet sollicitudin amet facilisi integer. Tempor at sapien et nisi.</p>
                                 </div>
                             </div>
-                            <div class="review-item flex items-start gap-3">
+                            <div class="review-item flex items-start gap-3 border-b pb-5 border-neutral-1e00">
                                 <img src="./assets/profile.png" class="w-14 h-14 rounded-full" alt="">
                                 <div class="flex flex-col gap-2 mt-2">
                                     <div class="flex gap-2 items-center">
@@ -458,160 +668,96 @@
                     </div>
                 </div>
                 <!-- end buyer reviews -->
-            </div>
-            <div class="sidebar w-64 xl:block hidden">
-                <div class="card bg-white border border-neutral-200 rounded-xl px-5 py-6 flex-col flex gap-4">
-                    <div class="text-xl font-bold font-altebold text-neutral-800">Set amount</div>
-                    <div class="flex items-center gap-3">
-                        <div class="flex rounded-xl bg-neutral-100 border border-neutral-100 items-center">
-                            <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-minus text-neutral-800 mt-1"></i></button>
-                            <input type="text" class="h-10 outline-none rounded-xl w-14 text-center" value="1">
-                            <button class="h-full flex items-center justify-center px-3"><i class="fi fi-br-plus text-neutral-800 mt-1"></i></button>
-                        </div>
-                        <div class="text-neutral-600 text-base font-medium">20 Left</div>
-                    </div>
-                    <div class="text-sm text-neutral-600">*Min. purchase of 1 pcs</div>
-                    <div class="border-t-2 border-neutral-200 "></div>
-                    <div class="flex-col flex">
-                        <div class="text-sm text-neutral-600">subtotal</div>
-                        <div class="flex items-center gap-2 mt-1 cursor-pointer swap">
-                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
-                            <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <button class="h-11 rounded-xl bg-primary hover:bg-darkprimary duration-200 text-white font-bold">Add to cart</button>
-                        <button class="h-11 rounded-xl border border-primary text-primary font-normal">Wishlist</button>
-                    </div>
-                </div>
-                <div class="mt-6">
-                    <a href="">
-                        <img src="./assets/iklan-detail-product.png" class="rounded-xl" alt="">
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>
 
-
     <!-- related -->
-    <div class="last-related-product container my-40">
+    <div class="last-related-destination container my-40">
         
-        <div class="font-bold font-altebold text-2xl text-neutral-800 mb-8">Related products</div>
+        <div class="font-bold font-altebold text-2xl text-neutral-800 mb-8">Related destinations</div>
 
-        <!-- list related product -->
+        <!-- list related destination -->
         <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 mt-4">
             
-            <!-- card related product -->
+            <!-- card trip -->
             <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
-                <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/product-1.png');">
-                    <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
-                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
+                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
+                <div class="flex px-5 py-2 gap-2 items-center">
+                    <div class="rating flex items-center">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <span class="text-orange-600 pl-1">(1,512)</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                        <div class="text-base text-neutral-600">Hiking</div>
                     </div>
                 </div>
-                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
-                <div class="flex items-stretch px-5">
-                    <div class="flex flex-col flex-1">
-                        <div class="flex items-center gap-2 py-2">
-                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
-                            <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
-                        </div>
-                        <div class="flex pb-5 gap-2 items-center">
-                            <div class="rating flex items-center">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <span class="text-orange-600 pl-1">(1,512)</span>
-                            </div>
-                            <div class="flex gap-2 items-center">
-                                <div class="bg-primary w-5 rounded-2xl h-1"></div>
-                                <div class="text-base text-neutral-600">Hiking</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:flex hidden gap-2 bottom-4 right-5 mt-1">
-                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
-                    </div>
+                <div class="flex items-center gap-2 pb-5 px-5">
+                    <div class="text-base text-neutral-600">From</div>
+                    <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
+                    <img src="./assets/icons/swap-gray.svg" alt="">
+                    <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
                 </div>
             </a>
-            <!-- end first card related product -->
-
-            <!-- card related product -->
+            <!-- end card trip -->
+            <!-- card trip -->
             <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
-                <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/product-1.png');">
-                    <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
-                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
+                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
+                <div class="flex px-5 py-2 gap-2 items-center">
+                    <div class="rating flex items-center">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <span class="text-orange-600 pl-1">(1,512)</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                        <div class="text-base text-neutral-600">Hiking</div>
                     </div>
                 </div>
-                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
-                <div class="flex items-stretch px-5">
-                    <div class="flex flex-col flex-1">
-                        <div class="flex items-center gap-2 py-2">
-                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
-                            <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
-                        </div>
-                        <div class="flex pb-5 gap-2 items-center">
-                            <div class="rating flex items-center">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <span class="text-orange-600 pl-1">(1,512)</span>
-                            </div>
-                            <div class="flex gap-2 items-center">
-                                <div class="bg-primary w-5 rounded-2xl h-1"></div>
-                                <div class="text-base text-neutral-600">Hiking</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:flex hidden gap-2 bottom-4 right-5 mt-1">
-                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
-                    </div>
+                <div class="flex items-center gap-2 pb-5 px-5">
+                    <div class="text-base text-neutral-600">From</div>
+                    <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
+                    <img src="./assets/icons/swap-gray.svg" alt="">
+                    <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
                 </div>
             </a>
-
-            <!-- card related product -->
+            <!-- end card trip -->
+            <!-- card trip -->
             <a class="rounded-2xl cursor-pointer border border-neutral-100 overflow-hidden mb-1">
-                <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/product-1.png');">
-                    <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
-                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
+                <img src="./assets/trip-card.png" alt="" class="rounded-2xl w-full h-auto">
+                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
+                <div class="flex px-5 py-2 gap-2 items-center">
+                    <div class="rating flex items-center">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <img src="./assets/icons/star.svg" alt="">
+                        <span class="text-orange-600 pl-1">(1,512)</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <div class="bg-primary w-5 rounded-2xl h-1"></div>
+                        <div class="text-base text-neutral-600">Hiking</div>
                     </div>
                 </div>
-                <div class="text-lg text-neutral-600 font-alte px-5 pt-4">Tokyo - elit at eget lacus feugiat. Eu amet vitae ultricies.</div>
-                <div class="flex items-stretch px-5">
-                    <div class="flex flex-col flex-1">
-                        <div class="flex items-center gap-2 py-2">
-                            <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
-                            <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
-                        </div>
-                        <div class="flex pb-5 gap-2 items-center">
-                            <div class="rating flex items-center">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <span class="text-orange-600 pl-1">(1,512)</span>
-                            </div>
-                            <div class="flex gap-2 items-center">
-                                <div class="bg-primary w-5 rounded-2xl h-1"></div>
-                                <div class="text-base text-neutral-600">Hiking</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:flex hidden gap-2 bottom-4 right-5 mt-1">
-                        <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
-                    </div>
+                <div class="flex items-center gap-2 pb-5 px-5">
+                    <div class="text-base text-neutral-600">From</div>
+                    <div class="font-bold text-neutral-800 text-xl">₮ 170,370</div>
+                    <img src="./assets/icons/swap-gray.svg" alt="">
+                    <div class="font-bold text-neutral-800 text-xl">¥ 6,807</div>
                 </div>
             </a>
-            <!-- end card related product -->
 
         </div>
         <!-- end list related product -->
@@ -686,6 +832,234 @@
         </div>
     </footer>
     <!-- end footer -->
+
+    <!-- modal edit -->
+    <div class="modal-edit-overlay active invisible opacity-0 duration-200 overlay-bg fixed z-10 bg-black top-0 left-0 h-full w-full"></div>
+    <div class="modal-edit active duration-200 invisible opacity-0 translate-y-3 fixed h-full z-20 w-full items-center justify-center flex top-0 left-0">
+        <div class="modal bg-white md:rounded-3xl rounded-none md:h-auto h-full md:max-w-4xl max-w-full w-full overflow md:m-4 m-0 flex flex-col md:justify-normal justify-between">
+            
+            <!-- modal content -->
+            <div class="md:overflow-y-auto overflow-y-scroll flex-1">
+                <!-- title -->
+                <div class="flex items-stretch justify-between gap-4 md:pt-12 md:px-12 sm:px-6 px-4 pt-10">
+                    <div class="font-bold font-altebold md:text-2xl text-xl flex-1">Full-Day Private Tour with Government-Licensed Guide</div>
+                    <div class="cursor-pointer pl-2 close-modal"><img src="./assets/icons/close-black.svg" alt=""></div>
+                </div>
+                <!-- end title -->
+
+                <!-- form -->
+                <div class="form mx-1">
+
+                    <!-- search -->
+                    <div class="flex gap-4 md:mt-8 mt-4 md:flex-row flex-col md:px-11 sm:px-5 px-3 pb-4">
+                        <div class="form-input lg:flex-none flex-1">
+                            <label for="date">
+                                <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
+                                <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                                    <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
+                                    <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                    <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="flex gap-4 sm:flex-row flex-col lg:max-w-none md:max-w-xs max-w-fit">
+                            <div class="form-input lg:flex-none flex-1">
+                                <label for="adult">
+                                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
+                                    <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 lg:w-44 w-full px-5 cursor-pointer">
+                                        <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
+                                        <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-input relative lg:flex-none flex-1">
+                                <label for="kid" class="relative">
+                                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
+                                    <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 lg:w-44 w-full px-5 cursor-pointer">
+                                        <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
+                                        <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
+                                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                                    </div>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end search -->
+
+                    <!-- list destination -->
+                    <div class="edits md:px-11 sm:px-5 px-3 md:overflow-y-scroll overflow-y-visible max-h-96">
+                        
+                        <!-- option available text -->
+                        <div class="mt-6 text-neutral-400">
+                            There is <span class="text-neutral-800 text-base">1 option available</span> at 21 February 2023 for 2 Adults & 2 Kids
+                        </div>
+                        <!-- end option available text -->
+                        <div class="rounded-xl border-2 border-neutral-200 bg-neutral-50 w-full md:p-7 p-4 mt-5 flex items-stretch gap-6 sm:flex-row flex-col cursor-pointer">
+                            <div class="left-side flex flex-col md:w-72 sm:w-48 w-full">
+                                <div class="text-neutral-800 text-lg font-bold">21 February 2023</div>
+                                <div class="text-base text-neutral-400 sm">select departure time</div>
+                                <div class="flex flex-wrap gap-3 mt-2">
+                                    <label for="departure" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-primary text-white" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="line border-r-2 border-neutral-200 sm:block hidden"></div>
+                            <div class="right-side flex flex-col justify-between flex-1">
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex justify-between border-b border-neutral-200 pb-2">
+                                        <div class="text-neutral-600 text-base">2 Adults</div>
+                                        <div class="text-neutral-600 text-base">x $127</div>
+                                    </div>
+                                    <div class="flex justify-between border-b border-neutral-200 pb-2">
+                                        <div class="text-neutral-600 text-base">2 Kids</div>
+                                        <div class="text-neutral-600 text-base">x $65</div>
+                                    </div>
+                                    <div class="flex justify-between pb-2">
+                                        <div class="text-neutral-800 font-bold text-lg">Total</div>
+                                        <div class="text-neutral-800 font-bold text-lg">$192</div>
+                                    </div>
+                                </div>
+                                <div class="text-neutral-400 text-sm">*(No additional taxes or booking fees)</div>
+                            </div>
+                        </div>
+
+                        <div class="text-neutral-400 pt-4 border-t-2 border-neutral-200 mt-8">Alternative options at 22 February 2023 for 2 Adults & 2 Kids</div>
+
+                        <div class="rounded-xl relative overflow-hidden border-2 border-neutral-50 bg-neutral-50 w-full md:p-7 p-4 mt-5 flex items-stretch gap-6 sm:flex-row flex-col">
+                            <div class="absolute flex justify-center items-center text-xl w-full h-full bg-white bg-opacity-80 top-0 left-0 text-neutral-800 font-bold z-10">Not Available</div>
+                            <div class="left-side flex flex-col md:w-72 sm:w-48 w-full">
+                                <div class="text-neutral-800 text-lg font-bold">21 February 2023</div>
+                                <div class="text-base text-neutral-400 sm">select departure time</div>
+                                <div class="flex flex-wrap gap-3 mt-2">
+                                    <label for="departure" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-primary text-white" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="line border-r-2 border-neutral-200 sm:block hidden"></div>
+                            <div class="right-side flex flex-col justify-between flex-1">
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex justify-between border-b border-neutral-200 pb-2">
+                                        <div class="text-neutral-600 text-base">2 Adults</div>
+                                        <div class="text-neutral-600 text-base">x $127</div>
+                                    </div>
+                                    <div class="flex justify-between border-b border-neutral-200 pb-2">
+                                        <div class="text-neutral-600 text-base">2 Kids</div>
+                                        <div class="text-neutral-600 text-base">x $65</div>
+                                    </div>
+                                    <div class="flex justify-between pb-2">
+                                        <div class="text-neutral-800 font-bold text-lg">Total</div>
+                                        <div class="text-neutral-800 font-bold text-lg">$192</div>
+                                    </div>
+                                </div>
+                                <div class="text-neutral-400 text-sm">*(No additional taxes or booking fees)</div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-xl relative mb-4 overflow-hidden border-2 border-neutral-50 bg-neutral-50 w-full md:p-7 p-4 mt-5 flex items-stretch gap-6 sm:flex-row flex-col">
+                            <div class="absolute flex justify-center items-center text-xl w-full h-full bg-white bg-opacity-80 top-0 left-0 text-neutral-800 font-bold z-10">Not Available</div>
+                            <div class="left-side flex flex-col md:w-72 sm:w-48 w-full">
+                                <div class="text-neutral-800 text-lg font-bold">21 February 2023</div>
+                                <div class="text-base text-neutral-400 sm">select departure time</div>
+                                <div class="flex flex-wrap gap-3 mt-2">
+                                    <label for="departure" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-primary text-white" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                    <label for="departure2" class="rounded-lg flex h-7 items-center cursor-pointer justify-center px-3 bg-neutral-200" onchange="toggleClass([this])">
+                                        <input type="radio" class="hidden" name="departure" id="departure2">
+                                        <div class="text-sm font-medium">09:00 AM</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="line border-r-2 border-neutral-200 sm:block hidden"></div>
+                            <div class="right-side flex flex-col justify-between flex-1">
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex justify-between border-b border-neutral-200 pb-2">
+                                        <div class="text-neutral-600 text-base">2 Adults</div>
+                                        <div class="text-neutral-600 text-base">x $127</div>
+                                    </div>
+                                    <div class="flex justify-between border-b border-neutral-200 pb-2">
+                                        <div class="text-neutral-600 text-base">2 Kids</div>
+                                        <div class="text-neutral-600 text-base">x $65</div>
+                                    </div>
+                                    <div class="flex justify-between pb-2">
+                                        <div class="text-neutral-800 font-bold text-lg">Total</div>
+                                        <div class="text-neutral-800 font-bold text-lg">$192</div>
+                                    </div>
+                                </div>
+                                <div class="text-neutral-400 text-sm">*(No additional taxes or booking fees)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end list destination -->
+
+                </div>
+                <!-- end form -->
+
+            </div>
+            <!-- end modal content -->
+
+            <!-- list order destination -->
+            <div class="md:py-6 py-4 border-t-4 border-neutral-200 flex justify-end md:gap-5 gap-3 md:px-12 sm:px-6 px-4 md:pb-8">
+                <button class="border-primary border-2 text-primary h-11 flex items-center justify-center w-40 font-semibold rounded-2xl close-modal">Cancel</button>
+                <button class="text-white bg-primary h-11 flex items-center justify-center w-40 font-semibold rounded-2xl close-modal">Save</button>
+            </div>
+            <!-- end list order destination -->
+
+        </div>
+        
+    </div>
+    <!-- end modal edit -->
 
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
     <script src="./scripts/script.js"></script>

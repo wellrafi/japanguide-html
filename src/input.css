@@ -199,3 +199,23 @@
 .wrap.active .trigger img{
   transform: rotate(180deg);
 }
+
+/* end expand component */
+
+
+/* modal edit */
+
+
+
+.modal-edit.active{
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.modal-edit-overlay.active{
+  opacity: .8;
+  visibility: visible;
+}
+
+/* end modal edit */

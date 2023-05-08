@@ -90,7 +90,45 @@ $(function() {
         $($(this).parent()).toggleClass('active')
     })
 
-    
+    $('.open-modal').on('click', function () {
+        let target = $(this).data('target-modal');
+        
+        $(`${target}-overlay`).addClass('active');
+        setTimeout(() => {
+            $(target).addClass('active');
+        }, 100);
+        $('body').addClass('overflow-hidden')
+    })
+
+    $('.close-modal').on('click', function () {
+        $('.modal-edit').removeClass('active');
+        setTimeout(() => {
+            $('.modal-edit-overlay').removeClass('active');
+            $('body').removeClass('overflow-hidden')
+    }, 100);
+    })
+
+    // slider online shop
+    var splide_banner = new Splide( '.splide_banner', {
+        type   : 'loop',
+        pagination : false
+    } );
+    splide_banner.mount();
+    // end slider online shop
+
+    // slider discount
+    let splide_discount = new Splide('.splide_discount', {
+        type        : 'loop',
+        pagination  : false,
+        focus       : 'left',
+        autoWidth   : true,
+        arrows      : false,
+        classes:    {
+            next: 'arrows-next-'
+        }
+        // padding     : '2rem',
+    })
+    splide_discount.mount()
 
 });
 
