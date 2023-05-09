@@ -20,6 +20,10 @@
   display: block;
 }
   
+.dropshadow{
+  box-shadow: 0px 20px 45px 4px rgba(0, 0, 0, 0.05);
+}
+
 .check{
   /* border: 1px solid rgb(220,220,220); */
   height: 45px;
@@ -205,8 +209,6 @@
 
 /* modal edit */
 
-
-
 .modal-edit.active{
   opacity: 1;
   transform: none;
@@ -219,3 +221,48 @@
 }
 
 /* end modal edit */
+
+
+/* maps text position */
+.hokkaido{
+  top: 13%;
+  right: 8%;
+}
+.tohoku{
+  top: 44%;
+  right: 26%;
+}
+.kanto{
+  right: 32%;
+  top: 67%;
+}
+.chubu{
+  top: 64.5%;
+  right: 43.5%;
+}
+.kansai{
+  top: 73%;
+  right: 55%;
+}
+.chugoku{
+  top: 67%;
+  right: 68%;
+}
+.shikoku{
+  top: 78%;
+  right: 68%;
+}
+.kyushu{
+  top: 84%;
+  right: 84%;
+}
+.okinawa{
+  top: 84%;
+  right: 10%;
+}
+/* end maps text position */
+
+
+.splide__slide.is-active.is-visible .card{
+  width: 500px !important;
+}

@@ -43,9 +43,9 @@ module.exports = {
         padding: '15px',
         center: true,
       },
-      dropShadow: {
-        '1xx' : '0px 10px 45px 4px rgba(0, 0, 0, 0.04)'
-      }
+      // dropShadow: {
+      //   '1xx' : ''
+      // }
     }
   },
   // plugins: [

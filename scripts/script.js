@@ -108,27 +108,27 @@ $(function() {
     }, 100);
     })
 
-    // slider online shop
-    var splide_banner = new Splide( '.splide_banner', {
-        type   : 'loop',
-        pagination : false
-    } );
-    splide_banner.mount();
     // end slider online shop
 
-    // slider discount
-    let splide_discount = new Splide('.splide_discount', {
-        type        : 'loop',
-        pagination  : false,
-        focus       : 'left',
-        autoWidth   : true,
-        arrows      : false,
-        classes:    {
-            next: 'arrows-next-'
-        }
-        // padding     : '2rem',
+    $('.map').on('mouseover', function () {
+        let name = $(this).data('name')
+        $('.text-mapping').removeClass('text-white')
+        $('.text-mapping').removeClass('text-xl')
+        $(`.text-mapping`).css({
+            "-webkit-text-stroke" : "0px transparent",
+            "text-stroke" : "0px transparent",
+            "transform" : "none"
+        })
+        $('.map').attr('fill', '#dbdbdb')
+        $(this).attr('fill', '#F34646')
+        $(`.${name}`).addClass('text-white')
+        $(`.${name}`).addClass('text-xl')
+        $(`.${name}`).css({
+            "-webkit-text-stroke" : "1px #F34646",
+            "text-stroke" : "1px #F34646",
+            "transform" : "translateY(-5px)"
+        })
     })
-    splide_discount.mount()
 
 });
 
