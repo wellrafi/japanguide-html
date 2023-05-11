@@ -48,14 +48,14 @@
 <body>
     
     <!-- header component -->
-    <header class="relative">
+    <header class="relative z-20">
 
         <!-- mobile background layer -->
-        <div class="mobile-layer fixed z-20 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"></div>
+        <div class="mobile-layer fixed z-50 w-full h-full bg-black opacity-60 invisible" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])"></div>
         <!-- end mobile background layer -->
 
         <!-- mobile menu -->
-        <div class="mobile-menu fixed -left-80 top-0 w-80 h-full bg-white z-20 overflow-y-scroll">
+        <div class="mobile-menu fixed -left-80 top-0 w-80 h-full bg-white z-50 overflow-y-scroll">
             <div class="px-6 m-auto pt-5 pb-4 h-full">
                 <div class="mobile-nav-menus flex flex-col justify-between">
                     <div class="mobile-top-nav-menus">
@@ -65,7 +65,7 @@
                         </div>
                         <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
                             <div class="mobile-dropdown-trigger cursor-pointer">
-                                <div class="text-base text-gray-800 flex py-4 block flex justify-between">
+                                <div class="text-base text-gray-800 py-4 flex justify-between">
                                     <span>Destinations</span> 
                                     <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
                                 </div>
@@ -74,7 +74,9 @@
                                 <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
                                 <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
                                 <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
-                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Tohoku</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Kanto</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Chubu</a>
                             </div>
                         </div>
                         <div class="mobile-nav-item border-b border-gray-200">
@@ -85,16 +87,16 @@
                         </div>
                         <div class="mobile-nav-item border-b border-gray-200" onclick="toggleClass([this])">
                             <div class="mobile-dropdown-trigger cursor-pointer">
-                                <div class="text-base text-gray-800 flex py-4 block flex justify-between ">
-                                    <span>Destinations</span> 
+                                <div class="text-base text-gray-800  py-4  flex justify-between ">
+                                    <span>News</span> 
                                     <img src="./assets/icons/arrow-down.svg" class="arrow-down-" alt="">
                                 </div>
                             </div>
                             <div class="flex flex-col gap-1 invisible overflow-hidden target-dropdown mobile-dropdown-menus">
-                                <a href="" class="text-sm text-gray-500 py-1">Tokyo</a>
-                                <a href="" class="text-sm text-gray-500 py-1">Okinawa</a>
-                                <a href="" class="text-sm text-gray-500 py-1">Shiba</a>
-                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Jumanji</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Around Tokyo</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Winter</a>
+                                <a href="" class="text-sm text-gray-500 py-1">Hidden spots</a>
+                                <a href="" class="text-sm text-gray-500 py-1 mb-4">Tourist</a>
                             </div>
                         </div>
                         <div class="mobile-nav-item border-b border-gray-200">
@@ -105,7 +107,7 @@
                     <div class="mobile-bottom-nav-menus">
                         <div class="mobile-nav-item border-b border-gray-200">
                             <div class="mobile-dropdown-trigger">
-                                <a href="" class="text-base text-gray-800 flex py-4 flex justify-between">
+                                <a href="" class="text-base text-gray-800 py-4 flex justify-between">
                                     <span>Sign in</span> 
                                     <img src="./assets/icons/user.svg" class="h-6" alt="">
                                 </a>
@@ -118,7 +120,7 @@
         <!-- end mobile menu -->
 
         <!-- top navbar -->
-        <div class="header-top sm:block hidden">
+        <div class="relative bg-white z-30 header-top sm:block hidden">
             <div class="mx-auto pt-3 pb-3 container">
                 <div class="flex sm:justify-between justify-center">
                     <!-- left top navbar / weather -->
@@ -130,7 +132,7 @@
                     <!-- right top navbar -->
                     <div class="flex gap-3">
                         <!-- currency switch -->
-                        <div class="flex gap-3 cursor-pointer">
+                        <div class="flex gap-3 cursor-pointer swap">
                             <div class="text-base text-gray-800">1,000 MNT</div>
                             <img src="./assets/icons/swap-read.svg" alt="">
                             <div class="text-base text-gray-800	">39.4 JPY</div>
@@ -141,7 +143,7 @@
                         <div class="cursor-pointer">
                             <div class="dropdown inline-block relative">
                                 <div class="flex gap-1 pointer text-gray-800">EN <img src="./assets/icons/drop-down-mini-black.svg" alt=""> </div>
-                                <ul class="dropdown-menu absolute shadow-lg hidden rounded right-0 z-20 overflow-hidden rounded-lg">
+                                <ul class="dropdown-menu absolute hidden shadow-lg bg-white right-0 z-50 overflow-hidden rounded-lg">
                                     <li class="pt-2"><a class="text-gray-800 bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">English</a></li>
                                     <li class=""><a class="bg-white hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap" href="#">Mongolian</a></li>
                                     <li class="pb-2"><a class="text-gray-800 bg-whiite hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-b " href="#">Japanese</a></li>
@@ -157,15 +159,15 @@
         <!-- end top navbar -->
 
         <!-- line header -->
-        <div class="container header-line">
-            <div class="border-b border-gray-100"></div>
+        <div class="relative bg-white z-20  header-line">
+            <div class="container border-b border-gray-100"></div>
         </div>
         <!-- end line header -->
 
         <!-- bottom navigation -->
-        <nav class="border-b border-gray-100">
+        <nav class="relative z-20 bg-white border-b border-gray-100">
             <div class="mx-auto container py-7">
-                <div class="flex justify-between items-center flex-1 relative">
+                <div class="flex justify-between items-stretch flex-1 relative">
                     <div class="mobile-trigger lg:hidden cursor-pointer" onclick="toggleClass(['.mobile-menu', '.mobile-layer'])">
                         <div class="hamburger">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -174,17 +176,126 @@
                         </div>
                     </div>
                     <div class="nav-menu lg:flex xl:gap-10 gap-6 hidden">
-                        <div class="nav-item"><a href="" class="text-lg">Destinations</a></div>
+                        <div class="nav-item drop-down">
+                            <a href="" class="text-lg">Destinations</a>
+
+                            
+                            <!-- mega menu -->
+                            <div class="dropdown-nav fixed opacity-0 max-h-0 duration-150 z-20 w-full left-0 overflow-hidden">
+                                <div class="pt-7 mt-1"></div>
+                                <div class="border-t border-b border-neutral-100 bg-white">
+                                    <div class="container py-9">
+                                        <div class="flex max-h-[27rem]">
+                                            <div class="bottom-menus flex flex-col gap-4 w-[15rem] border-r-2 border-neutral-100 mr-10">
+                                                <a class="menu group flex gap-2 items-center cursor-pointer">
+                                                    <div class="w-0 group-hover:w-2 duration-150 h-1 rounded-xl bg-primary"></div>
+                                                    <div class="text-lg font-semi group-hover:text-neutral-800 group-hover:font-bold text-neutral-600">Top Destinations</div>
+                                                </a>
+                                                <a class="menu group flex gap-2 items-center cursor-pointer">
+                                                    <div class="w-0 group-hover:w-2 duration-150 h-1 rounded-xl bg-primary"></div>
+                                                    <div class="text-lg font-semi group-hover:text-neutral-800 group-hover:font-bold text-neutral-600">Regions</div>
+                                                </a>
+                                                <a class="menu group flex gap-2 items-center cursor-pointer">
+                                                    <div class="w-0 group-hover:w-2 duration-150 h-1 rounded-xl bg-primary"></div>
+                                                    <div class="text-lg font-semi group-hover:text-neutral-800 group-hover:font-bold text-neutral-600">Activities</div>
+                                                </a>
+                                                <a class="menu group flex gap-2 items-center cursor-pointer">
+                                                    <div class="w-0 group-hover:w-2 duration-150 h-1 rounded-xl bg-primary"></div>
+                                                    <div class="text-lg font-semi group-hover:text-neutral-800 group-hover:font-bold text-neutral-600">All Destinations</div>
+                                                </a>
+                                            </div>
+                                            <div class="flex-1 w-full">
+                                                <div class="flex w-full justify-between">
+                                                    <div class="flex items-stretch flex-col gap-3 flex-wrap max-h-72">
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Tokyo</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Kyoto</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Mt. Fuji</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Nara</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Yokohama</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Okinawa</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Nagoya</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Kamakura</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Kobe</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Yokohama</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Hiroshima</a>
+                                                        </div>
+                                                        <div class="mr-10">
+                                                            <a href="" class="text-neutral-600 font-semi text-lg hover:text-neutral-800 duration-100 hover:underline">Nagasaki</a>
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                                                    <div class="flex flex-wrap xl:max-w-[39rem] max-w-[26rem] w-full gap-3 flex-1 items-start justify-start">
+                                                        <a href="#" class="text-white pb-2 text-sm hover:pb-4 duration-200 max-w-[12.5rem] flex items-end justify-center w-full h-32 rounded-xl bg-black bg-center bg-cover bg-no-repeat" 
+                                                            style="background-image: url('./assets/top-d-1.png');">
+                                                            Okinawa
+                                                        </a>
+                                                        <a href="#" class="text-white pb-2 text-sm hover:pb-4 duration-200 max-w-[12.5rem] flex items-end justify-center w-full h-32 rounded-xl bg-black bg-center bg-cover bg-no-repeat" 
+                                                            style="background-image: url('./assets/top-d-2.png');">
+                                                            Tokyo
+                                                        </a>
+                                                        <a href="#" class="text-white pb-2 text-sm hover:pb-4 duration-200 max-w-[12.5rem] flex items-end justify-center w-full h-32 rounded-xl bg-black bg-center bg-cover bg-no-repeat" 
+                                                            style="background-image: url('./assets/top-d-3.png');">
+                                                            Okinawa
+                                                        </a>
+                                                        <a href="#" class="text-white pb-2 text-sm hover:pb-4 duration-200 max-w-[12.5rem] flex items-end justify-center w-full h-32 rounded-xl bg-black bg-center bg-cover bg-no-repeat" 
+                                                            style="background-image: url('./assets/top-d-4.png');">
+                                                            Hiroshima
+                                                        </a>
+                                                        <a href="#" class="text-white pb-2 text-sm hover:pb-4 duration-200 max-w-[12.5rem] xl:flex hidden items-end justify-center w-full h-32 rounded-xl bg-black bg-center bg-cover bg-no-repeat" 
+                                                            style="background-image: url('./assets/top-d-5.png');">
+                                                            Mt. Juji
+                                                        </a>
+                                                        <a href="#" class="text-white pb-2 text-sm hover:pb-4 duration-200 max-w-[12.5rem] xl:flex hidden items-end justify-center w-full h-32 rounded-xl bg-black bg-center bg-cover bg-no-repeat" 
+                                                            style="background-image: url('./assets/top-d-6.png');">
+                                                            Nara
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="text-right pt-7"><a class="text-right underline text-primary font-bold" href="">all destinations</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- end mega menu -->
+
+                        </div>
                         <div class="nav-item"><a href="" class="text-lg">Shop</a></div>
                         <div class="nav-item"><a href="" class="text-lg">Good to know</a></div>
                         <div class="nav-item"><a href="" class="text-lg">News</a></div>
                     </div>
-                    <a href="/" class="logo gap-5 absolute right-1/2 translate-x-2/4">
+
+                    <!-- logo -->
+                    <a href="/" class="logo gap-5 absolute lg:-mt-1 -mt-2 right-1/2 translate-x-2/4">
                         <img src="./assets/logo.png" alt="">
                     </a>
+                    <!-- end logo -->
 
                     <!-- mobile search -->
-                    <div class="mobile-form-search hidden fixed w-full left-0 z-20">
+                    <div class="mobile-form-search hidden fixed w-full left-0 z-20 top-4">
                         <div class="container">
                             <form action="" class="flex w-full">
                                 <button type="button" class="h-12 pr-0 pl-3 border-r-0 border rounded-l-xl bg-white">
@@ -198,7 +309,7 @@
                         </div>
                     </div>
                     <div class="mobile-search lg:hidden pl-2 cursor-pointer relative z-10" onclick="toggleClass(['.mobile-form-search'])">
-                        <img src="./assets/icons/search_navbar.svg" alt="">
+                        <img src="./assets/icons/search_navbar.svg" class="mt-1" alt="">
                     </div>
                     <!-- end mobile serach -->
 
@@ -219,6 +330,7 @@
             </div>
         </nav>
         <!-- end bottom navigation -->
+
         
     </header>
     <!-- end header component -->
