@@ -141,11 +141,11 @@
 
 /* dropdown trips */
 
-.open_destination_list{
+.target-form-input{
   display: none;
 }
 
-.open_destination_list.active_element{
+.target-form-input.active_element{
   display: block !important;
 }
 /* end dropdown trips  */
@@ -265,4 +265,8 @@
 
 .splide__slide.is-active.is-visible .card{
   width: 500px !important;
+}
+
+.nav-item:hover .nav-item .dropdown-nav{
+  max-height: auto !important;
 }

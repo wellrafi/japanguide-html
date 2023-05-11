@@ -8,7 +8,7 @@ module.exports = {
   mode: "jit",
   theme: {
     screens: {
-      'ph': '340px',
+      'ph': '440px',
     },
     minHeight: {
       lg: '700px',

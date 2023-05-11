@@ -13,15 +13,20 @@ function toggle(target) {
     }
 }
 
-// tab
-// $('.tab').on('click', function(evt) {
-//     evt.preventDefault();
-//     $(this).toggleClass('block');
-//     var sel = this.getAttribute('data-toggle-target');
-//     $('.tab-content').removeClass('block').filter(sel).addClass('block');
-// });
+$(document).ready(function() {
 
-$(function() {
+
+
+    $('.form-input').on('click',function (e) {
+        $(this).find('.target-form-input').toggleClass('active_element')
+    })
+    // $(document).on("click", function(e) {
+    //     if ($(e.target).is(".target-form-input") === false) {
+    //         $(".target-form-input").removeClass("active_element");
+    //     }
+    //     console.log(e)
+    // });
+
     $('.tab').click(function() {
   
       // Check for active
@@ -129,6 +134,20 @@ $(function() {
             "transform" : "translateY(-5px)"
         })
     })
+
+
+
+    $('.nav-item.drop-down').on('mouseenter', function (){
+        $('body').addClass('overflow-hidden')
+        $('.dropdown-nav').removeClass('max-h-0')
+        $('.dropdown-nav').removeClass('opacity-0')
+    })
+    $('.nav-item.drop-down').on('mouseleave', function (){
+        $('body').removeClass('overflow-hidden')
+        $('.dropdown-nav').addClass('max-h-0')
+        $('.dropdown-nav').addClass('opacity-0')
+    })
+
 
 });
 
