@@ -37,10 +37,10 @@
 
     <link href="./dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-
 
 </head>
 <body>
@@ -359,6 +359,7 @@
                     <form class="xl:max-w-[33rem] lg:max-w-md relative w-full bg-white rounded-t-3xl lg:px-9 sm:px-10 p-0 py-10 flex flex-col gap-4">
                         <img src="./assets/icons/lenjung-left.svg" class="bottom-0 absolute right-full" alt="">
                         <img src="./assets/icons/lenjung-right.svg" class="bottom-0 absolute left-full" alt="">
+
                         <div class="flex items-center justify-between">
                             <div class="text-primary text-2xl font-altebold font-bold mb-2">Book Your Trip</div>
                             <div class="text-center items-center flex gap-2">
@@ -371,81 +372,134 @@
                                 <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
                                 <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                     <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                                    <input name="destination" id="destination" placeholder="Tokyo" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                    <input name="destination" placeholder="Tokyo" value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
                                     <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                                 </div>
                             </label>
                             <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
-                                <div class="flex flex-col">
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
-                                    <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                        
-                                        <div class="value text-base font-bold">Tokyo</div>
-                                    </div>
+                                <div class="flex flex-col spot-search" id="">
+                                    
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-input">
                             <label for="date">
                                 <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
                                 <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                     <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                                    <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                    <input name="date" type="text" id="date" placeholder="21/2/2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide />
+                                    
                                     <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                                 </div>
                             </label>
                         </div>
                         <div class="flex gap-4">
-                            <div class="form-input">
+                            <div class="form-input relative">
                                 <label for="adult">
                                     <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
                                     <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                         <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
-                                        <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                        <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer adult-input" readonly value=""/>
                                         <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                                     </div>
                                 </label>
+                                <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                                    <div class="flex flex-col" id="">
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">1 Adult</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">2 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">3 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">4 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">5 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">6 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">7 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">8 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">9 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">10 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">11 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">12 Adults</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                            <div class="value text-base font-medium">13+ Adults</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-input relative">
                                 <label for="kid" class="relative">
                                     <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
                                     <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                         <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
-                                        <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
+                                        <input name="kid" placeholder="2 Kids" class="h-full bg-neutral-50 w-full outline-none cursor-pointer kid-input" readonly />
                                         <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                                     </div>
                                 </label>
+                                <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                                    <div class="flex flex-col" id="">
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">1 Kid</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">2 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">3 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">4 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">5 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">6 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">7 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">8 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">9 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">10 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">11 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">12 Kids</div>
+                                        </div>
+                                        <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                            <div class="value text-base font-medium">13+ Kids</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-button pt-2">
@@ -476,48 +530,13 @@
                     <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
                     <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                         <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                        <input name="destination" id="destination" placeholder="Tokyo" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                        <input name="destination" placeholder="Tokyo" value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
                         <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                     </div>
                 </label>
                 <div class="open_destination_list overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
                     <div class="flex flex-col">
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
-                        <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                            <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                            <div class="value text-base font-bold">Tokyo</div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1261,54 +1280,20 @@
 
                 <!-- booking form -->
                 <form class="lg:max-w-sm w-full bg-white rounded-2xl lg:px-6 sm:px-6 p-0 py-6 flex flex-col gap-4 sm:border sm:border-neutral-150">
+
                     <div class="text-primary text-2xl font-altebold font-bold mb-2 text-center">Book Your Trip</div>
                     <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
                         <label for="destination">
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
                             <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                 <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                                <input name="destination" id="destination" placeholder="Tokyo" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <input name="destination" placeholder="Tokyo" value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
                                 <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                             </div>
                         </label>
                         <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
-                            <div class="flex flex-col">
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
-                                <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                    <img src="./assets/icons/star.svg" alt="" class="h-4 w-auto">
-                                    <div class="value text-base font-bold">Tokyo</div>
-                                </div>
+                            <div class="flex flex-col spot-search">
+
                             </div>
                         </div>
                     </div>
@@ -1431,7 +1416,8 @@
     <!-- end footer -->
 
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     <script src="./scripts/script.js"></script>

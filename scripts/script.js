@@ -135,8 +135,6 @@ $(document).ready(function() {
         })
     })
 
-
-
     $('.nav-item.drop-down').on('mouseenter', function (){
         $('body').addClass('overflow-hidden')
         $('.dropdown-nav').removeClass('max-h-0')
@@ -148,6 +146,65 @@ $(document).ready(function() {
         $('.dropdown-nav').addClass('opacity-0')
     })
 
+    // stupid idea but works close dropdown
+    $(document).on('click', function (e) {
+        if ($($(e.target).parent().parent().parent()[0]).hasClass('form-input')) return
+        $('.target-form-input').removeClass('active_element')
+    })
+    // end stupid idea but works close dropdown
+
+
+    // searching destination
+
+    let data = ['fukuoka','saga','nagasaki','kumamoto','oita','miyazaki','kagoshima','okinawa','niigata','toyama','ishikawa','fukui','yamanashi','nagano','gifu','shizuoka','aichi','ibaraki','tochigi','gunma','saitama','chiba','tokyo','kanagawa','aomori','iwate','miyagi','akita','yamagata','fukushima','tottori','shimane','okayama','hiroshima','yamaguchi','tokushima','kagawa','ehime','kochi','kanto','hokkaido','chubu','tohoku','kansai','chugoku','shikoku','kyushu']
+    let search = ''
+
+    addList(data)
+
+    function component(spot) {
+        return `
+            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize search-destination-click">
+                <div class="value text-base font-medium">${spot}</div>
+            </div>
+        `
+    }
+
+    $(document).on('click', '.search-destination-click', function (e) {
+        let val = e.target.innerText.replace(/\s+/g, '')
+        $('.searchdestination').val(val.slice(0, 1).toUpperCase() + val.slice(1))
+    })
+
+    $('.searchdestination').on('input', function (e) {
+
+        search = e.target.value
+        let searching = data.filter( d => { 
+            if(d.indexOf(search) > -1) {return d }
+            }) 
+        
+        searching = searching.length === 0 ? ['not found'] : searching
+
+        addList(searching)
+
+    })
+
+    function addList(searching) {
+        $('.spot-search').html('')
+        let listElements = searching.map(d => component(d)).join('')
+        $('.spot-search').append(listElements)
+    }
+
+    // end search destination
+
+
+    $(document).on('click', '.adult-click', function (e) {
+        let val = e.target.innerText.replace(/\s+/g, '')
+        $('.adult-input').val(val.split('A')[0] + ' A' + val.split('A')[1])
+    })
+
+    $(document).on('click', '.kid-click', function (e) {
+        let val = e.target.innerText.replace(/\s+/g, '')
+        $('.kid-input').val(val.split('K')[0] + ' K' + val.split('K')[1])
+    })
 
 });
 
