@@ -37,7 +37,6 @@
 
     <link href="./dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
@@ -644,19 +643,138 @@
                 <img src="./assets/icons/explore.svg" alt="">
                 <div class="text-xl font-bold font-altebold">Explore Regions of Japan</div>
             </div>
-            <div class="card bg-white rounded-2xl overflow-hidden border border-neutral-100 relative dropshadow">
-                <img src="./assets/explore.png" alt="" class="rounded-2xl">
-                <div class="flex justify-between absolute top-1/2 w-full px-4">
-                    <div class="cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-left-explore.svg" class="cursor-pointer" alt=""></div>
-                    <div class="cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-right-explore.svg" class="cursor-pointer" alt=""></div>
+
+            <div class="splide splide_map dropshadow rounded-2xl">
+                <div class="splide__track">
+                        <ul class="splide__list">
+
+                            <!-- hokkaido -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class="card bg-white relative">
+                                    <img src="./assets/dest-hokkaido.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Hokkaido</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- tohoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-tohoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Tohoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- kanto -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kanto.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kanto</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Chubu -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/explore.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Chubu</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Kansai -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kansai.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kansai</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Chugoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-chugoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Chugoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Shikoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-shikoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Shikoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Kyushu -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kyushu.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kyushu</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Okinawa -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-okinawa.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Okinawa</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+
+                        </ul>
                 </div>
-                <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                    <div class="flex flex-col gap-1 flex-1">
-                        <div class="text-lg font-bold font-altebold">Chubu</div>
-                        <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                    </div>
+                <div class="flex justify-between absolute top-1/2 w-full px-4 splide__arrows">
+                    <div class="prev-map splide__arrow splide__arrow--prev cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-left-explore.svg" class="cursor-pointer" alt=""></div>
+                    <div class="splide__arrow splide__arrow--next next-map cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-right-explore.svg" class="cursor-pointer" alt=""></div>
                 </div>
             </div>
+
+            
         </div>
 
         <div class="relative max-w-[53rem] w-full h-auto xl:ml-0 md:ml-auto sm:mt-2 mt-6">
@@ -684,21 +802,21 @@
             </svg>
 
             <div class="mapping">
-                <a class="text-mapping duration-150 hokkaido absolute font-bold font-altebold sm:text-lg text-base" href="">Hokkaido</a>
-                <a class="text-mapping duration-150 tohoku absolute font-bold font-altebold sm:text-lg text-base" href="">Tohoku</a>
-                <a class="text-mapping duration-150 kanto absolute font-bold font-altebold sm:text-lg text-base" href="">Kanto</a>
-                <a class="text-mapping duration-150 chubu absolute font-bold font-altebold sm:text-lg text-base" href="">Chubu</a>
-                <a class="text-mapping duration-150 kansai absolute font-bold font-altebold sm:text-lg text-base" href="">Kansai</a>
-                <a class="text-mapping duration-150 chugoku absolute font-bold font-altebold sm:text-lg text-base" href="">Chugoku</a>
-                <a class="text-mapping duration-150 shikoku absolute font-bold font-altebold sm:text-lg text-base" href="">Shikoku</a>
-                <a class="text-mapping duration-150 kyushu absolute font-bold font-altebold sm:text-lg text-base" href="">Kyushu</a>
-                <a class="text-mapping duration-150 okinawa absolute font-bold font-altebold sm:text-lg text-base" href="">Okinawa</a>
+                <a class="text-mapping duration-150 hokkaido absolute font-bold font-altebold sm:text-xl text-base" href="">Hokkaido</a>
+                <a class="text-mapping duration-150 tohoku absolute font-bold font-altebold sm:text-xl text-base" href="">Tohoku</a>
+                <a class="text-mapping duration-150 kanto absolute font-bold font-altebold sm:text-xl text-base" href="">Kanto</a>
+                <a class="text-mapping duration-150 chubu absolute font-bold font-altebold sm:text-xl text-base" href="">Chubu</a>
+                <a class="text-mapping duration-150 kansai absolute font-bold font-altebold sm:text-xl text-base" href="">Kansai</a>
+                <a class="text-mapping duration-150 chugoku absolute font-bold font-altebold sm:text-xl text-base" href="">Chugoku</a>
+                <a class="text-mapping duration-150 shikoku absolute font-bold font-altebold sm:text-xl text-base" href="">Shikoku</a>
+                <a class="text-mapping duration-150 kyushu absolute font-bold font-altebold sm:text-xl text-base" href="">Kyushu</a>
+                <a class="text-mapping duration-150 okinawa absolute font-bold font-altebold sm:text-xl text-base" href="">Okinawa</a>
             </div>
 
         </div>
 
         <div class="absolute z-10 right-0 top-1/2 -translate-y-1/2 max-w-md w-full xl:flex hidden flex-col gap-6">
-            <div class="text-xl font-bold font-altebold text-right">Best spots in Chubu</div>
+            <div class="text-xl font-bold font-altebold text-right">Best spots in <span class="sidebarmap capitalize">chubu</span></div>
             <div class="flex flex-col gap-3">
                 <div class="card dropshadow bg-white flex items-center rounded-xl overflow-hidden gap-4 border border-neutral-100">
                     <img src="./assets/home-best-spot-1.png" alt="" class="rounded-xl">
@@ -965,6 +1083,7 @@
 
         </div>
         <!-- end -->
+
         <!-- good to know -->
         <div class="good-to-know container">
             <div class="flex sm:flex-row flex-col justify-between items-center mb-8 w-full">
@@ -1039,6 +1158,7 @@
 
         </div>
         <!-- end good to know -->
+
     </section>
     <!-- end product help you & good to know -->
 
@@ -1173,33 +1293,33 @@
             <div class="flex items-center gap-6">
                 <div class="font-bold font-altebold text-2xl text-neutral-800 text-center">Top Destinations</div>
                 <div class="flex gap-4"> 
-                    <img src="./assets/arrow-left-dest.svg" class="cursor-pointer" alt="destination-left">
+                    <img src="./assets/arrow-left-dest.svg" class="destination-left cursor-pointer" alt="destination-left">
                     <img src="./assets/arrow-right-dest.svg" class="destination-right cursor-pointer" alt="">
                 </div>
             </div>
             <a href="" class="text-base font-bold text-primary underline">all destinations</a>
         </div>
-        <div class="splide">
+        <div class="splide splide_l">
             <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
-                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-80 rounded-2xl overflow-hidden" style="background-image: url('./assets/dest-1.png');">
+                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-96 rounded-2xl overflow-hidden" style="background-image: url('./assets/dest-1.png');">
                                 <div class="flex items-end justify-center w-full h-full bg-gradient-to-t from-black to-transparent bg-opacity-10">
                                     <span class="font-bold font-altebold text-white text-xl mb-4">Tokyo</span>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide">
-                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-80 rounded-2xl" style="background-image: url('./assets/dest-2.png');"></div>
+                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-96 rounded-2xl" style="background-image: url('./assets/dest-2.png');"></div>
                         </li>
                         <li class="splide__slide">
-                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-80 rounded-2xl" style="background-image: url('./assets/dest-3.png');"></div>
+                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-96 rounded-2xl" style="background-image: url('./assets/dest-3.png');"></div>
                         </li>
                         <li class="splide__slide">
-                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-80 rounded-2xl" style="background-image: url('./assets/dest-4.png');"></div>
+                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-96 rounded-2xl" style="background-image: url('./assets/dest-4.png');"></div>
                         </li>
                         <li class="splide__slide">
-                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-80 rounded-2xl" style="background-image: url('./assets/dest-5.png');"></div>
+                            <div class="card bg-center bg-cover bg-no-repeat duration-200 h-72 w-96 rounded-2xl" style="background-image: url('./assets/dest-5.png');"></div>
                         </li>
                     </ul>
             </div>
@@ -1287,7 +1407,7 @@
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
                             <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                 <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                                <input name="destination" placeholder="Tokyo" value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
+                                <input name="destination" placeholder="Tokyo" value="" class="h-full w-full !border-l-0 border border-neutral-200 outline-none cursor-pointer searchdestination" />
                                 <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                             </div>
                         </label>
@@ -1416,23 +1536,8 @@
     <!-- end footer -->
 
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
     <script src="./scripts/script.js"></script>
-    <script>
-        var splide = new Splide( '.splide', {
-            type        : 'loop',
-            focus       : 'left',
-            gap         : 24,
-            autoWidth   : true,
-            padding     : 250,
-            pagination  : false,
-            arrows      : false
-        });
-        splide.mount();
-    </script>
 
 </body>
 </html>

@@ -115,25 +115,57 @@ $(document).ready(function() {
 
     // end slider online shop
 
+
+    // map controller 
+    let activeSlide = ['hokkaido', 'tohoku', 'kanto', 'chubu', 'kansai', 'chugoku', 'shikoku', 'kyushu', 'okinawa']
+    changeMap('hokkaido')
+
+
     $('.map').on('mouseover', function () {
         let name = $(this).data('name')
+        let numberSlide = activeSlide.indexOf(name)
+        changeMap(name)
+        splideMap.go(numberSlide)
+    })
+
+    var splideMap = new Splide( '.splide_map', {
+        type        : 'fade',
+        autoWidth   : true,
+        pagination  : false,
+        arrows      : true,
+        rewind      : true,
+        classes     : {
+            prev    : 'prev-map',
+            next    : 'next-map'
+        }
+    });
+    splideMap.mount();
+    splideMap.on( 'move', function (e) {
+        changeMap(activeSlide[e])
+    });
+
+    function changeMap(name) {
         $('.text-mapping').removeClass('text-white')
-        $('.text-mapping').removeClass('text-xl')
+        $('.text-mapping').removeClass('drop-shadow-2xl')
         $(`.text-mapping`).css({
-            "-webkit-text-stroke" : "0px transparent",
-            "text-stroke" : "0px transparent",
-            "transform" : "none"
+            "transform" : "none",
+            "filter" : "drop-shadow(0 0 2px transparent)",
+            "text-decoration" : "none"
         })
         $('.map').attr('fill', '#dbdbdb')
-        $(this).attr('fill', '#F34646')
-        $(`.${name}`).addClass('text-white')
-        $(`.${name}`).addClass('text-xl')
+        $(`.map[data-name=${name}]`).attr('fill', '#F34646')
+        $(`.${name}`).addClass('text-black')
+        $(`.${name}`).addClass('drop-shadow-2xl')
         $(`.${name}`).css({
-            "-webkit-text-stroke" : "1px #F34646",
-            "text-stroke" : "1px #F34646",
-            "transform" : "translateY(-5px)"
+            "transform" : "translateY(-5px)",
+            "filter" : "drop-shadow(0 0 2px #fff)",
+            "text-decoration" : "underline"
         })
-    })
+        $('.sidebarmap').html(name)
+    }
+
+    // end map controller
+
 
     $('.nav-item.drop-down').on('mouseenter', function (){
         $('body').addClass('overflow-hidden')
@@ -152,6 +184,50 @@ $(document).ready(function() {
         $('.target-form-input').removeClass('active_element')
     })
     // end stupid idea but works close dropdown
+
+
+    // top destination slider
+
+    let width = window.innerWidth
+    console.log('width', width)
+    let container = width > 1536 ? 1350 : width > 1280 ? 1250 : width > 1024 ? 994 : width > 768 ? 738 : width > 640 ? 610 : 0
+    console.log('container', container)
+    let getGap = (window.innerWidth - container) / 2
+    console.log('getGap', getGap)
+    let amountSlide = $('.splide_l ul').find('.splide__slide').length - 1
+    let currentSlide = 2
+    var slideTopDest = new Splide( '.splide_l', {
+        type        : 'loop',
+        focus       : 'left',
+        gap         : 24,
+        autoWidth   : true,
+        padding     : getGap,
+        pagination  : false,
+        arrows      : false,
+        slideSize   : 500
+    });
+    
+    slideTopDest.mount();
+    slideTopDest.go(2)
+    setTimeout(() => {
+        slideTopDest.getNext()
+    }, 400);
+
+    $('.destination-left').on('click', function () {
+        // currentSlide = currentSlide === 0 ? amountSlide : currentSlide - 1
+        // console.log(currentSlide)
+        slideTopDest.getPrev()
+    })
+    $('.destination-right').on('click', function () {
+        currentSlide  = currentSlide !== amountSlide ? 0 : currentSlide + 1
+        slideTopDest.go(currentSlide)
+        
+    })
+
+    
+
+    // end top destination slider
+
 
 
     // searching destination

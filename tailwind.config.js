@@ -4,7 +4,6 @@ module.exports = {
     './**/*.{html,js}',
     './*.{html,js}',
     '*.{html,js}',
-    "./node_modules/flowbite/**/*.js"
   ],
   mode: "jit",
   theme: {
@@ -48,10 +47,7 @@ module.exports = {
       //   '1xx' : ''
       // }
     }
-  },
-  plugins: [
-    require('flowbite/plugin')
-  ]
+  }
 
 }
 

@@ -263,10 +263,6 @@
 /* end maps text position */
 
 
-.splide__slide.is-active.is-visible .card{
-  width: 500px !important;
-}
-
 .nav-item:hover .nav-item .dropdown-nav{
   max-height: auto !important;
 }
