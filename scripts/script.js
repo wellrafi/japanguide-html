@@ -120,12 +120,12 @@ $(document).ready(function() {
     let activeSlide = ['hokkaido', 'tohoku', 'kanto', 'chubu', 'kansai', 'chugoku', 'shikoku', 'kyushu', 'okinawa']
     changeMap('hokkaido')
 
-
     $('.map').on('mouseover', function () {
         let name = $(this).data('name')
         let numberSlide = activeSlide.indexOf(name)
         changeMap(name)
         splideMap.go(numberSlide)
+        splideMap2.go(numberSlide)
     })
 
     var splideMap = new Splide( '.splide_map', {
@@ -139,9 +139,22 @@ $(document).ready(function() {
             next    : 'next-map'
         }
     });
+
+    var splideMap2 = new Splide( '.splide_map_2', {
+        type        : 'fade',
+        autoWidth   : true,
+        pagination  : false,
+        arrows      : false,
+        rewind      : true,
+        
+    });
+
+    splideMap2.mount();
+
     splideMap.mount();
     splideMap.on( 'move', function (e) {
         changeMap(activeSlide[e])
+        splideMap2.go(e)
     });
 
     function changeMap(name) {
@@ -209,9 +222,9 @@ $(document).ready(function() {
     
     slideTopDest.mount();
     slideTopDest.go(2)
-    setTimeout(() => {
-        slideTopDest.getNext()
-    }, 400);
+    // setTimeout(() => {
+    //     slideTopDest.getNext()
+    // }, 400);
 
     $('.destination-left').on('click', function () {
         // currentSlide = currentSlide === 0 ? amountSlide : currentSlide - 1
