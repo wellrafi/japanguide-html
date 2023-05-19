@@ -7,13 +7,6 @@ module.exports = {
   ],
   mode: "jit",
   theme: {
-    screens: {
-      'ph': '440px',
-    },
-    minHeight: {
-      lg: '700px',
-      xl: '860px',
-    },
     fontFamily: {
       'alte': ['AlteHaasGroteskRegular'],
       'altebold': ['AlteHaasGroteskBold']

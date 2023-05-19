@@ -35,8 +35,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
+    
     <link href="./dist/output.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
@@ -292,8 +295,8 @@
                     <!-- end logo -->
 
                     <!-- mobile search -->
-                    <div class="mobile-form-search hidden fixed w-full left-0 z-20 top-4">
-                        <div class="container">
+                    <div class="mobile-form-search hidden absolute w-full left-0 z-20 -mt-3">
+                        <div class="">
                             <form action="" class="flex w-full">
                                 <button type="button" class="h-12 pr-0 pl-3 border-r-0 border rounded-l-xl bg-white">
                                     <img src="./assets/icons/search_navbar.svg" alt="">
@@ -337,7 +340,7 @@
         <div class="container">
             <div class="flex gap-4 items-center">
                 <div class="banner-content flex-1">
-                    <div class="max-w-xl w-full">
+                    <a href="" class="block max-w-xl w-full">
                         <div class="flex pb-4 gap-1 items-center">
                             <span class="w-8 bg-primary h-1 rounded block mr-1"></span> 
                             <span class="text-white font-medium sm:text-lg text-base">Destinations</span>
@@ -348,12 +351,13 @@
                         <div class="xl:pl-10 pl-0 pb-4 sm:block hidden">
                             <p class=" text-base leading-8 text-white opacity-80">The most beautiful and iconic symbols of spring in Japan. The blooming of these delicate pink and white flowers is eagerly awaited every year by locals and tourists alike</p>
                         </div>
-                        <div class="xl:pl-10 pl-0 sm:block hidden">
-                            <img src="./assets/icons/arrow.svg" alt="" class="cursor-pointer">
-                        </div>
+                    </a>
+                    <div class="xl:pl-10 pl-0 sm:block hidden">
+                        <a href="#scrolldown-target" class="scrolldown"><img src="./assets/icons/arrow.svg" alt="" class="cursor-pointer"></a>
                     </div>
                 </div>
                 <div class="banner-form lg:block hidden">
+
                     <!-- booking form -->
                     <form class="xl:max-w-[33rem] lg:max-w-md relative w-full bg-white rounded-t-3xl lg:px-9 sm:px-10 p-0 py-10 flex flex-col gap-4">
                         <img src="./assets/icons/lenjung-left.svg" class="bottom-0 absolute right-full" alt="">
@@ -361,23 +365,23 @@
 
                         <div class="flex items-center justify-between">
                             <div class="text-primary text-2xl font-altebold font-bold mb-2">Book Your Trip</div>
-                            <div class="text-center items-center flex gap-2">
+                            <a href="" class="text-center items-center flex gap-2">
                                 <span class="text-primary">Check more</span>
                                 <img src="./assets/icons/arrow-pri.png" alt="">
-                            </div>
+                            </a>
                         </div>
+
                         <div class="form-input flex-1 relative">
                             <label for="destination">
                                 <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
                                 <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                     <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                                    <input name="destination" placeholder="Tokyo" value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
+                                    <input name="destination" placeholder="Your destination..." value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
                                     <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                                 </div>
                             </label>
                             <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
                                 <div class="flex flex-col spot-search" id="">
-                                    
                                 </div>
                             </div>
                         </div>
@@ -387,14 +391,15 @@
                                 <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
                                 <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                     <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                                    <input name="date" type="text" id="date" placeholder="21/2/2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide />
+                                    <input name="date" type="text" placeholder="21/2/2023" id="datepicker1" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
                                     
                                     <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                                 </div>
                             </label>
                         </div>
+
                         <div class="flex gap-4">
-                            <div class="form-input relative">
+                            <div class="adult form-input relative">
                                 <label for="adult">
                                     <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
                                     <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
@@ -447,7 +452,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-input relative">
+                            <div class="kids form-input relative">
                                 <label for="kid" class="relative">
                                     <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
                                     <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
@@ -506,82 +511,17 @@
                         </div>
                     </form>
                     <!-- end booking form -->
+                    
                 </div>
             </div>
         </div>
     </section>
     <!-- end banner component -->
 
-    <!-- hidden form -->
-    <div class="container mt-4 lg:hidden block">
-        <form class="xl:max-w-[33rem] lg:max-w-md relative w-full bg-white rounded-t-3xl sm:py-10 pt-8 flex flex-col gap-4">
-            <img src="./assets/icons/lenjung-left.svg" class="bottom-0 absolute right-full hidden" alt="">
-            <img src="./assets/icons/lenjung-right.svg" class="bottom-0 absolute left-full hidden" alt="">
-            <div class="flex items-center justify-between">
-                <div class="text-primary sm:text-2xl text-xl font-altebold font-bold mb-2">Book Your Trip</div>
-                <div class="text-center items-center sm:flex hidden gap-2">
-                    <span class="text-primary">Check more</span>
-                    <img src="./assets/icons/arrow-pri.png" alt="">
-                </div>
-            </div>
-            <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
-                <label for="destination">
-                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
-                    <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
-                        <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                        <input name="destination" placeholder="Tokyo" value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
-                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                    </div>
-                </label>
-                <div class="open_destination_list overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
-                    <div class="flex flex-col">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="form-input">
-                <label for="date">
-                    <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
-                    <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
-                        <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                        <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
-                        <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                    </div>
-                </label>
-            </div>
-            <div class="flex gap-4">
-                <div class="form-input">
-                    <label for="adult">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
-                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
-                            <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
-                            <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
-                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                        </div>
-                    </label>
-                </div>
-                <div class="form-input relative">
-                    <label for="kid" class="relative">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
-                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
-                            <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
-                            <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
-                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <div class="form-button pt-2">
-                <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 w-full">Book Now</button>
-            </div>
-        </form>
-    </div>
-    <!-- end hidden form -->
-
     <!-- cards -->
-    <section class="container sm:py-10 py-5 my-8">
+    <section class="container sm:py-10 my-8" id="scrolldown-target">
         <div class="grid lg:grid-cols-3 sm:grid-cols-6 grid-cols-1 grid-rows-2 gap-5">
-            <div class="cursor-pointer sm:row-span-2 lg:col-span-1 col-span-3 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative flex items-end" style="background-image: url('./assets/home-dest-grid-1.png');">
+            <a href="" class="cursor-pointer sm:row-span-2 lg:col-span-1 col-span-3 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative flex items-end" style="background-image: url('./assets/home-dest-grid-1.png');">
                 <div class="bg-gradient-to-t from-black to-transparent opacity-70 h-full w-full absolute z-0"></div>
                 <div class="text-card sm:p-6 p-4 relative z-10">
                     <div class="flex items-center gap-2">
@@ -590,8 +530,8 @@
                     </div>
                     <div class="text-white font-altebold font-bold md:text-xl text-base">Ryokan Living: A Traditional Japanese Inn Experience</div>
                 </div>
-            </div>
-            <div class="cursor-pointer lg:col-span-1 col-span-3 w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative flex items-end" style="background-image: url('./assets/home-dest-grid-2.png');">
+            </a>
+            <a href="" class="cursor-pointer lg:col-span-1 col-span-3 w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative flex items-end" style="background-image: url('./assets/home-dest-grid-2.png');">
                 <div class="bg-gradient-to-t from-black to-transparent opacity-70 h-full w-full absolute z-0"></div>
                 <div class="text-card sm:p-6 p-4 relative z-10">
                     <div class="flex items-center gap-2">
@@ -600,8 +540,8 @@
                     </div>
                     <div class="text-white font-altebold font-bold md:text-xl text-base">Life is Art: Experiencing Japan's Creative Scene</div>
                 </div>
-            </div>
-            <div class="cursor-pointer w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative lg:flex hidden items-end" style="background-image: url('./assets/home-dest-grid-3.png');">
+            </a>
+            <a href="" class="cursor-pointer w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative lg:flex hidden items-end" style="background-image: url('./assets/home-dest-grid-3.png');">
                 <div class="bg-gradient-to-t from-black to-transparent opacity-70 h-full w-full absolute z-0"></div>
                 <div class="text-card sm:p-6 p-4 relative z-10">
                     <div class="flex items-center gap-2">
@@ -610,8 +550,8 @@
                     </div>
                     <div class="text-white font-altebold font-bold md:text-xl text-base">Finding Zen: Japanese Meditation, Wellness and Mindfulness Practices</div>
                 </div>
-            </div>
-            <div class="cursor-pointer lg:col-span-1 col-span-3 w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative sm:flex hidden items-end" style="background-image: url('./assets/home-dest-grid-4.png');">
+            </a>
+            <a href="" class="cursor-pointer lg:col-span-1 col-span-3 w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative sm:flex hidden items-end" style="background-image: url('./assets/home-dest-grid-4.png');">
                 <div class="bg-gradient-to-t from-black to-transparent opacity-70 h-full w-full absolute z-0"></div>
                 <div class="text-card sm:p-6 p-4 relative z-10">
                     <div class="flex items-center gap-2">
@@ -620,8 +560,8 @@
                     </div>
                     <div class="text-white font-altebold font-bold md:text-xl text-base">Onsen Hot Springs and Beyond: Ultimate Relaxation in Japan</div>
                 </div>
-            </div>
-            <div class="cursor-pointer w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative lg:flex hidden items-end" style="background-image: url('./assets/home-dest-grid-5.png');">
+            </a>
+            <a href="" class="cursor-pointer w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl overflow-hidden relative lg:flex hidden items-end" style="background-image: url('./assets/home-dest-grid-5.png');">
                 <div class="bg-gradient-to-t from-black to-transparent opacity-70 h-full w-full absolute z-0"></div>
                 <div class="text-card sm:p-6 p-4 relative z-10">
                     <div class="flex items-center gap-2">
@@ -630,15 +570,15 @@
                     </div>
                     <div class="text-white font-altebold font-bold md:text-xl text-base">From Mount Fuji to Hokkaido: Epic Outdoor Adventures in Japan</div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
     <!-- end cards -->
 
     <!-- japan's map -->
-    <section class="container relative pb-20">
+    <section class="container relative sm:pb-20 pb-16 sm:block flex flex-col-reverse">
 
-        <div class="sm:absolute relative md:max-w-sm sm:max-w-[20rem] max-w-none w-full z-10">
+        <div class="sm:absolute relative md:max-w-sm sm:max-w-[20rem] max-w-none w-full z-10 sm:mt-0 mt-10">
             <div class="flex gap-3 items-center mb-5">
                 <img src="./assets/icons/explore.svg" alt="">
                 <div class="text-xl font-bold font-altebold">Explore Regions of Japan</div>
@@ -648,91 +588,13 @@
                 <div class="splide__track">
                         <ul class="splide__list">
 
-                            <!-- hokkaido -->
-                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
-                                <a href="" class="card bg-white relative">
-                                    <img src="./assets/dest-hokkaido.png" alt="" class="rounded-2xl">
-                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                                        <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Hokkaido</div>
-                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- tohoku -->
+                            <!-- Okinawa -->
                             <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
                                 <a href="" class=" card bg-white relative">
-                                    <img src="./assets/dest-tohoku.png" alt="" class="rounded-2xl">
+                                    <img src="./assets/dest-okinawa.png" alt="" class="rounded-2xl">
                                     <div class="flex items-center gap-3 px-4 pt-3 pb-4">
                                         <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Tohoku</div>
-                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- kanto -->
-                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
-                                <a href="" class=" card bg-white relative">
-                                    <img src="./assets/dest-kanto.png" alt="" class="rounded-2xl">
-                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                                        <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Kanto</div>
-                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Chubu -->
-                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
-                                <a href="" class=" card bg-white relative">
-                                    <img src="./assets/explore.png" alt="" class="rounded-2xl">
-                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                                        <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Chubu</div>
-                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Kansai -->
-                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
-                                <a href="" class=" card bg-white relative">
-                                    <img src="./assets/dest-kansai.png" alt="" class="rounded-2xl">
-                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                                        <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Kansai</div>
-                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Chugoku -->
-                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
-                                <a href="" class=" card bg-white relative">
-                                    <img src="./assets/dest-chugoku.png" alt="" class="rounded-2xl">
-                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                                        <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Chugoku</div>
-                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <!-- Shikoku -->
-                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
-                                <a href="" class=" card bg-white relative">
-                                    <img src="./assets/dest-shikoku.png" alt="" class="rounded-2xl">
-                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                                        <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Shikoku</div>
+                                            <div class="text-lg font-bold font-altebold">Okinawa</div>
                                             <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
                                         </div>
                                     </div>
@@ -752,32 +614,109 @@
                                 </a>
                             </li>
 
-                            <!-- Okinawa -->
+                            <!-- Shikoku -->
                             <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
                                 <a href="" class=" card bg-white relative">
-                                    <img src="./assets/dest-okinawa.png" alt="" class="rounded-2xl">
+                                    <img src="./assets/dest-shikoku.png" alt="" class="rounded-2xl">
                                     <div class="flex items-center gap-3 px-4 pt-3 pb-4">
                                         <div class="flex flex-col gap-1 flex-1">
-                                            <div class="text-lg font-bold font-altebold">Okinawa</div>
+                                            <div class="text-lg font-bold font-altebold">Shikoku</div>
                                             <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
                                         </div>
                                     </div>
                                 </a>
                             </li>
 
+                            <!-- Chugoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-chugoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Chugoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Kansai -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kansai.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kansai</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Chubu -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/explore.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Chubu</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>                          
+
+                            <!-- kanto -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kanto.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kanto</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- tohoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-tohoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Tohoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- hokkaido -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class="card bg-white relative">
+                                    <img src="./assets/dest-hokkaido.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Hokkaido</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
 
                         </ul>
                 </div>
                 <div class="flex justify-between absolute top-1/2 w-full px-4 splide__arrows">
                     <div class="prev-map splide__arrow splide__arrow--prev cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-left-explore.svg" class="cursor-pointer" alt=""></div>
-                    <div class="splide__arrow splide__arrow--next next-map cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-right-explore.svg" class="cursor-pointer" alt=""></div>
+                    <div class="next-map splide__arrow splide__arrow--next  cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-right-explore.svg" class="cursor-pointer" alt=""></div>
                 </div>
             </div>
 
             
         </div>
 
-        <div class="relative max-w-[53rem] w-full h-auto xl:ml-0 md:ml-auto sm:mt-2 mt-6">
+        <div class="relative max-w-[53rem] w-full h-auto xl:mx-0 mx-auto mt-6">
             <svg class="w-full h-auto"  viewBox="0 0 869 843" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                 <path class="map cursor-pointer duration-100" data-name="hokkaido" fill="#dbdbdb" d="M866.137 134.92C861.605 134.161 860.063 139.356 857.737 142.113C856.411 143.681 854.886 144.672 852.767 144.456C850.716 144.25 846.254 144.043 846.366 141.053C846.417 139.709 847.813 140.106 848.313 139.279C848.881 138.331 848.519 136.195 848.226 135.221C847.804 133.834 845.969 130.983 846.15 129.578C846.357 128.002 847.615 127.976 848.097 126.761C849.157 124.142 850.415 123.401 846.908 121.377C845.34 120.472 842.98 121.144 841.541 120.222C835.201 116.173 839.405 106.223 841.688 101.287C843.85 96.6174 848.442 93.852 849.803 89.5187C851.216 85.0217 851.612 75.2954 845.849 83.0316C842.36 87.7182 837.656 91.4657 833.693 96.0488C826.844 103.966 814.999 107.601 807.779 98.237C806.763 96.9189 804.85 91.0005 802.86 91.2589C801.111 91.4829 801.034 95.0236 798.802 94.9461C795.606 94.8427 797.424 91.5949 794.564 90.518C790.187 88.8726 786.431 95.1184 781.4 90.6214C779.393 88.8295 779.126 86.6585 780.771 84.8235C774.792 80.2231 767.737 76.7685 761.672 72.1595C756.796 68.4465 753.169 63.3895 748.973 58.8753C739.575 48.7441 736.077 36.3644 728.091 25.6215C722.577 18.204 716.202 13.1384 712.136 4.50624C711.283 2.70571 711.636 0.0609172 709.103 0.000612464C706.519 -0.0596923 705.502 4.35117 703.082 5.33327C700.566 6.34984 697.111 3.53275 695.233 6.78059C694.156 8.65004 694.889 12.0874 694.277 14.1895C693.441 17.0324 691.469 19.1517 691.296 22.1497C691.124 25.2425 693.011 29.0417 694.027 31.8846C699.11 46.1768 701.453 58.1085 693.993 71.9614C689.582 80.1542 693.502 91.1986 688.048 98.5041C685.74 101.597 681.975 102.622 679.666 105.336C676.539 108.997 676.677 115.105 677.59 119.516C678.813 125.443 680.597 132.395 677.047 137.857C673.765 142.906 667.579 145.456 662.333 142.01C660.575 140.855 659.154 138.21 657.155 137.521C654.665 136.66 652.047 138.779 649.428 137.263C647.842 136.341 646.714 134.058 645.284 132.852C643.13 131.026 633.602 126.296 630.862 128.777C624.789 134.308 639.09 146.076 634.532 152.658C632.964 154.923 629.846 156.009 628.45 158.24C627.356 159.989 628.261 162.272 625.504 162.72C623.229 163.09 622.825 160.825 621.024 161.152C619.103 161.505 617.75 164.839 615.993 165.813C613.813 167.028 611.194 167.562 608.903 168.346C602.821 170.43 605.715 174.652 605.896 179.2C606.06 183.809 599.59 186.342 600.555 191.692C601.434 196.517 606.801 199.067 609.497 202.745C613.202 207.785 616.355 213.307 613.098 219.536C610.686 224.153 604.535 230.959 606.034 236.567C606.68 238.997 609.937 244.915 612.616 245.811C615.648 246.828 616.768 243.744 618.689 241.573C619.568 240.582 619.499 239.841 620.723 239.186C621.903 238.558 624.1 239.35 625.047 238.652C627.709 236.688 625.512 233.19 626.727 230.761C628.002 228.22 632.137 227.901 634.222 226.195C636.367 224.438 636.428 221.672 639.908 222.137C641.691 222.379 646.119 224.799 647.722 225.738C652.219 228.375 651.392 229.417 656.216 226.927C658.775 225.609 662.462 225.265 660.954 221.465C659.757 218.433 655.51 218.657 653.029 217.46C649.324 215.668 649.514 214.393 648.325 210.921C647.437 208.336 645.818 205.347 643.276 204.236C639.874 202.754 638.685 205.795 636.135 205.545C633.671 205.304 624.117 195.362 623.6 193.217C622.842 190.073 625.435 187.764 626.641 185.3C627.907 182.715 628.278 179.855 630.345 177.555C636.272 170.956 643.569 177.124 647.394 183.163C649.152 185.937 649.608 191.037 653.218 191.959C656.802 192.872 664.159 186.963 667.571 185.274C672.309 182.931 675.505 178.64 681.2 178.494C683.844 178.425 689.117 177.546 691.477 178.296C694.803 179.356 698.653 184.344 701.772 186.153C708.63 190.133 714.798 195.569 721.311 200.083C725.11 202.711 728.97 205.459 733.105 207.552C737.214 209.62 741.711 210.524 745.476 213.324C748.017 215.211 749.163 218.528 751.799 220.509C755.202 223.068 754.892 221.009 755.857 217.287C756.529 214.685 758.226 212.291 758.683 209.646C759.113 207.139 758.079 204.606 758.708 202.065C759.449 199.118 762.223 195.362 764.041 192.907C768.305 187.161 772.174 182.121 777.687 177.262C782.107 173.368 786.888 170.008 791.359 166.183C793.728 164.159 795.856 161.075 798.966 160.17C806.651 157.939 814.215 165.951 821.27 163.806C824.57 162.798 821.442 156.362 826.327 157.801C828.533 158.447 828.593 161.342 830.695 161.962C832.616 162.531 834.71 161.118 836.019 159.929C838.802 157.396 839.25 152.977 842.808 151.124C845.694 149.625 849.484 151.822 852.482 150.814C855.635 149.763 857.169 147.472 858.539 145.137C860.529 141.76 861.209 141.941 864.836 140.106C866.843 139.098 870.634 135.669 866.12 134.92H866.137ZM677.409 24.5619C682.888 25.3717 680.355 15.8263 676.608 15.1629C670.62 14.1119 672.989 23.9071 677.409 24.5619ZM669.311 8.9774C673.765 7.96084 671.938 0.379671 667.209 2.61956C666.64 4.70438 666.261 9.67522 669.311 8.9774ZM585.832 194.216C583.601 195.405 580.508 200.083 582.817 202.383C584.479 204.046 586.771 203.322 587.805 201.281C589.157 198.61 591.078 191.425 585.841 194.208L585.832 194.216Z" />
@@ -911,7 +850,7 @@
     <!-- end japan's map -->
 
     <!-- product help you & good to know-->
-    <section class="bg-neutral-100 py-24 flex flex-col gap-24">
+    <section class="bg-neutral-100 sm:py-24 py-16 flex flex-col sm:gap-24 gap-16">
         <!-- products -->
         <div class="popular-product container">
             
@@ -1186,7 +1125,7 @@
                         <div class="text-sm text-neutral-400 leading-relaxed">Habitasse feugiat ut libero amet aliquam lectus. Commodo arcu rhoncus neque praesent odio.</div>
                     </div>
                 </div>
-                <div class="card bg-white items-stretch px-6 pt-6 rounded-2xl sm:flex hidden gap-2">
+                <div class="card bg-white items-stretch px-6 pt-6 rounded-2xl flex gap-2">
                     <div class="flex flex-col items-center gap-2">
                         <img src="./assets/home-need-to-know-4.svg" class="w-8 h-8" alt="">
                         <div class="h-full w-1 bg-neutral-100"></div>
@@ -1217,7 +1156,7 @@
                     </div>
                 </div>
             </div>   
-            <div class="text-center pt-8">
+            <div class="text-center pt-8 sm:hidden block">
                 <a href="" class="md:text-base text-sm font-bold text-primary underline">all information</a>
             </div>
 
@@ -1228,45 +1167,50 @@
     <!-- end product help you & good to know -->
 
     <!-- translator -->
-    <section class="container py-24">
+    <section class="container sm:py-24 py-16">
         <div class="flex justify-between items-center mb-8 w-full">
             <div class="font-bold font-altebold md:text-2xl text-xl text-neutral-800 text-center">Translator for both Japanese and Mongolian</div>
             <a href="" class="sm:block hidden md:text-base text-sm font-bold text-primary underline">all translator</a>
         </div>
         
         <!-- list translators -->
-        <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
+        <div class="grid lg:grid-cols-3 grid-cols-2 sm:gap-5 gap-2">
 
             <!-- card translator -->
             <a href="" class="card-translator rounded-xl border border-neutral-100 overflow-hidden">
-                <img src="./assets/home-translator-1.png" class="rounded-xl w-full max-h-72 object-cover" alt="">
-                <div class="flex justify-between px-5 pt-4 mb-4 items-center">
+                <div class="image relative">
+                    <img src="./assets/home-translator-1.png" class="rounded-xl w-full sm:max-h-72 sm:h-full h-48 object-cover" alt="">
+                    <div class="absolute bottom-4 right-4 bg-primary sm:hidden flex items-center justify-center h-10 w-10 rounded-full">
+                        <i class="fi fi-sr-comments text-white mt-1"></i>
+                    </div>
+                </div>
+                <div class="flex justify-between sm:px-5 px-2 sm:pt-4 pt-2 sm:mb-4 mb-0 items-center">
                     <div class="flex flex-col">
-                        <div class="md:text-xl sm:text-base text-xs text-neutral-600">Чоной Куланда</div>
+                        <div class="md:text-xl text-base text-neutral-600">Чоной Куланда</div>
                         <div class="flex items-center gap-2 mt-1 swap">
                             <div class="font-bold text-neutral-800 md:text-xl text-base">₮ 170,370</div>
                             <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-neutral-800 md:text-xl text-base">¥ 6,807</div>
+                            <div class="font-bold text-neutral-800 md:text-xl text-base sm:block hidden">¥ 6,807</div>
                         </div>
                     </div>
-                    <div class="bg-primary flex items-center justify-center h-12 w-12 rounded-full">
+                    <div class="bg-primary sm:flex hidden items-center justify-center h-12 w-12 rounded-full">
                         <i class="fi fi-sr-comments text-white mt-1"></i>
                     </div>
                 </div>
-                <div class="mx-5 border-t border-neutral-200 flex items-center justify-between py-4">
+                <div class="sm:mx-5 mx-2 sm:border-t border-t-0 border-neutral-200 flex sm:items-center sm:gap-0 gap-2 sm:justify-between justify-start sm:py-4 py-2 pb-3">
                     <div class="flex gap-3">
                         <div class="flex gap-1 items-center">
-                            <i class="fi fi-sr-marker text-neutral-400"></i>
-                            <span class="text-neutral-600 font-medium text-base">Mongolia</span>
+                            <i class="fi fi-sr-marker text-neutral-400 sm:block hidden"></i>
+                            <span class="text-neutral-600 font-medium sm:text-base text-xs">Mongolia</span>
                         </div>
                         <div class="xl:flex gap-1 items-center hidden">
                             <img src="./assets/icons/suitcase-gray.svg" alt="">
-                            <span class="text-neutral-600 font-medium text-base">15 Years Exp</span>
+                            <span class="text-neutral-600 font-medium sm:text-base text-xs">15 Years Exp</span>
                         </div>
                     </div>
                     <div class="flex gap-2 items-center">
-                        <img src="./assets/icons/level-dark.svg" alt="">
-                        <span class="font-medium text-neutral-800 text-base">Expert</span>
+                        <img src="./assets/icons/level-dark.svg" alt="" class="sm:block hidden">
+                        <span class="font-medium text-neutral-600 sm:text-base text-xs">Expert</span>
                     </div>
                 </div>
             </a>
@@ -1274,69 +1218,79 @@
 
             <!-- card translator -->
             <a href="" class="card-translator rounded-xl border border-neutral-100 overflow-hidden">
-                <img src="./assets/home-translator-2.png" class="rounded-xl w-full max-h-72 object-cover" alt="">
-                <div class="flex justify-between px-5 pt-4 mb-4 items-center">
+                <div class="image relative">
+                    <img src="./assets/home-translator-2.png" class="rounded-xl w-full sm:max-h-72 sm:h-full h-48 object-cover" alt="">
+                    <div class="absolute bottom-4 right-4 bg-primary sm:hidden flex items-center justify-center h-10 w-10 rounded-full">
+                        <i class="fi fi-sr-comments text-white mt-1"></i>
+                    </div>
+                </div>
+                <div class="flex justify-between sm:px-5 px-2 sm:pt-4 pt-2 sm:mb-4 mb-0 items-center">
                     <div class="flex flex-col">
-                        <div class="md:text-xl sm:text-base text-xs text-neutral-600">Соёллхам Баттөр</div>
+                        <div class="md:text-xl text-base text-neutral-600">Соёллхам Баттөр</div>
                         <div class="flex items-center gap-2 mt-1 swap">
                             <div class="font-bold text-neutral-800 md:text-xl text-base">₮ 14,370</div>
                             <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-neutral-800 md:text-xl text-base">¥ 807</div>
+                            <div class="font-bold text-neutral-800 md:text-xl text-base sm:block hidden">¥ 807</div>
                         </div>
                     </div>
-                    <div class="bg-primary flex items-center justify-center h-12 w-12 rounded-full">
+                    <div class="bg-primary sm:flex hidden items-center justify-center h-12 w-12 rounded-full">
                         <i class="fi fi-sr-comments text-white mt-1"></i>
                     </div>
                 </div>
-                <div class="mx-5 border-t border-neutral-200 flex items-center justify-between py-4">
+                <div class="sm:mx-5 mx-2 sm:border-t border-t-0 border-neutral-200 flex sm:items-center sm:gap-0 gap-2 sm:justify-between justify-start sm:py-4 py-2 pb-3">
                     <div class="flex gap-3">
                         <div class="flex gap-1 items-center">
-                            <i class="fi fi-sr-marker text-neutral-400"></i>
-                            <span class="text-neutral-600 font-medium text-base">Mongolia</span>
+                            <i class="fi fi-sr-marker text-neutral-400 sm:block hidden"></i>
+                            <span class="text-neutral-600 font-medium sm:text-base text-xs">Mongolia</span>
                         </div>
                         <div class="xl:flex gap-1 items-center hidden">
                             <img src="./assets/icons/suitcase-gray.svg" alt="">
-                            <span class="text-neutral-600 font-medium text-base">15 Years Exp</span>
+                            <span class="text-neutral-600 font-medium sm:text-base text-xs">15 Years Exp</span>
                         </div>
                     </div>
                     <div class="flex gap-2 items-center">
-                        <img src="./assets/icons/level-dark.svg" alt="">
-                        <span class="font-medium text-neutral-800 text-base">Expert</span>
+                        <img src="./assets/icons/level-dark.svg" alt="" class="sm:block hidden">
+                        <span class="font-medium text-neutral-600 sm:text-base text-xs">Expert</span>
                     </div>
                 </div>
             </a>
             <!-- end of card translator -->
 
             <!-- card translator -->
-            <a href="" class="card-translator rounded-xl border border-neutral-100 overflow-hidden">
-                <img src="./assets/home-translator-3.png" class="rounded-xl w-full max-h-72 object-cover" alt="">
-                <div class="flex justify-between px-5 pt-4 mb-4 items-center">
-                    <div class="flex flex-col">
-                        <div class="md:text-xl sm:text-base text-xs text-neutral-600">Даваахүү Жаргалмаа</div>
-                        <div class="flex items-center gap-2 mt-1 swap">
-                            <div class="font-bold text-neutral-800 md:text-xl text-base">₮ 31,24</div>
-                            <img src="./assets/icons/swap-gray.svg" alt="">
-                            <div class="font-bold text-neutral-800 md:text-xl text-base">¥ 5,123</div>
-                        </div>
-                    </div>
-                    <div class="bg-primary flex items-center justify-center h-12 w-12 rounded-full">
+            <a href="" class="card-translator rounded-xl border border-neutral-100 overflow-hidden lg:block hidden">
+                <div class="image relative">
+                    <img src="./assets/home-translator-3.png" class="rounded-xl w-full sm:max-h-72 sm:h-full h-48 object-cover" alt="">
+                    <div class="absolute bottom-4 right-4 bg-primary sm:hidden flex items-center justify-center h-10 w-10 rounded-full">
                         <i class="fi fi-sr-comments text-white mt-1"></i>
                     </div>
                 </div>
-                <div class="mx-5 border-t border-neutral-200 flex items-center justify-between py-4">
+                <div class="flex justify-between sm:px-5 px-2 sm:pt-4 pt-2 sm:mb-4 mb-0 items-center">
+                    <div class="flex flex-col">
+                        <div class="md:text-xl text-base text-neutral-600">Даваахүү Жаргалмаа</div>
+                        <div class="flex items-center gap-2 mt-1 swap">
+                            <div class="font-bold text-neutral-800 md:text-xl text-base">₮ 31,24</div>
+                            <img src="./assets/icons/swap-gray.svg" alt="">
+                            <div class="font-bold text-neutral-800 md:text-xl text-base sm:block hidden">¥ 5,123</div>
+                        </div>
+                    </div>
+                    <div class="bg-primary sm:flex hidden items-center justify-center h-12 w-12 rounded-full">
+                        <i class="fi fi-sr-comments text-white mt-1"></i>
+                    </div>
+                </div>
+                <div class="sm:mx-5 mx-2 sm:border-t border-t-0 border-neutral-200 flex sm:items-center sm:gap-0 gap-2 sm:justify-between justify-start sm:py-4 py-2 pb-3">
                     <div class="flex gap-3">
                         <div class="flex gap-1 items-center">
-                            <i class="fi fi-sr-marker text-neutral-400"></i>
-                            <span class="text-neutral-600 font-medium text-base">Mongolia</span>
+                            <i class="fi fi-sr-marker text-neutral-400 sm:block hidden"></i>
+                            <span class="text-neutral-600 font-medium sm:text-base text-xs">Mongolia</span>
                         </div>
                         <div class="xl:flex gap-1 items-center hidden">
                             <img src="./assets/icons/suitcase-gray.svg" alt="">
-                            <span class="text-neutral-600 font-medium text-base">15 Years Exp</span>
+                            <span class="text-neutral-600 font-medium sm:text-base text-xs">15 Years Exp</span>
                         </div>
                     </div>
                     <div class="flex gap-2 items-center">
-                        <img src="./assets/icons/level-dark.svg" alt="">
-                        <span class="font-medium text-neutral-800 text-base">Expert</span>
+                        <img src="./assets/icons/level-dark.svg" alt="" class="sm:block hidden">
+                        <span class="font-medium text-neutral-600 sm:text-base text-xs">Expert</span>
                     </div>
                 </div>
             </a>
@@ -1345,7 +1299,7 @@
         </div>
         <!-- end list translators -->
 
-        <div class="text-center pt-8">
+        <div class="text-center pt-8 sm:hidden block">
             <a href="" class="md:text-base text-sm font-bold text-primary underline">all translator</a>
         </div>
 
@@ -1393,13 +1347,13 @@
     <!-- end top destination -->
 
     <!-- latest news section -->
-    <div class="container mt-14">
+    <div class="container sm:mt-14 mt-0">
         <div class="flex lg:flex-row flex-col md:gap-10 gap-20">
 
             <!-- list of Japan's news -->
             <div class="news-list flex flex-col gap-6 flex-1">
 
-                <div class="font-bold font-altebold text-2xl text-neutral-800 text-left">Check latest news</div>
+                <div class="font-bold font-altebold sm:text-2xl text-xl text-neutral-800 lg:text-left text-center">Check latest news</div>
 
                 <a href="" class="flex sm:flex-row flex-col sm:gap-5 gap-1 items-stretch">
                     <div class="xl:w-80 lg:w-44 md:w-52 sm:w-40 w-full h-auto overflow-hidden" >
@@ -1461,57 +1415,150 @@
             <!-- end list of related news -->
 
             <!-- sidebar -->
-            <div class="sidebar lg:flex-col flex-row flex-wrap flex gap-12 lg:max-w-sm w-full lg:max-w-none mt-16 xl:mt-0">
+            <div class="sidebar lg:flex-col flex-row flex-wrap lg:flex hidden gap-12 lg:max-w-[27rem] w-full mt-16 xl:mt-0">
 
                 <!-- booking form -->
-                <form class="lg:max-w-sm w-full bg-white rounded-2xl lg:px-6 sm:px-6 p-0 py-6 flex flex-col gap-4 sm:border sm:border-neutral-150">
+                <form class="border border-neutral-100 dropshadow relative w-full bg-white rounded-2xl lg:px-6 sm:px-10 p-0 py-10 flex flex-col gap-4">
 
-                    <div class="text-primary text-2xl font-altebold font-bold mb-2 text-center">Book Your Trip</div>
-                    <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
+                    <div class="flex items-center justify-between">
+                        <div class="text-primary text-2xl font-altebold font-bold mb-2">Book Your Trip</div>
+                    </div>
+
+                    <div class="form-input flex-1 relative">
                         <label for="destination">
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
                             <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                 <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                                <input name="destination" placeholder="Tokyo" value="" class="h-full w-full !border-l-0 border border-neutral-200 outline-none cursor-pointer searchdestination" />
+                                <input name="destination" placeholder="Your destination..." value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
                                 <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                             </div>
                         </label>
                         <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
-                            <div class="flex flex-col spot-search">
-
+                            <div class="flex flex-col spot-search" id="">
                             </div>
                         </div>
                     </div>
+
                     <div class="form-input">
                         <label for="date">
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
                             <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                 <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                                <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <input name="date" type="text" placeholder="21/2/2023" id="datepicker3" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
+                                
                                 <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                             </div>
                         </label>
                     </div>
-                    <div class="form-input">
+
+                    <div class="adult form-input relative">
                         <label for="adult">
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
                             <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                 <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
-                                <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                                <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer adult-input" readonly value=""/>
                                 <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                             </div>
                         </label>
+                        <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col" id="">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">1 Adult</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">2 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">3 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">4 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">5 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">6 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">7 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">8 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">9 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">10 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">11 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">12 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">13+ Adults</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-input relative">
+
+                    <div class="kids form-input relative">
                         <label for="kid" class="relative">
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
                             <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                 <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
-                                <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
+                                <input name="kid" placeholder="2 Kids" class="h-full bg-neutral-50 w-full outline-none cursor-pointer kid-input" readonly />
                                 <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                             </div>
                         </label>
+                        <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col" id="">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">1 Kid</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">2 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">3 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">4 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">5 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">6 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">7 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">8 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">9 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">10 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">11 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">12 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">13+ Kids</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="form-button pt-2">
                         <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 w-full">Book Now</button>
                     </div>
@@ -1525,14 +1572,14 @@
     </div>
     <!-- end latest news section -->
 
-    <div class="container my-20">
+    <div class="container sm:my-20 my-16">
         <img src="./assets/bg_discount.png" class="w-full rounded-2xl" alt="">
     </div>
 
-    <div class="my-20"></div>
+    <div class="sm:my-20 my-16"></div>
 
     <!-- footer -->
-    <footer class="bg-neutral-50 pt-28 mt-28">
+    <footer class="bg-neutral-50 sm:pt-28 pt-16 sm:mt-28 mt-16">
         <div class="container flex flex-col">
             <div class="flex lg:gap-4 justify-between lg:flex-row flex-col gap-10">
                 <div class="logo-footer xl:max-w-md lg:max-w-xs">
@@ -1600,9 +1647,202 @@
     </footer>
     <!-- end footer -->
 
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+
+    <!-- booking mobile -->
+    <div class="fixed w-full bottom-0 z-40 lg:hidden block">
+        <div class="container flex justify-end">
+            <div class="mb-4 flex items-center dropshadow rounded-2xl bg-primary z-50 pr-5 pl-2 open-modal-booking cursor-pointer">
+                <img src="./assets/booking.png" height="54" width="54" class="" alt="">
+                <div class="font-altebold text-white text-base">BOOKING</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="
+            target-modal-booking duration-100 fixed lg:hidden
+            flex flex-col gap-6 sm:justify-center justify-between 
+            items-center w-full h-screen z-50 top-0 left-0 
+            bg-white min-h-[37rem] invisible opacity-0
+        ">
+
+        <!-- form -->
+        <div class="container">
+
+            <!-- booking form -->
+            <form class="relative w-full bg-white flex flex-col sm:gap-4 gap-2 sm:pt-0 pt-8">
+
+                <div class="flex items-center justify-center">
+                    <div class="text-primary text-2xl font-altebold font-bold mb-2 text-center">Book Your Trip</div>
+                </div>
+
+                <div class="form-input flex-1 relative">
+                    <label for="destination">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                            <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
+                            <input name="destination" placeholder="Your destination..." value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
+                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                        </div>
+                    </label>
+                    <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                        <div class="flex flex-col spot-search" id="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-input">
+                    <label for="date">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                            <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
+                            <input name="date" type="text" placeholder="21/2/2023" id="datepicker2" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
+                            
+                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                        </div>
+                    </label>
+                </div>
+
+                <div class="flex sm:gap-4 gap-2 sm:flex-row flex-col">
+                    <div class="adult form-input relative">
+                        <label for="adult">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                                <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
+                                <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer adult-input" readonly value=""/>
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                        <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col" id="">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">1 Adult</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">2 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">3 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">4 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">5 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">6 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">7 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">8 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">9 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">10 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">11 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">12 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">13+ Adults</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kids form-input relative">
+                        <label for="kid" class="relative">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                                <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
+                                <input name="kid" placeholder="2 Kids" class="h-full bg-neutral-50 w-full outline-none cursor-pointer kid-input" readonly />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                        <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col" id="">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">1 Kid</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">2 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">3 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">4 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">5 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">6 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">7 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">8 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">9 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">10 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">11 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">12 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">13+ Kids</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-button pt-2">
+                    <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 w-full">Book Now</button>
+                </div>
+            </form>
+            <!-- end booking form -->
+
+        </div>
+        <!-- end form -->
+
+        <div class="close sm:fixed relative flex bottom-4 justify-end items-end container">
+            <div class="border border-neutral-150 bg-neutral-50 px-6 w-fit py-3 rounded-2xl items-center flex gap-2 cursor-pointer close-modal-booking">
+                <i class="fi fi-sr-circle-xmark text-neutral-600 mt-1"></i>
+                <span class="font-altebold text-neutral-600">CLOSE</span>
+            </div>
+        </div>
+
+    </div>
+    <!-- end booking mobile -->
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="./scripts/script.js"></script>
+    <script>
+        $( function() {
+          $( "#datepicker1" ).datepicker();
+          $( "#datepicker2" ).datepicker();
+          $( "#datepicker3" ).datepicker();
+        } );
+    </script>
 
 </body>
 </html>

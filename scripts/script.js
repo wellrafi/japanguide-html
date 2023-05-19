@@ -15,17 +15,36 @@ function toggle(target) {
 
 $(document).ready(function() {
 
-
+    // scrolldown
+    $('#scrolldown').on('click', function () {
+        $(document.body).animate({
+            top: 200
+        }, 800);
+    })
+    // end scrolldown
 
     $('.form-input').on('click',function (e) {
+        // $('.target-form-input').removeClass('active_element')
         $(this).find('.target-form-input').toggleClass('active_element')
     })
-    // $(document).on("click", function(e) {
-    //     if ($(e.target).is(".target-form-input") === false) {
-    //         $(".target-form-input").removeClass("active_element");
-    //     }
-    //     console.log(e)
-    // });
+
+    // stupid idea but works close dropdown
+    $(document).on('click', function (e) {
+        if ($($(e.target).parent().parent().parent()[0]).hasClass('form-input')) return
+        $('.target-form-input').removeClass('active_element')
+    })
+    // end stupid idea but works close dropdown
+
+    $(document).on('click', '.adult-click', function (e) {
+        let val = e.target.innerText.replace(/\s+/g, '')
+        $('.adult-input').val(val.split('A')[0] + ' A' + val.split('A')[1])
+    })
+
+    $(document).on('click', '.kid-click', function (e) {
+        let val = e.target.innerText.replace(/\s+/g, '')
+        $('.kid-input').val(val.split('K')[0] + ' K' + val.split('K')[1])
+    })
+
 
     $('.tab').click(function() {
   
@@ -117,8 +136,9 @@ $(document).ready(function() {
 
 
     // map controller 
-    let activeSlide = ['hokkaido', 'tohoku', 'kanto', 'chubu', 'kansai', 'chugoku', 'shikoku', 'kyushu', 'okinawa']
-    changeMap('hokkaido')
+    // let activeSlide = ['hokkaido', 'tohoku', 'kanto', 'chubu', 'kansai', 'chugoku', 'shikoku', 'kyushu', 'okinawa']
+    let activeSlide = ['okinawa', 'kyushu', 'shikoku', 'chugoku', 'kansai',  'chubu',  'kanto',  'tohoku', 'hokkaido']
+    changeMap('okinawa')
 
     $('.map').on('mouseover', function () {
         let name = $(this).data('name')
@@ -191,22 +211,15 @@ $(document).ready(function() {
         $('.dropdown-nav').addClass('opacity-0')
     })
 
-    // stupid idea but works close dropdown
-    $(document).on('click', function (e) {
-        if ($($(e.target).parent().parent().parent()[0]).hasClass('form-input')) return
-        $('.target-form-input').removeClass('active_element')
-    })
-    // end stupid idea but works close dropdown
-
 
     // top destination slider
 
     let width = window.innerWidth
-    console.log('width', width)
+    // console.log('width', width)
     let container = width > 1536 ? 1350 : width > 1280 ? 1250 : width > 1024 ? 994 : width > 768 ? 738 : width > 640 ? 610 : 0
-    console.log('container', container)
+    // console.log('container', container)
     let getGap = (window.innerWidth - container) / 2
-    console.log('getGap', getGap)
+    // console.log('getGap', getGap)
     let amountSlide = $('.splide_l ul').find('.splide__slide').length - 1
     let currentSlide = 2
     var slideTopDest = new Splide( '.splide_l', {
@@ -222,9 +235,7 @@ $(document).ready(function() {
     
     slideTopDest.mount();
     slideTopDest.go(2)
-    // setTimeout(() => {
-    //     slideTopDest.getNext()
-    // }, 400);
+
 
     $('.destination-left').on('click', function () {
         // currentSlide = currentSlide === 0 ? amountSlide : currentSlide - 1
@@ -236,15 +247,10 @@ $(document).ready(function() {
         slideTopDest.go(currentSlide)
         
     })
-
-    
-
     // end top destination slider
 
 
-
     // searching destination
-
     let data = ['fukuoka','saga','nagasaki','kumamoto','oita','miyazaki','kagoshima','okinawa','niigata','toyama','ishikawa','fukui','yamanashi','nagano','gifu','shizuoka','aichi','ibaraki','tochigi','gunma','saitama','chiba','tokyo','kanagawa','aomori','iwate','miyagi','akita','yamagata','fukushima','tottori','shimane','okayama','hiroshima','yamaguchi','tokushima','kagawa','ehime','kochi','kanto','hokkaido','chubu','tohoku','kansai','chugoku','shikoku','kyushu']
     let search = ''
 
@@ -281,19 +287,21 @@ $(document).ready(function() {
         let listElements = searching.map(d => component(d)).join('')
         $('.spot-search').append(listElements)
     }
-
     // end search destination
 
 
-    $(document).on('click', '.adult-click', function (e) {
-        let val = e.target.innerText.replace(/\s+/g, '')
-        $('.adult-input').val(val.split('A')[0] + ' A' + val.split('A')[1])
+    // mobile modal booking
+    $('.open-modal-booking').on('click', function (e) {
+        $('.target-modal-booking').removeClass('invisible')
+        $('.target-modal-booking').removeClass('opacity-0')
+        $('body').addClass('overflow-hidden')
     })
-
-    $(document).on('click', '.kid-click', function (e) {
-        let val = e.target.innerText.replace(/\s+/g, '')
-        $('.kid-input').val(val.split('K')[0] + ' K' + val.split('K')[1])
+    $('.close-modal-booking').on('click', function (e) {
+        $('.target-modal-booking').addClass('invisible')
+        $('.target-modal-booking').addClass('opacity-0')
+        $('body').removeClass('overflow-hidden')
     })
+    // end mobile modal booking 
 
 });
 

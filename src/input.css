@@ -40,6 +40,16 @@
 }
 
 
+/* container custom mobile */
+@media screen and (max-width: 639px) {
+  .container{
+    width: 100%;
+    max-width: 440px !important;
+  }
+}
+/* end container custom mobile */
+
+
 /* mobile dropdown */
 
 .mobile-dropdown-trigger img.arrow-down-{
@@ -265,4 +275,56 @@
 
 .nav-item:hover .nav-item .dropdown-nav{
   max-height: auto !important;
+}
+
+
+
+/* datepicker */
+
+#ui-datepicker-div{
+  max-width: 340px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: -57px;
+}
+
+@media screen and (max-width: 639px) {
+  #ui-datepicker-div{
+    max-width: 410px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    margin-left: 0;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #ui-datepicker-div{
+    max-width: calc(100% - 30px);
+  }
+}
+
+.ui-state-default{
+  border: none !important;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: 1px solid #F34646;
+  background: #007fff;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.ui-datepicker-header .ui-widget-header .ui-helper-clearfix .ui-corner-all{
+  border: none !important;
+  border-radius: 6px;
+}
+
+.ui-datepicker-next .ui-corner-all{
+  cursor: pointer;
 }
