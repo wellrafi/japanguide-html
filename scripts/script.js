@@ -232,13 +232,13 @@ $(document).ready(function() {
     }
 
     if ($(document).find('.splide_map_2').length > 0) {
+        console.log('yosah')
         var splideMap2 = new Splide( '.splide_map_2', {
             type        : 'fade',
             autoWidth   : true,
             pagination  : false,
             arrows      : false,
-            rewind      : true,
-            
+            rewind      : true, 
         });
         splideMap2.mount();
     }
@@ -262,11 +262,11 @@ $(document).ready(function() {
         })
         $('.sidebarmap').html(name)
     }
-
     // end map controller
 
+
     // top destination slider
-    if ($(document).find('.splide__slide').length > 0) {
+    if ($(document).find('.splide_l').length > 0) {
         let width = window.innerWidth
         // console.log('width', width)
         let container = width > 1536 ? 1350 : width > 1280 ? 1250 : width > 1024 ? 994 : width > 768 ? 738 : width > 640 ? 610 : 0
