@@ -38,9 +38,9 @@
     
     <link href="./dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-
-
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
@@ -1444,7 +1444,7 @@
                             <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
                             <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                                 <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                                <input name="date" type="text" placeholder="21/2/2023" id="datepicker3" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
+                                <input name="date" type="text" placeholder="21/2/2023" id="sidebar_datepicker" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
                                 
                                 <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                             </div>
@@ -1647,7 +1647,6 @@
     </footer>
     <!-- end footer -->
 
-
     <!-- booking mobile -->
     <div class="fixed w-full bottom-0 z-40 lg:hidden block">
         <div class="container flex justify-end">
@@ -1658,11 +1657,10 @@
         </div>
     </div>
 
-    <div class="
-            target-modal-booking duration-100 fixed lg:hidden
-            flex flex-col gap-6 sm:justify-center justify-between 
-            items-center w-full h-screen z-50 top-0 left-0 
-            bg-white min-h-[37rem] invisible opacity-0
+    <div class="target-modal-booking duration-100 fixed lg:hidden
+                flex flex-col gap-6 sm:justify-center justify-between 
+                items-center w-full h-screen z-50 top-0 left-0 
+                bg-white min-h-[37rem] invisible opacity-0
         ">
 
         <!-- form -->
@@ -1695,7 +1693,7 @@
                         <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
                         <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                             <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                            <input name="date" type="text" placeholder="21/2/2023" id="datepicker2" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
+                            <input name="date" type="text" placeholder="21/2/2023" id="mobile_datepicker" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
                             
                             <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                         </div>
@@ -1839,8 +1837,8 @@
     <script>
         $( function() {
           $( "#datepicker1" ).datepicker();
-          $( "#datepicker2" ).datepicker();
-          $( "#datepicker3" ).datepicker();
+          $( "#mobile_datepicker" ).datepicker();
+          $( "#sidebar_datepicker" ).datepicker();
         } );
     </script>
 

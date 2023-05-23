@@ -135,121 +135,6 @@ $(document).ready(function() {
     // end slider online shop
 
 
-    // map controller 
-    // let activeSlide = ['hokkaido', 'tohoku', 'kanto', 'chubu', 'kansai', 'chugoku', 'shikoku', 'kyushu', 'okinawa']
-    let activeSlide = ['okinawa', 'kyushu', 'shikoku', 'chugoku', 'kansai',  'chubu',  'kanto',  'tohoku', 'hokkaido']
-    changeMap('okinawa')
-
-    $('.map').on('mouseover', function () {
-        let name = $(this).data('name')
-        let numberSlide = activeSlide.indexOf(name)
-        changeMap(name)
-        splideMap.go(numberSlide)
-        splideMap2.go(numberSlide)
-    })
-
-    var splideMap = new Splide( '.splide_map', {
-        type        : 'fade',
-        autoWidth   : true,
-        pagination  : false,
-        arrows      : true,
-        rewind      : true,
-        classes     : {
-            prev    : 'prev-map',
-            next    : 'next-map'
-        }
-    });
-
-    var splideMap2 = new Splide( '.splide_map_2', {
-        type        : 'fade',
-        autoWidth   : true,
-        pagination  : false,
-        arrows      : false,
-        rewind      : true,
-        
-    });
-
-    splideMap2.mount();
-
-    splideMap.mount();
-    splideMap.on( 'move', function (e) {
-        changeMap(activeSlide[e])
-        splideMap2.go(e)
-    });
-
-    function changeMap(name) {
-        $('.text-mapping').removeClass('text-white')
-        $('.text-mapping').removeClass('drop-shadow-2xl')
-        $(`.text-mapping`).css({
-            "transform" : "none",
-            "filter" : "drop-shadow(0 0 2px transparent)",
-            "text-decoration" : "none"
-        })
-        $('.map').attr('fill', '#dbdbdb')
-        $(`.map[data-name=${name}]`).attr('fill', '#F34646')
-        $(`.${name}`).addClass('text-black')
-        $(`.${name}`).addClass('drop-shadow-2xl')
-        $(`.${name}`).css({
-            "transform" : "translateY(-5px)",
-            "filter" : "drop-shadow(0 0 2px #fff)",
-            "text-decoration" : "underline"
-        })
-        $('.sidebarmap').html(name)
-    }
-
-    // end map controller
-
-
-    $('.nav-item.drop-down').on('mouseenter', function (){
-        $('body').addClass('overflow-hidden')
-        $('.dropdown-nav').removeClass('max-h-0')
-        $('.dropdown-nav').removeClass('opacity-0')
-    })
-    $('.nav-item.drop-down').on('mouseleave', function (){
-        $('body').removeClass('overflow-hidden')
-        $('.dropdown-nav').addClass('max-h-0')
-        $('.dropdown-nav').addClass('opacity-0')
-    })
-
-
-    // top destination slider
-
-    let width = window.innerWidth
-    // console.log('width', width)
-    let container = width > 1536 ? 1350 : width > 1280 ? 1250 : width > 1024 ? 994 : width > 768 ? 738 : width > 640 ? 610 : 0
-    // console.log('container', container)
-    let getGap = (window.innerWidth - container) / 2
-    // console.log('getGap', getGap)
-    let amountSlide = $('.splide_l ul').find('.splide__slide').length - 1
-    let currentSlide = 2
-    var slideTopDest = new Splide( '.splide_l', {
-        type        : 'loop',
-        focus       : 'left',
-        gap         : 24,
-        autoWidth   : true,
-        padding     : getGap,
-        pagination  : false,
-        arrows      : false,
-        slideSize   : 500
-    });
-    
-    slideTopDest.mount();
-    slideTopDest.go(2)
-
-
-    $('.destination-left').on('click', function () {
-        // currentSlide = currentSlide === 0 ? amountSlide : currentSlide - 1
-        // console.log(currentSlide)
-        slideTopDest.getPrev()
-    })
-    $('.destination-right').on('click', function () {
-        currentSlide  = currentSlide !== amountSlide ? 0 : currentSlide + 1
-        slideTopDest.go(currentSlide)
-        
-    })
-    // end top destination slider
-
-
     // searching destination
     let data = ['fukuoka','saga','nagasaki','kumamoto','oita','miyazaki','kagoshima','okinawa','niigata','toyama','ishikawa','fukui','yamanashi','nagano','gifu','shizuoka','aichi','ibaraki','tochigi','gunma','saitama','chiba','tokyo','kanagawa','aomori','iwate','miyagi','akita','yamagata','fukushima','tottori','shimane','okayama','hiroshima','yamaguchi','tokushima','kagawa','ehime','kochi','kanto','hokkaido','chubu','tohoku','kansai','chugoku','shikoku','kyushu']
     let search = ''
@@ -290,6 +175,17 @@ $(document).ready(function() {
     // end search destination
 
 
+    $('.nav-item.drop-down').on('mouseenter', function (){
+        $('body').addClass('overflow-hidden')
+        $('.dropdown-nav').removeClass('max-h-0')
+        $('.dropdown-nav').removeClass('opacity-0')
+    })
+    $('.nav-item.drop-down').on('mouseleave', function (){
+        $('body').removeClass('overflow-hidden')
+        $('.dropdown-nav').addClass('max-h-0')
+        $('.dropdown-nav').addClass('opacity-0')
+    })
+
     // mobile modal booking
     $('.open-modal-booking').on('click', function (e) {
         $('.target-modal-booking').removeClass('invisible')
@@ -303,19 +199,108 @@ $(document).ready(function() {
     })
     // end mobile modal booking 
 
+    // map controller 
+    // let activeSlide = ['hokkaido', 'tohoku', 'kanto', 'chubu', 'kansai', 'chugoku', 'shikoku', 'kyushu', 'okinawa']
+    let activeSlide = ['okinawa', 'kyushu', 'shikoku', 'chugoku', 'kansai',  'chubu',  'kanto',  'tohoku', 'hokkaido']
+    changeMap('okinawa')
+
+    $('.map').on('mouseover', function () {
+        let name = $(this).data('name')
+        let numberSlide = activeSlide.indexOf(name)
+        changeMap(name)
+        $(document).find('.splide_map').length > 0 ? splideMap.go(numberSlide) : ""
+        $(document).find('.splide_map_2').length > 0 ? splideMap2.go(numberSlide) : ""
+    })
+
+    if ($(document).find('.splide_map').length > 0) {
+        var splideMap = new Splide( '.splide_map', {
+            type        : 'fade',
+            autoWidth   : true,
+            pagination  : false,
+            arrows      : true,
+            rewind      : true,
+            classes     : {
+                prev    : 'prev-map',
+                next    : 'next-map'
+            }
+        });
+        splideMap.mount();
+        splideMap.on( 'move', function (e) {
+            changeMap(activeSlide[e])
+            $(document).find('.splide_map_2').length > 0 ? splideMap2.go(e) : ""
+        });
+    }
+
+    if ($(document).find('.splide_map_2').length > 0) {
+        var splideMap2 = new Splide( '.splide_map_2', {
+            type        : 'fade',
+            autoWidth   : true,
+            pagination  : false,
+            arrows      : false,
+            rewind      : true,
+            
+        });
+        splideMap2.mount();
+    }
+
+    function changeMap(name) {
+        $('.text-mapping').removeClass('text-white')
+        $('.text-mapping').removeClass('drop-shadow-2xl')
+        $(`.text-mapping`).css({
+            "transform" : "none",
+            "filter" : "drop-shadow(0 0 2px transparent)",
+            "text-decoration" : "none"
+        })
+        $('.map').attr('fill', '#dbdbdb')
+        $(`.map[data-name=${name}]`).attr('fill', '#F34646')
+        $(`.${name}`).addClass('text-black')
+        $(`.${name}`).addClass('drop-shadow-2xl')
+        $(`.${name}`).css({
+            "transform" : "translateY(-5px)",
+            "filter" : "drop-shadow(0 0 2px #fff)",
+            "text-decoration" : "underline"
+        })
+        $('.sidebarmap').html(name)
+    }
+
+    // end map controller
+
+    // top destination slider
+    if ($(document).find('.splide__slide').length > 0) {
+        let width = window.innerWidth
+        // console.log('width', width)
+        let container = width > 1536 ? 1350 : width > 1280 ? 1250 : width > 1024 ? 994 : width > 768 ? 738 : width > 640 ? 610 : 0
+        // console.log('container', container)
+        let getGap = (window.innerWidth - container) / 2
+        // console.log('getGap', getGap)
+        let amountSlide = $('.splide_l ul').find('.splide__slide').length - 1
+        let currentSlide = 2
+        var slideTopDest = new Splide( '.splide_l', {
+            type        : 'loop',
+            focus       : 'left',
+            gap         : 24,
+            autoWidth   : true,
+            padding     : getGap,
+            pagination  : false,
+            arrows      : false,
+            slideSize   : 500
+        });
+        
+        slideTopDest.mount();
+        slideTopDest.go(2)
+
+        $('.destination-left').on('click', function () {
+            // currentSlide = currentSlide === 0 ? amountSlide : currentSlide - 1
+            // console.log(currentSlide)
+            slideTopDest.getPrev()
+        })
+        $('.destination-right').on('click', function () {
+            currentSlide  = currentSlide !== amountSlide ? 0 : currentSlide + 1
+            slideTopDest.go(currentSlide)
+            
+        })
+    }
+    // end top destination slider
+
 });
 
-
-
-// document.addEventListener('click', function (e) {
-//     const specifiedElement = document.getElementsByClassName('active_element')
-    
-//     document.addEventListener('click', function (eve) {
-//         if (specifiedElement.length > 0) {
-//             const isClickInside = specifiedElement[0].contains(eve.target)
-//             if (!isClickInside) {
-//                 specifiedElement[0].classList.toggle('active_element')
-//             }
-//         }
-//     })
-// })

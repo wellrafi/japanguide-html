@@ -36,8 +36,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
     <link href="./dist/output.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 
@@ -337,31 +339,148 @@
         <div class="text-center font-bold font-altebold lg:text-4xl text-2xl">Explore the beautiful of Japan</div>
     </div>
 
-
     <!-- japan's map -->
-    <section class="container relative pb-20">
+    <section class="container relative sm:pb-20 pb-16 sm:block flex flex-col-reverse">
 
-        <div class="sm:absolute relative md:max-w-sm sm:max-w-[20rem] max-w-none w-full z-10">
+        <div class="sm:absolute relative md:max-w-sm sm:max-w-[20rem] max-w-none w-full z-10 sm:mt-0 mt-10">
             <div class="flex gap-3 items-center mb-5">
                 <img src="./assets/icons/explore.svg" alt="">
                 <div class="text-xl font-bold font-altebold">Explore Regions of Japan</div>
             </div>
-            <div class="card bg-white rounded-2xl overflow-hidden border border-neutral-100 relative dropshadow">
-                <img src="./assets/explore.png" alt="" class="rounded-2xl">
-                <div class="flex justify-between absolute top-1/2 w-full px-4">
-                    <div class="cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-left-explore.svg" class="cursor-pointer" alt=""></div>
-                    <div class="cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-right-explore.svg" class="cursor-pointer" alt=""></div>
+
+            <div class="splide splide_map dropshadow rounded-2xl">
+                <div class="splide__track">
+                        <ul class="splide__list">
+
+                            <!-- Okinawa -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-okinawa.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Okinawa</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Kyushu -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kyushu.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kyushu</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Shikoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-shikoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Shikoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Chugoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-chugoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Chugoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Kansai -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kansai.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kansai</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Chubu -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/explore.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Chubu</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>                          
+
+                            <!-- kanto -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-kanto.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Kanto</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- tohoku -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class=" card bg-white relative">
+                                    <img src="./assets/dest-tohoku.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Tohoku</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- hokkaido -->
+                            <li class="rounded-2xl overflow-hidden border border-neutral-100 splide__slide md:max-w-sm sm:max-w-[20rem] max-w-none w-full">
+                                <a href="" class="card bg-white relative">
+                                    <img src="./assets/dest-hokkaido.png" alt="" class="rounded-2xl">
+                                    <div class="flex items-center gap-3 px-4 pt-3 pb-4">
+                                        <div class="flex flex-col gap-1 flex-1">
+                                            <div class="text-lg font-bold font-altebold">Hokkaido</div>
+                                            <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
                 </div>
-                <div class="flex items-center gap-3 px-4 pt-3 pb-4">
-                    <div class="flex flex-col gap-1 flex-1">
-                        <div class="text-lg font-bold font-altebold">Chubu</div>
-                        <p class="text-sm text-neutral-400">It is known for its stunning natural scenery, including Mount Fuji, which is located...</p>
-                    </div>
+                <div class="flex justify-between absolute top-1/2 w-full px-4 splide__arrows">
+                    <div class="prev-map splide__arrow splide__arrow--prev cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-left-explore.svg" class="cursor-pointer" alt=""></div>
+                    <div class="next-map splide__arrow splide__arrow--next  cursor-pointer flex w-8 h-8 p-2 items-center justify-center rounded-full bg-white"><img src="./assets/icons/arrow-right-explore.svg" class="cursor-pointer" alt=""></div>
                 </div>
             </div>
+
+            
         </div>
 
-        <div class="relative max-w-[53rem] w-full h-auto xl:ml-0 md:ml-auto sm:mt-2 mt-6">
+        <div class="relative max-w-[53rem] w-full h-auto xl:mx-0 mx-auto mt-6">
             <svg class="w-full h-auto"  viewBox="0 0 869 843" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                 <path class="map cursor-pointer duration-100" data-name="hokkaido" fill="#dbdbdb" d="M866.137 134.92C861.605 134.161 860.063 139.356 857.737 142.113C856.411 143.681 854.886 144.672 852.767 144.456C850.716 144.25 846.254 144.043 846.366 141.053C846.417 139.709 847.813 140.106 848.313 139.279C848.881 138.331 848.519 136.195 848.226 135.221C847.804 133.834 845.969 130.983 846.15 129.578C846.357 128.002 847.615 127.976 848.097 126.761C849.157 124.142 850.415 123.401 846.908 121.377C845.34 120.472 842.98 121.144 841.541 120.222C835.201 116.173 839.405 106.223 841.688 101.287C843.85 96.6174 848.442 93.852 849.803 89.5187C851.216 85.0217 851.612 75.2954 845.849 83.0316C842.36 87.7182 837.656 91.4657 833.693 96.0488C826.844 103.966 814.999 107.601 807.779 98.237C806.763 96.9189 804.85 91.0005 802.86 91.2589C801.111 91.4829 801.034 95.0236 798.802 94.9461C795.606 94.8427 797.424 91.5949 794.564 90.518C790.187 88.8726 786.431 95.1184 781.4 90.6214C779.393 88.8295 779.126 86.6585 780.771 84.8235C774.792 80.2231 767.737 76.7685 761.672 72.1595C756.796 68.4465 753.169 63.3895 748.973 58.8753C739.575 48.7441 736.077 36.3644 728.091 25.6215C722.577 18.204 716.202 13.1384 712.136 4.50624C711.283 2.70571 711.636 0.0609172 709.103 0.000612464C706.519 -0.0596923 705.502 4.35117 703.082 5.33327C700.566 6.34984 697.111 3.53275 695.233 6.78059C694.156 8.65004 694.889 12.0874 694.277 14.1895C693.441 17.0324 691.469 19.1517 691.296 22.1497C691.124 25.2425 693.011 29.0417 694.027 31.8846C699.11 46.1768 701.453 58.1085 693.993 71.9614C689.582 80.1542 693.502 91.1986 688.048 98.5041C685.74 101.597 681.975 102.622 679.666 105.336C676.539 108.997 676.677 115.105 677.59 119.516C678.813 125.443 680.597 132.395 677.047 137.857C673.765 142.906 667.579 145.456 662.333 142.01C660.575 140.855 659.154 138.21 657.155 137.521C654.665 136.66 652.047 138.779 649.428 137.263C647.842 136.341 646.714 134.058 645.284 132.852C643.13 131.026 633.602 126.296 630.862 128.777C624.789 134.308 639.09 146.076 634.532 152.658C632.964 154.923 629.846 156.009 628.45 158.24C627.356 159.989 628.261 162.272 625.504 162.72C623.229 163.09 622.825 160.825 621.024 161.152C619.103 161.505 617.75 164.839 615.993 165.813C613.813 167.028 611.194 167.562 608.903 168.346C602.821 170.43 605.715 174.652 605.896 179.2C606.06 183.809 599.59 186.342 600.555 191.692C601.434 196.517 606.801 199.067 609.497 202.745C613.202 207.785 616.355 213.307 613.098 219.536C610.686 224.153 604.535 230.959 606.034 236.567C606.68 238.997 609.937 244.915 612.616 245.811C615.648 246.828 616.768 243.744 618.689 241.573C619.568 240.582 619.499 239.841 620.723 239.186C621.903 238.558 624.1 239.35 625.047 238.652C627.709 236.688 625.512 233.19 626.727 230.761C628.002 228.22 632.137 227.901 634.222 226.195C636.367 224.438 636.428 221.672 639.908 222.137C641.691 222.379 646.119 224.799 647.722 225.738C652.219 228.375 651.392 229.417 656.216 226.927C658.775 225.609 662.462 225.265 660.954 221.465C659.757 218.433 655.51 218.657 653.029 217.46C649.324 215.668 649.514 214.393 648.325 210.921C647.437 208.336 645.818 205.347 643.276 204.236C639.874 202.754 638.685 205.795 636.135 205.545C633.671 205.304 624.117 195.362 623.6 193.217C622.842 190.073 625.435 187.764 626.641 185.3C627.907 182.715 628.278 179.855 630.345 177.555C636.272 170.956 643.569 177.124 647.394 183.163C649.152 185.937 649.608 191.037 653.218 191.959C656.802 192.872 664.159 186.963 667.571 185.274C672.309 182.931 675.505 178.64 681.2 178.494C683.844 178.425 689.117 177.546 691.477 178.296C694.803 179.356 698.653 184.344 701.772 186.153C708.63 190.133 714.798 195.569 721.311 200.083C725.11 202.711 728.97 205.459 733.105 207.552C737.214 209.62 741.711 210.524 745.476 213.324C748.017 215.211 749.163 218.528 751.799 220.509C755.202 223.068 754.892 221.009 755.857 217.287C756.529 214.685 758.226 212.291 758.683 209.646C759.113 207.139 758.079 204.606 758.708 202.065C759.449 199.118 762.223 195.362 764.041 192.907C768.305 187.161 772.174 182.121 777.687 177.262C782.107 173.368 786.888 170.008 791.359 166.183C793.728 164.159 795.856 161.075 798.966 160.17C806.651 157.939 814.215 165.951 821.27 163.806C824.57 162.798 821.442 156.362 826.327 157.801C828.533 158.447 828.593 161.342 830.695 161.962C832.616 162.531 834.71 161.118 836.019 159.929C838.802 157.396 839.25 152.977 842.808 151.124C845.694 149.625 849.484 151.822 852.482 150.814C855.635 149.763 857.169 147.472 858.539 145.137C860.529 141.76 861.209 141.941 864.836 140.106C866.843 139.098 870.634 135.669 866.12 134.92H866.137ZM677.409 24.5619C682.888 25.3717 680.355 15.8263 676.608 15.1629C670.62 14.1119 672.989 23.9071 677.409 24.5619ZM669.311 8.9774C673.765 7.96084 671.938 0.379671 667.209 2.61956C666.64 4.70438 666.261 9.67522 669.311 8.9774ZM585.832 194.216C583.601 195.405 580.508 200.083 582.817 202.383C584.479 204.046 586.771 203.322 587.805 201.281C589.157 198.61 591.078 191.425 585.841 194.208L585.832 194.216Z" />
@@ -386,109 +505,170 @@
             </svg>
 
             <div class="mapping">
-                <a class="text-mapping duration-150 hokkaido absolute font-bold font-altebold sm:text-lg text-base" href="">Hokkaido</a>
-                <a class="text-mapping duration-150 tohoku absolute font-bold font-altebold sm:text-lg text-base" href="">Tohoku</a>
-                <a class="text-mapping duration-150 kanto absolute font-bold font-altebold sm:text-lg text-base" href="">Kanto</a>
-                <a class="text-mapping duration-150 chubu absolute font-bold font-altebold sm:text-lg text-base" href="">Chubu</a>
-                <a class="text-mapping duration-150 kansai absolute font-bold font-altebold sm:text-lg text-base" href="">Kansai</a>
-                <a class="text-mapping duration-150 chugoku absolute font-bold font-altebold sm:text-lg text-base" href="">Chugoku</a>
-                <a class="text-mapping duration-150 shikoku absolute font-bold font-altebold sm:text-lg text-base" href="">Shikoku</a>
-                <a class="text-mapping duration-150 kyushu absolute font-bold font-altebold sm:text-lg text-base" href="">Kyushu</a>
-                <a class="text-mapping duration-150 okinawa absolute font-bold font-altebold sm:text-lg text-base" href="">Okinawa</a>
+                <a class="text-mapping duration-150 hokkaido absolute font-bold font-altebold sm:text-xl text-base" href="">Hokkaido</a>
+                <a class="text-mapping duration-150 tohoku absolute font-bold font-altebold sm:text-xl text-base" href="">Tohoku</a>
+                <a class="text-mapping duration-150 kanto absolute font-bold font-altebold sm:text-xl text-base" href="">Kanto</a>
+                <a class="text-mapping duration-150 chubu absolute font-bold font-altebold sm:text-xl text-base" href="">Chubu</a>
+                <a class="text-mapping duration-150 kansai absolute font-bold font-altebold sm:text-xl text-base" href="">Kansai</a>
+                <a class="text-mapping duration-150 chugoku absolute font-bold font-altebold sm:text-xl text-base" href="">Chugoku</a>
+                <a class="text-mapping duration-150 shikoku absolute font-bold font-altebold sm:text-xl text-base" href="">Shikoku</a>
+                <a class="text-mapping duration-150 kyushu absolute font-bold font-altebold sm:text-xl text-base" href="">Kyushu</a>
+                <a class="text-mapping duration-150 okinawa absolute font-bold font-altebold sm:text-xl text-base" href="">Okinawa</a>
             </div>
 
         </div>
 
-        <div class="absolute z-10 right-0 top-1/2 -translate-y-1/2 max-w-md w-full xl:flex hidden flex-col gap-6">
+        <div class="absolute max-w-[27rem] z-10 right-0 top-1/2 -translate-y-1/2 w-full xl:flex hidden flex-col gap-6">
             <!-- booking form -->
-            <form class="dropshadow lg:max-w-sm w-full bg-white rounded-2xl lg:px-6 sm:px-6 p-0 py-6 flex flex-col gap-4 sm:border sm:border-neutral-100">
-                <div class="text-primary text-2xl font-altebold font-bold mb-2 text-center">Book Your Trip</div>
-                <div class="form-input flex-1 relative" onclick="toggleClass(['.open_destination_list'])">
+            <form class="border border-neutral-100 dropshadow relative w-full bg-white rounded-2xl lg:px-6 sm:px-10 p-0 py-10 flex flex-col gap-4">
+    
+                <div class="flex items-center justify-between">
+                    <div class="text-primary text-2xl font-altebold font-bold mb-2">Book Your Trip</div>
+                </div>
+    
+                <div class="form-input flex-1 relative">
                     <label for="destination">
                         <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
-                        <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                             <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
-                            <input name="destination" id="destination" placeholder="Tokyo" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
+                            <input name="destination" placeholder="Your destination..." value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
                             <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                         </div>
                     </label>
-                    <div class="open_destination_list overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
-                        <div class="flex flex-col">
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                    <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                        <div class="flex flex-col spot-search" id="">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-input">
+                    <label for="date">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                            <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
+                            <input name="date" type="text" placeholder="21/2/2023" id="sidebar_datepicker" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
+                            
+                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                        </div>
+                    </label>
+                </div>
+    
+                <div class="adult form-input relative">
+                    <label for="adult">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                            <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
+                            <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer adult-input" readonly value=""/>
+                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                        </div>
+                    </label>
+                    <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                        <div class="flex flex-col" id="">
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">1 Adult</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">2 Adults</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">3 Adults</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">4 Adults</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">5 Adults</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">6 Adults</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">7 Adults</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">8 Adults</div>
                             </div>
-                            <div class="flex option pl-5 gap-5 py-2 hover:bg-white cursor-pointer">
-                                <img src="./assets/icons/star.svg" alt="">
-                                <div class="value text-base font-bold">Tokyo</div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">9 Adults</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">10 Adults</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">11 Adults</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">12 Adults</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                <div class="value text-base font-medium">13+ Adults</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-input">
-                    <label for="date">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
-                        <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
-                            <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
-                            <input name="date" id="date" placeholder="21 February, 2023" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
-                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                        </div>
-                    </label>
-                </div>
-                <div class="form-input">
-                    <label for="adult">
-                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
-                        <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
-                            <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
-                            <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" disabled />
-                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
-                        </div>
-                    </label>
-                </div>
-                <div class="form-input relative">
+    
+                <div class="kids form-input relative">
                     <label for="kid" class="relative">
                         <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
-                        <div class="flex items-center border border-neutral-200 bg-neutral-50 rounded-xl h-14 px-5 cursor-pointer">
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
                             <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
-                            <input name="kid" id="kid" placeholder="2 Adults" class="h-full bg-neutral-50 w-full outline-none cursor-pointer" disabled />
+                            <input name="kid" placeholder="2 Kids" class="h-full bg-neutral-50 w-full outline-none cursor-pointer kid-input" readonly />
                             <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
                         </div>
                     </label>
+                    <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                        <div class="flex flex-col" id="">
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">1 Kid</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">2 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">3 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">4 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">5 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">6 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">7 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">8 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">9 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">10 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">11 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">12 Kids</div>
+                            </div>
+                            <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                <div class="value text-base font-medium">13+ Kids</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+    
                 <div class="form-button pt-2">
                     <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 w-full">Book Now</button>
                 </div>
             </form>
             <!-- end booking form -->
         </div>
+
+
     </section>
     <!-- end japan's map -->
 
@@ -504,12 +684,12 @@
                 
                 <!-- card product -->
                 <a class="rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1">
-                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/desti01.png');">
+                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/card-dest-1.png');">
                         <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
                             <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
                         </div>
                     </div>
-                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4">Tokyo - Kanto</div>
+                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4 group-hover:text-primary">Tokyo - Kanto</div>
                     <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Experience the Fusion of Timeless Traditions and Modern Innovations in Japan's Tourism Industry</div>
                     <div class="flex items-stretch px-5">
                         <div class="flex pb-5 gap-2 items-center">
@@ -532,17 +712,17 @@
 
                 <!-- card product -->
                 <a class="rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1">
-                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/desti01.png');">
+                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/card-dest-2.png');">
                         <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
                             <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
                         </div>
                     </div>
-                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4">Tokyo - Kanto</div>
-                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Experience the Fusion of Timeless Traditions and Modern Innovations in Japan's Tourism Industry</div>
+                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4 group-hover:text-primary">Kyoto - Kansai</div>
+                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Id imperdiet faucibus pulvinar aenean consequat. Malesuada pretium pretium dignissim dignissim.</div>
                     <div class="flex items-stretch px-5">
                         <div class="flex pb-5 gap-2 items-center">
                             <div class="flex gap-2 items-center">
-                                <div class="text-base text-neutral-600">Recommended</div>
+                                <div class="text-base text-neutral-600">Trending</div>
                                 <div class="bg-primary w-5 rounded-2xl h-1"></div>
                             </div>
                             <div class="rating flex items-center">
@@ -551,7 +731,7 @@
                                 <img src="./assets/icons/star.svg" alt="">
                                 <img src="./assets/icons/star.svg" alt="">
                                 <img src="./assets/icons/star.svg" alt="">
-                                <span class="text-orange-600 pl-1">(1,512)</span>
+                                <span class="text-orange-600 pl-1">(1,222)</span>
                             </div>
                         </div>
                     </div>
@@ -560,17 +740,17 @@
 
                 <!-- card product -->
                 <a class="rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1">
-                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/desti01.png');">
+                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/card-dest-3.png');">
                         <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
                             <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
                         </div>
                     </div>
-                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4">Tokyo - Kanto</div>
-                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Experience the Fusion of Timeless Traditions and Modern Innovations in Japan's Tourism Industry</div>
+                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4 group-hover:text-primary">Osaka - Kansai</div>
+                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Nibh sapien commodo aliquam lectus quis pharetra. Platea morbi cursus curabitur at.</div>
                     <div class="flex items-stretch px-5">
                         <div class="flex pb-5 gap-2 items-center">
                             <div class="flex gap-2 items-center">
-                                <div class="text-base text-neutral-600">Recommended</div>
+                                <div class="text-base text-neutral-600">Trending</div>
                                 <div class="bg-primary w-5 rounded-2xl h-1"></div>
                             </div>
                             <div class="rating flex items-center">
@@ -587,14 +767,14 @@
                 <!-- end card product -->
 
                 <!-- card product -->
-                <a class="rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1 md:block hidden">
-                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/desti01.png');">
+                <a class="group rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1 md:block hidden">
+                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/card-dest-4.png');">
                         <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
                             <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
                         </div>
                     </div>
-                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4">Tokyo - Kanto</div>
-                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Experience the Fusion of Timeless Traditions and Modern Innovations in Japan's Tourism Industry</div>
+                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4 group-hover:text-primary">Nara - Kansai</div>
+                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Ultrices pellentesque adipiscing adipiscing arcu nunc egestas. Aenean aenean sit ornare urna sit.</div>
                     <div class="flex items-stretch px-5">
                         <div class="flex pb-5 gap-2 items-center">
                             <div class="flex gap-2 items-center">
@@ -607,7 +787,7 @@
                                 <img src="./assets/icons/star.svg" alt="">
                                 <img src="./assets/icons/star.svg" alt="">
                                 <img src="./assets/icons/star.svg" alt="">
-                                <span class="text-orange-600 pl-1">(1,512)</span>
+                                <span class="text-orange-600 pl-1">(412)</span>
                             </div>
                         </div>
                     </div>
@@ -615,14 +795,14 @@
                 <!-- end card product -->
                 
                 <!-- card product -->
-                <a class="rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1 md:block hidden">
-                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/desti01.png');">
+                <a class="group rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1 md:block hidden">
+                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/card-dest-5.png');">
                         <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
                             <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
                         </div>
                     </div>
-                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4">Tokyo - Kanto</div>
-                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Experience the Fusion of Timeless Traditions and Modern Innovations in Japan's Tourism Industry</div>
+                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4 group-hover:text-primary">Mt Fuji - Chubu</div>
+                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Consequat scelerisque magna amet sit orci ac turpis. Risus vel nulla sed vitae id ultrices proin. Ut.</div>
                     <div class="flex items-stretch px-5">
                         <div class="flex pb-5 gap-2 items-center">
                             <div class="flex gap-2 items-center">
@@ -635,7 +815,7 @@
                                 <img src="./assets/icons/star.svg" alt="">
                                 <img src="./assets/icons/star.svg" alt="">
                                 <img src="./assets/icons/star.svg" alt="">
-                                <span class="text-orange-600 pl-1">(1,512)</span>
+                                <span class="text-orange-600 pl-1">(852)</span>
                             </div>
                         </div>
                     </div>
@@ -643,14 +823,14 @@
                 <!-- end card product -->
 
                 <!-- card product -->
-                <a class="rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1 md:block hidden">
-                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/desti01.png');">
+                <a class="group rounded-2xl cursor-pointer border border-neutral-100 bg-white overflow-hidden mb-1 md:block hidden">
+                    <div class="image relative w-full h-60 bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url('./assets/card-dest-6.png');">
                         <div class="md:hidden flex gap-2 absolute bottom-4 right-5">
                             <div class="bg-primary w-10 h-10 flex rounded-full justify-center items-center cursor-pointer"><i class="fi fi-sr-shopping-cart-add text-white mt-1"></i></div>
                         </div>
                     </div>
-                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4">Tokyo - Kanto</div>
-                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Experience the Fusion of Timeless Traditions and Modern Innovations in Japan's Tourism Industry</div>
+                    <div class="text-lg font-bold font-altebold text-neutral-800 px-5 pt-4 group-hover:text-primary">Hiroshima - Chugoku</div>
+                    <div class="text-sm font-normal text-neutral-500 px-5 py-1 leading-relaxed">Donec ut diam porta id egestas quis vitae cras. Leo nec velit erat faucibus feugiat condimentum.</div>
                     <div class="flex items-stretch px-5">
                         <div class="flex pb-5 gap-2 items-center">
                             <div class="flex gap-2 items-center">
@@ -679,7 +859,7 @@
     </section>
     <!-- end product help you -->
 
-    <!-- latest news section -->
+    <!-- list cities & latest news section -->
     <div class="container mt-14">
         <div class="flex lg:flex-row flex-col md:gap-10 gap-20">
 
@@ -690,101 +870,93 @@
                     <img src="./assets/hokkaido.svg" class="absolute top-0 right-0 z-0" alt="">
                     <div class="text-xl font-bold font-altebold text-neutral-800">Hokkaido</div>
                     <div class="the-list flex flex-col relative z-10">
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (1).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Shiretoko</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">National park on an unspoiled peninsula.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (2).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Rishiri and Rebun</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Small islands near Hokkaido's northern tip.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
+                            <div class="flex md:gap-4 gap-3 items-center">
+                                <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (3).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Daisetsuzan</div>
+                            </div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Hokkaido's largest and wildest national park.</div>
+                        </a>
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/thumbs-up.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (4).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Niseko</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Leading snow resort with lots of powder snow.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/thumbs-up.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (5).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Sapporo</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">National park on an unspoiled peninsula.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (6).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Tortor senectus tristique</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Amet ipsum et congue at tellus.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (7).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Nunc vitae adipiscing</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Vel vitae id enim augue felis. Arcu dui massa eu proin.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (8).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Id ut</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Enim facilisi mauris aliquam vel et eu non quis ultricies nulla.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (9).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Quam eu</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Interdum viverra in nunc non enim condimentum. Pulvinar.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (10).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Feugiat tincidunt</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Imperdiet praesent facilisis sed egestas porta sem purus.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (11).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Lobortis consequat</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
-                        </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
-                            <div class="flex md:gap-4 gap-3 items-center">
-                                <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
-                            </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
-                        </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
-                            <div class="flex md:gap-4 gap-3 items-center">
-                                <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
-                            </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Non at tellus mattis enim ut id. Odio non egestas leo sit.</div>
                         </a>
                     </div>
                 </div>
@@ -793,101 +965,93 @@
                     <img src="./assets/tohoku.svg" class="absolute top-0 right-0 z-0" alt="">
                     <div class="text-xl font-bold font-altebold text-neutral-800">Tohoku</div>
                     <div class="the-list flex flex-col relative z-10">
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (1).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Shiretoko</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">National park on an unspoiled peninsula.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (2).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Rishiri and Rebun</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Small islands near Hokkaido's northern tip.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
+                            <div class="flex md:gap-4 gap-3 items-center">
+                                <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (3).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Daisetsuzan</div>
+                            </div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Hokkaido's largest and wildest national park.</div>
+                        </a>
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/thumbs-up.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (4).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Niseko</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Leading snow resort with lots of powder snow.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/thumbs-up.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (5).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Sapporo</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">National park on an unspoiled peninsula.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (6).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Tortor senectus tristique</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Amet ipsum et congue at tellus.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (7).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Nunc vitae adipiscing</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Vel vitae id enim augue felis. Arcu dui massa eu proin.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (8).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Id ut</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Enim facilisi mauris aliquam vel et eu non quis ultricies nulla.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (9).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Quam eu</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Interdum viverra in nunc non enim condimentum. Pulvinar.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (10).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Feugiat tincidunt</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Imperdiet praesent facilisis sed egestas porta sem purus.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (11).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Lobortis consequat</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
-                        </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
-                            <div class="flex md:gap-4 gap-3 items-center">
-                                <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
-                            </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
-                        </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
-                            <div class="flex md:gap-4 gap-3 items-center">
-                                <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
-                            </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Non at tellus mattis enim ut id. Odio non egestas leo sit.</div>
                         </a>
                     </div>
                 </div>
@@ -896,101 +1060,93 @@
                     <img src="./assets/kanto.svg" class="absolute top-0 right-0 z-0" alt="">
                     <div class="text-xl font-bold font-altebold text-neutral-800">Kanto</div>
                     <div class="the-list flex flex-col relative z-10">
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (1).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Shiretoko</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">National park on an unspoiled peninsula.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (2).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Rishiri and Rebun</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Small islands near Hokkaido's northern tip.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
+                            <div class="flex md:gap-4 gap-3 items-center">
+                                <div class="w-7"><img src="./assets/star-reco.svg" alt=""></div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (3).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Daisetsuzan</div>
+                            </div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Hokkaido's largest and wildest national park.</div>
+                        </a>
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/thumbs-up.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (4).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Niseko</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Leading snow resort with lots of powder snow.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7"><img src="./assets/thumbs-up.svg" alt=""></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (5).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Sapporo</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">National park on an unspoiled peninsula.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (6).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Tortor senectus tristique</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Amet ipsum et congue at tellus.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (7).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Nunc vitae adipiscing</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Vel vitae id enim augue felis. Arcu dui massa eu proin.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (8).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Id ut</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Enim facilisi mauris aliquam vel et eu non quis ultricies nulla.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (9).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Quam eu</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Interdum viverra in nunc non enim condimentum. Pulvinar.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (10).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Feugiat tincidunt</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Imperdiet praesent facilisis sed egestas porta sem purus.</div>
                         </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
+                        <a href="#" class="group flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-3 pb-4 pt-3">
                             <div class="flex md:gap-4 gap-3 items-center">
                                 <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
+                                <div class="w-10"><img src="./assets/mini-dest-1 (11).png" alt=""></div>
+                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64 group-hover:text-primary">Lobortis consequat</div>
                             </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
-                        </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
-                            <div class="flex md:gap-4 gap-3 items-center">
-                                <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
-                            </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
-                        </a>
-                        <a href="#" class="flex md:flex-row flex-col md:items-center md:gap-4 gap-2 border-b border-neutral-100 md:py-2 pb-4 pt-3">
-                            <div class="flex md:gap-4 gap-3 items-center">
-                                <div class="w-7 md:block hidden"></div>
-                                <div class="w-6"><img src="./assets/hok-1.png" alt=""></div>
-                                <div class="text-lg font-bold font-altebold text-neutral-800 w-64">Shiretoko</div>
-                            </div>
-                            <div class="text-base font-normal text-neutral-600 flex-1">National park on an unspoiled peninsula.</div>
+                            <div class="text-base font-normal text-neutral-600 flex-1 group-hover:text-neutral-800">Non at tellus mattis enim ut id. Odio non egestas leo sit.</div>
                         </a>
                     </div>
                 </div>
@@ -1028,7 +1184,7 @@
 
         </div>
     </div>
-    <!-- end latest news section -->
+    <!-- end list cities & latest news section -->
 
     <div class="my-20"></div>
 
@@ -1101,21 +1257,199 @@
     </footer>
     <!-- end footer -->
 
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- booking mobile -->
+    <div class="fixed w-full bottom-0 z-40 lg:hidden block">
+        <div class="container flex justify-end">
+            <div class="mb-4 flex items-center dropshadow rounded-2xl bg-primary z-50 pr-5 pl-2 open-modal-booking cursor-pointer">
+                <img src="./assets/booking.png" height="54" width="54" class="" alt="">
+                <div class="font-altebold text-white text-base">BOOKING</div>
+            </div>
+        </div>
+    </div>
 
+    <div class="target-modal-booking duration-100 fixed lg:hidden
+                flex flex-col gap-6 sm:justify-center justify-between 
+                items-center w-full h-screen z-50 top-0 left-0 
+                bg-white min-h-[37rem] invisible opacity-0
+        ">
+
+        <!-- form -->
+        <div class="container">
+
+            <!-- booking form -->
+            <form class="relative w-full bg-white flex flex-col sm:gap-4 gap-2 sm:pt-0 pt-8">
+
+                <div class="flex items-center justify-center">
+                    <div class="text-primary text-2xl font-altebold font-bold mb-2 text-center">Book Your Trip</div>
+                </div>
+
+                <div class="form-input flex-1 relative">
+                    <label for="destination">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Destination</span>
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                            <img src="./assets/icons/pin_list_trip.svg" alt="" class="pr-4">
+                            <input name="destination" placeholder="Your destination..." value="" class="h-full w-full bg-neutral-50 outline-none cursor-pointer searchdestination" />
+                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                        </div>
+                    </label>
+                    <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                        <div class="flex flex-col spot-search" id="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-input">
+                    <label for="date">
+                        <span class="block mb-1 text-gray-700 text-sm sm:text-base">Date</span>
+                        <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                            <img src="./assets/icons/date_list_trip.svg" alt="" class="pr-4">
+                            <input name="date" type="text" placeholder="21/2/2023" id="mobile_datepicker" class="h-full w-full bg-neutral-50 outline-none cursor-pointer" datepicker="" datepicker-autohide readonly/>
+                            
+                            <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                        </div>
+                    </label>
+                </div>
+
+                <div class="flex sm:gap-4 gap-2 sm:flex-row flex-col">
+                    <div class="adult form-input relative">
+                        <label for="adult">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Adult<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                                <img src="./assets/icons/adult_list_trip.svg" alt="" class="pr-4">
+                                <input name="adult" id="adult" placeholder="2 Adults" class="h-full w-full bg-neutral-50 outline-none cursor-pointer adult-input" readonly value=""/>
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                        <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col" id="">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">1 Adult</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">2 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">3 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">4 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">5 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">6 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">7 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">8 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">9 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">10 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">11 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">12 Adults</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize adult-click">
+                                    <div class="value text-base font-medium">13+ Adults</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kids form-input relative">
+                        <label for="kid" class="relative">
+                            <span class="block mb-1 text-gray-700 text-sm sm:text-base">Kid<span class="text-gray-300">(s)</span> </span>
+                            <div class="flex items-center border border-neutral-200 bg-neutral-50 sm:rounded-xl rounded-lg sm:h-14 h-12 sm:px-5 px-3 cursor-pointer">
+                                <img src="./assets/icons/kid_list_trip.svg" alt="" class="pr-4">
+                                <input name="kid" placeholder="2 Kids" class="h-full bg-neutral-50 w-full outline-none cursor-pointer kid-input" readonly />
+                                <img src="./assets/icons/drop-down_list_trip.svg" alt="" class="pl-4">
+                            </div>
+                        </label>
+                        <div class="target-form-input overflow-y-scroll max-h-72 absolute z-10 top-full pt-2 pb-2 left-0 w-full border rounded-xl bg-neutral-50 border-neutral-200">
+                            <div class="flex flex-col" id="">
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">1 Kid</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">2 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">3 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">4 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">5 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">6 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">7 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">8 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">9 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">10 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">11 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">12 Kids</div>
+                                </div>
+                                <div class="flex option pl-5 gap-5 py-2 hover:bg-neutral-200 cursor-pointer capitalize kid-click">
+                                    <div class="value text-base font-medium">13+ Kids</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-button pt-2">
+                    <button class="btn bg-primary hover:bg-darkprimary duration-200 rounded-xl font-bold px-2 text-white h-14 w-full">Book Now</button>
+                </div>
+            </form>
+            <!-- end booking form -->
+
+        </div>
+        <!-- end form -->
+
+        <div class="close sm:fixed relative flex bottom-4 justify-end items-end container">
+            <div class="border border-neutral-150 bg-neutral-50 px-6 w-fit py-3 rounded-2xl items-center flex gap-2 cursor-pointer close-modal-booking">
+                <i class="fi fi-sr-circle-xmark text-neutral-600 mt-1"></i>
+                <span class="font-altebold text-neutral-600">CLOSE</span>
+            </div>
+        </div>
+
+    </div>
+    <!-- end booking mobile -->
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="./scripts/script.js"></script>
+    
     <script>
-        var splide = new Splide( '.splide', {
-            type        : 'loop',
-            focus       : 'left',
-            gap         : 24,
-            autoWidth   : true,
-            padding     : 250,
-            pagination  : false,
-            arrows      : false
-        });
-        splide.mount();
+        $( function() {
+          $( "#mobile_datepicker" ).datepicker();
+          $( "#sidebar_datepicker" ).datepicker();
+        } );
     </script>
 
 </body>
